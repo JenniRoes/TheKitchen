@@ -8,6 +8,11 @@
     color: $fcolor;
 }
 
+@mixin custom-font($clr-font, $fweight){
+    color: $clr-font;
+    font-weight: $fweight;
+}
+
 //media-queries
 @mixin respond-to($media) {
     @media only screen and #{$media} {
@@ -16,9 +21,48 @@
 }
 
 //badge styles
-@mixin basic-badge($clr-badge, $clr-background, $border-radius, $padding){
-    color: $clr-badge;
+@mixin basic-badge($clr-font, $clr-background, $border-radius, $padding){
+    color: $clr-font;
     background-color: $clr-background;
     border-radius: $border-radius;
     padding: $padding;
+}
+
+//box/container styles
+@mixin basic-box($display, $flex-direction, $align, $padding, $width, $height, $border-radius, $background-color){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align;
+    padding: $padding;
+    width: $width;  
+    height: $height;
+    border-radius: $border-radius;
+    background-color: $background-color;
+}
+
+//buttons
+@mixin btn-basic($display, $flex-direction, $align, $padding, $gap, $width, $height, $background, $border-radius,$border){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align;
+    padding: $padding;
+    gap: $gap;
+    width: $width;
+    height: $height;
+    background: $background;
+    border-radius: $border-radius;
+    border: $border;
+}
+
+@mixin btn-signup ($height, $width, $border-radius, $padding){
+    height: $height;
+    width: $width;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
+//images
+@mixin img-size($height, $width){
+    height: $height;
+    width: $width;
 }

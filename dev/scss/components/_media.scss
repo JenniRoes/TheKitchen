@@ -1,6 +1,7 @@
 @use '../abstracts/vars';
-
+@use '../abstracts/mixins';
 @import url(./imgs);
+
 .line-deco {
     border-top: 0.1rem solid var(--clr-black-200);
     display: block;
@@ -19,41 +20,44 @@
 }
 
 .size-img {
-    height: 12.5rem;
-    width: 12.5rem;
+    @include mixins.img-size(12.5rem, 12.5rem);
 }
 
 .size-img-big {
-    height: 16.62rem;
-    width: 21.5rem;
+    @include mixins.img-size(16.62rem, 21.5rem);
+    //media-query
+    @include mixins.respond-to(vars.$phone){
+        height: 16.62rem;
+        width: 24.25rem;
+    }
 }
 
 .size-img-md {
-    height: 14.62rem;
-    width: 21.5rem;
+    @include mixins.img-size(14.62rem, 21.5rem);
 }
 
 .size-img-sm {
-    width: 3.063rem;
-    height: 1.9rem;
+    @include mixins.img-size(3.063rem, 1.9rem);
 }
 
 .size-img-list{
-    width: 246px;
-    height: 56px;
-    border-radius: 8px;
+    @include mixins.img-size(3.5rem, 15.375rem);
+    border-radius: 0.5rem;
 }
 
 .size-img-detail{
-    height: 35.12rem;
-    width: 33.12rem;
+    @include mixins.img-size(35.12rem, 33.12rem);
     margin-top: 0;
     border-radius: 0.2rem;
 }
 
 .size-img-categories{
-    height: 10rem;
-    width: 13rem;
+    @include mixins.img-size(10rem, 13rem);
+    //media-query
+    @include mixins.respond-to(vars.$phone){
+        height: 10rem;
+        width: 28rem;
+    }
 }
 
 .img-retote {
@@ -100,10 +104,19 @@
 }
 .margin-cards{
     margin-right: 0%;
+    //media-query
+    @include mixins.respond-to(vars.$phone){
+        margin-bottom: 5%;
+    }
 }
 .margin-box{
     margin-left: 0%;
     margin-right: 0%;
+    //media-query
+    @include mixins.respond-to(vars.$phone){
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 .box-width{
     max-width: 100%;
@@ -121,26 +134,11 @@
     background-image: url("../../imgs/unsplash_jpkfc5_d-DI.png");
 }
 
+
+//media queries general 
 @media screen and (max-width: 600px) {
-    .ocultar{
-    display:none;
-    }
-    .size-img-big {
-        height: 16.62rem;
-        width: 24.25rem;
-    }
+    
     .center-img-detail{
         max-width: 90%;
-    }
-    .margin-cards{
-        margin-bottom: 5%;
-    }
-    .margin-box{
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-    .size-img-categories{
-        height: 10rem;
-        width: 28rem;
     }
 }

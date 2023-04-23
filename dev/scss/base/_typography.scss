@@ -1,10 +1,11 @@
 @use '../abstracts/vars';
+@use '../abstracts/mixins';
 
 .text-question{
+    @include mixins.custom-font(vars.$clr-gray-400, vars.$fw-reg);
+
     text-decoration: underline;
     opacity: 0.8;
-    font-weight: vars.$fw-reg;
-    color: vars.$clr-gray-400;
 }
 
 .text-orange{
@@ -12,13 +13,11 @@
 }
 
 .text-forms{
-    color: vars.$clr-gray-400;
-    font-weight: vars.$fw-med;
+    @include mixins.custom-font(vars.$clr-gray-400, vars.$fw-med);
 }
 
 .text-med{
-    font-weight: vars.$fw-med;
-    color: vars.$clr-black;
+    @include mixins.custom-font(vars.$clr-black, vars.$fw-med);
 }
 
 .text-nevbar{
