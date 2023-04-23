@@ -1,0 +1,24 @@
+@use '../abstracts/vars';
+
+//fonts
+@mixin set-font($ffamily, $fweight, $fsize, $fcolor:vars.$clr-dark){
+    font-family: $ffamily;
+    font-weight: $fweight;
+    font-size: $fsize;
+    color: $fcolor;
+}
+
+//media-queries
+@mixin respond-to($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
+
+//badge styles
+@mixin basic-badge($clr-badge, $clr-background, $border-radius, $padding){
+    color: $clr-badge;
+    background-color: $clr-background;
+    border-radius: $border-radius;
+    padding: $padding;
+}

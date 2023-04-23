@@ -1,0 +1,25 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+.badge-orange {
+    @include mixins.basic-badge(vars.$clr-white, vars.$clr-orange-300, 0.12rem, 0.12rem);
+}
+.badge-orange {
+    @include mixins.basic-badge(vars.$clr-black, vars.$clr-green-100, 0.12rem, 0.12rem);
+}
+
+.badge-orange-big {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0.37rem;
+    gap: 0.5rem;
+    position: absolute;
+    width: 5.75rem;
+    height: 1.75rem;
+    left: 1rem;
+    top: 1rem;
+    background: vars.$clr-orange-300;
+    border-radius: 0.12rem;
+}
+

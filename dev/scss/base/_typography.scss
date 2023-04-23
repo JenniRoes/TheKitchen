@@ -1,0 +1,39 @@
+@use '../abstracts/vars';
+
+.text-question{
+    text-decoration: underline;
+    opacity: 0.8;
+    font-weight: vars.$fw-reg;
+    color: vars.$clr-gray-400;
+}
+
+.text-orange{
+    color: vars.$clr-orange-300;
+}
+
+.text-forms{
+    color: vars.$clr-gray-400;
+    font-weight: vars.$fw-med;
+}
+
+.text-med{
+    font-weight: vars.$fw-med;
+    color: vars.$clr-black;
+}
+
+.text-nevbar{
+    color: vars.$clr-white !important ;
+}
+
+.text-cards-categories{
+    font-weight: vars.$fs-xsm;
+}
+
+.text-label-time{
+    font-size: vars.$fs-xsm;
+}
+
+.text-title-recipe{
+    text-decoration: none !important;
+    color: vars.$clr-black;
+}
