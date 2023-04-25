@@ -1,18 +1,18 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins';
-@import url(./imgs);
+@import url(../../../dist/imgs);
 
 .line-deco {
-    border-top: 0.1rem solid var(--clr-black-200);
+    border-top: 0.1rem solid vars.$clr-black-200;
     display: block;
     max-width: 50%;
-    border-color: var(--clr-gray-200);
+    border-color: vars.$clr-gray-200;
 }
 
 .line-deco-item {
     width: 100%;
     height: 0rem;
-    border: 0.063rem solid var(--clr-orange-200);
+    border: 0.063rem solid vars.$clr-orange-200;
     flex: none;
     order: 1;
     align-self: stretch;
@@ -65,11 +65,11 @@
 }
 
 .color-input {
-    border-color: var(--clr-orange-300);
+    border-color: vars.$clr-orange-300;
 }
 
 .border-photo-card {
-    border: 0.12rem solid var(--clr-gray-200);
+    border: 0.12rem solid vars.$clr-gray-200;
     border-radius: 0.75rem 0rem 0rem 0.75rem;
 }
 
@@ -82,13 +82,13 @@
     gap: 0.25rem;
     width: 5.6rem;
     height: 1.5rem;
-    background: var(--clr-orange-100);
+    background: vars.$clr-orange-100;
     border-radius: 0.25rem;
     flex: none;
     order: 0;
     flex-grow: 0;
-    color: var(--clr-orange-300);
-    font-weight: var(--fw-med);
+    color: vars.$clr-orange-300;
+    font-weight: vars.$fw-med;
 }
 
 .top-border-photo{
@@ -126,12 +126,12 @@
 }
 
 .banner-background{
-    background-image: url("../../imgs/Background.png");
+    background-image: url("../../../dist/imgs/Background.png");
     background-repeat: no-repeat;
 }
 
 .admin-background{
-    background-image: url("../../imgs/unsplash_jpkfc5_d-DI.png");
+    background-image: url("../../../dist/imgs/unsplash_jpkfc5_d-DI.png");
 }
 
 

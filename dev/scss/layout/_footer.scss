@@ -1,3 +1,5 @@
+@use '../abstracts/vars';
+
 .footer-color {
     background: vars.$clr-orange-200;
     color: vars.$clr-white;

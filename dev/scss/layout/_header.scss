@@ -1,3 +1,5 @@
+@use '../abstracts/vars';
+
 .header-link{
     color: vars.$clr-white;
     text-decoration: none;
@@ -16,7 +18,7 @@
     left: 0rem;
     top: 0rem;
     background: vars.$clr-orange-200;
-    box-shadow: 0rem 0.25rem 0.5rem vars.$clr-black-50;
+    
 }
 
 .navbar-color {

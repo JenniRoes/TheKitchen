@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="../dev/main.css">
+    <!--title page-->
     <title>Password recovery</title>
 </head>
-<body>
-    
+<body class="admin-background">
+    <!--email to send password-->
+    <div class="container center mt-1">
+        <div class="row">
+            <img src="./imgs/logo-xl.png" class="size-img" alt="logo">
+        </div>
+    </div>
+    <div class="row container center mt-1 col-md-12 margin-box box-width">
+        <div class="row box-pass-big col-md-10 center center-img-detail">
+            <div>
+                <p class="text-center mt-2">Enter your email and we’ll send you a link to reset your password</p>
+                <form>
+                    <label class="form-label text-forms" for="email">Email</label>
+                    <input id="email" class="form-control" type="email" name="email">
+                <div class="col col-md-12 center-button margin-box ">
+                    <div class="row center margin-box">
+                        <a href="#" class="center btn-orange mt-4 hover-grow">Send link to email</a>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!--footer-->
+     <footer class="container-fluid footer-color mt-5 ">
+        <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
+            <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
+            <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
+        </div>
+    </footer>
 </body>
 </html>

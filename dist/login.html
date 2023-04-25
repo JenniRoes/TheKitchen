@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="../dev/main.css">
+    <!--title page-->
     <title>Login</title>
 </head>
-<body>
-    
+<body class="admin-background">
+     <!--login-->
+     <div class="container center mt-1">
+        <div class="row">
+            <img src="./imgs/logo-xl.png" class="size-img" alt="logo">
+        </div>
+    </div>
+    <div class="row container center mt-1 col-md-12 margin-box box-width">
+        <div class="row box-login col-md-12 center">
+            <form >
+                <label class="form-label text-forms" for="user">User</label>
+                <input id="user" class="form-control" type="text" name="user">
+                <label for="password" class="form-label mt-4 text-forms">Password <span
+                        class="text-question"><a href="" class="text-question"> Forgot?</a></span></label>
+                <input id="password" type="password" class="form-control color-input">
+                <div class="col center-button">
+                    <div class="row center"><a href="#" class="center btn-orange mt-4 hover-grow">Log in</a></div>
+                    <div class="">
+                        <span class=" line-deco mt-4 mb-3 mx-auto"></span>
+                    </div>
+                    <div class="row center"><a href="#" class="center btn-orange-ligth mt-2 hover-grow">Sign up</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="container-fluid footer-color mt-5 ">
+        <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
+            <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
+            <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
+        </div>
+    </footer>
 </body>
 </html>
