@@ -18,140 +18,158 @@
 </head>
 
 <body>
-    <!--header-->
-    <header class="container-fluid navbar-color">
-        <!--navbar-->
-        <nav id="navbar-main" class="navbar navbar-expand-lg">
-            <a class="navbar-brand color-header" href="#">
-                <img src="../dist/imgs/logo-sm.png" class="ms-5  img-fluid d-inline-block align-text-middle" alt="logo">
-            </a>
-            <!--boton navbar-main-->
-            <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse ms-4 justify-content-between" id="menu">
-                <ul class="navbar-nav gap-5 box-navbar">
-                    <li class=" position-relative"><a class="header-link" href="#">Home</a></li>
-                    <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
-                    <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
-                </ul>
-                <!--search placeholder and button-->
-                <div class="me-5 box-navbar">
-                    <form class="d-flex input-group" role="search">
-                        <input class="form-control me-2 input-search" type="search" placeholder="Search something..."
-                            aria-label="Search">
-                        <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
-                                alt="search icon"></button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!--recipe detail-->
-    <div class="row  center mt-5 col-12 margin-box">
-        <div class="center-img-detail col-md-4 col-lg-6">
-            <div class="card text-bg-dark  max-box-size">
-                <img src="./imgs/unsplash_OFismyezPnY(13).png" alt="photo food">
-                <div class="card-img-overlay">
-                    <div>
-                        <p class="align-content-center"><span class="badge-orange-big ">Goat Meal</span></p>
-                    </div>
-                    <div class="align-end">
-                        <button class=" btn-circular hover-grow"><img src="./imgs/icons/favorite.svg"
-                                class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
+    <section id="app">
+        <!--header-->
+        <header class="container-fluid navbar-color">
+            <!--navbar-->
+            <nav id="navbar-main" class="navbar navbar-expand-lg">
+                <a class="navbar-brand color-header" href="#">
+                    <img src="../dist/imgs/logo-sm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
+                        alt="logo">
+                </a>
+                <!--boton navbar-main-->
+                <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-4 justify-content-between" id="menu">
+                    <ul class="navbar-nav gap-5 box-navbar">
+                        <li class=" position-relative"><a class="header-link" href="#">Home</a></li>
+                        <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
+                        <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
+                    </ul>
+                    <!--search placeholder and button-->
+                    <div class="me-5 box-navbar">
+                        <form class="d-flex input-group" role="search">
+                            <input class="form-control me-2 input-search" type="search"
+                                placeholder="Search something..." aria-label="Search">
+                            <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                                    alt="search icon"></button>
+                        </form>
                     </div>
                 </div>
-            </div>
-            <div class="">
-                <h1 class="mt-4">Recipe Title</h1>
-            </div>
-            <div>
-                <span class="badge badge-orange">Entries</span>
-                <span class="badge badge-green">Easy</span>
-                <span class="badge badge-orange">All</span>
-            </div>
-            <div>
-                <h2 class="mt-4">Description</h2>
-                <div class="row">
-                    <p class="label-time ms-3"><img src="imgs/icons/wash.svg" alt="preparation time icon">15min</p>
-                    <p class="label-time ms-3"><img src="imgs/icons/local_fire_department.svg"
-                            alt="cooking time icon">30min</p>
-                    <p class="label-time ms-3"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
-                            alt="total time icon">45min</p>
-                    <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg" alt="portions icon">4-5</p>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa. Molestie
-                    arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo elementum
-                    ac morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed
-                    fringilla. Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed
-                    nisl metus, fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet
-                    mauris. Dolor commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea tempus
-                    gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam sit.
-                </p>
-                <h2 class="mt-2">Ingredients</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                </ul>
-                <h2 class="mt-2">Preparation</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa. Molestie
-                    arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo elementum
-                    ac morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed
-                    fringilla. Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed
-                    nisl metus, fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet
-                    mauris. Dolor commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea tempus
-                    gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam sit.
-                </p>
-            </div>
-        </div>
+            </nav>
+        </header>
 
-        <!--related recipes-->
-        <div class="col-lg-5 center-img-detail" data-aos="fade-left">
-            <div class="row">
-                <h2>Related Recipes</h2>
-            </div>
-            <div class="row center mt-3 recipe-display margin-cards margin-cards-block">
-                <div v-for="(item, index) in relatedrecipes"  class="col-12 col-lg-6 margin-cards">
-                    <div class="card" style="min-width:232px ;">
-                        <img v-bind:src="item.image" class="card-img-top" alt="photo food">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="mt-2">{{item.title}}</h5>
-                                <h6><span class="badge badge-green mt-2">{{item.level}}</span></h6>
-                            </div>
-                            <p class="card-text">{{item.description}}</p>
+        <!--recipe detail-->
+        <div class="row  center mt-5 col-12 margin-box">
+            <div class="center-img-detail col-md-4 col-lg-6">
+                <div class="card text-bg-dark  max-box-size">
+                    <img src="./imgs/unsplash_OFismyezPnY(13).png" alt="photo food">
+                    <div class="card-img-overlay">
+                        <div>
+                            <p class="align-content-center"><span class="badge-orange-big ">Goat Meal</span></p>
                         </div>
-                        <div class="d-flex justify-content-between gap-1">
-                            <h6 class="mt-2 opacity-50 ms-3"><small>{{item.time}}</small></h6>
-                            <button class=" btn-circular mt-2 mb-3 me-3 hover-grow"><img src="./imgs/icons/favorite.svg"
+                        <div class="align-end">
+                            <button class=" btn-circular hover-grow"><img src="./imgs/icons/favorite.svg"
                                     class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
                         </div>
                     </div>
                 </div>
+                <div class="">
+                    <h1 class="mt-4">Recipe Title</h1>
+                </div>
+                <div>
+                    <span class="badge badge-orange">Entries</span>
+                    <span class="badge badge-green">Easy</span>
+                    <span class="badge badge-orange">All</span>
+                </div>
+                <div>
+                    <h2 class="mt-4">Description</h2>
+                    <div class="row">
+                        <p class="label-time ms-3"><img src="imgs/icons/wash.svg" alt="preparation time icon">15min</p>
+                        <p class="label-time ms-3"><img src="imgs/icons/local_fire_department.svg"
+                                alt="cooking time icon">30min</p>
+                        <p class="label-time ms-3"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
+                                alt="total time icon">45min</p>
+                        <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg" alt="portions icon">4-5
+                        </p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa.
+                        Molestie
+                        arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo
+                        elementum
+                        ac morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed
+                        fringilla. Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed
+                        nisl metus, fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet
+                        mauris. Dolor commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea
+                        tempus
+                        gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam
+                        sit.
+                    </p>
+                    <h2 class="mt-2">Ingredients</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <h2 class="mt-2">Preparation</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa.
+                        Molestie
+                        arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo
+                        elementum
+                        ac morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed
+                        fringilla. Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed
+                        nisl metus, fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet
+                        mauris. Dolor commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea
+                        tempus
+                        gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam
+                        sit.
+                    </p>
+                </div>
+            </div>
+
+            <!--related recipes-->
+            <div class="col-lg-5 center-img-detail" data-aos="fade-left">
+                <div class="row">
+                    <h2>Related Recipes</h2>
+                </div>
+                <div class="row center mt-3 recipe-display margin-cards margin-cards-block">
+                    <div v-for="(item, index) in relatedrecipes" class="col-12 col-lg-6 margin-cards">
+                        <div class="card" style="min-width:232px ;">
+                            <img v-bind:src="item.image" class="card-img-top" alt="photo food">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="mt-2">{{item.title}}</h5>
+                                    <h6><span class="badge badge-green mt-2">{{item.level}}</span></h6>
+                                </div>
+                                <p class="card-text">{{item.description}}</p>
+                            </div>
+                            <div class="d-flex justify-content-between gap-1">
+                                <h6 class="mt-2 opacity-50 ms-3"><small>{{item.time}}</small></h6>
+                                <button class=" btn-circular mt-2 mb-3 me-3 hover-grow"><img
+                                        src="./imgs/icons/favorite.svg" class="img-fluid mx-auto mt-1"
+                                        alt="favorite icon"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!--footer-->
-    <footer class="container-fluid footer-color mt-5 ">
-        <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
-            <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
-            <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
-        </div>
-    </footer>
+        <!--footer-->
+        <footer class="container-fluid footer-color mt-5 ">
+            <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
+                <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
+                <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
+            </div>
+        </footer>
 
-     <!--Vuejs-->
-     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-     <!--js main-->
-     <script src="./js/main.js"></script>
-     <!--mounted app-->
-     <script>
-         const mountedApp = app.mount("#app"); 
-     </script>
+        <!--Scripts-->
+        <!--bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+            </script>
+        <!--Vuejs-->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!--js main-->
+        <script src="./js/main.js"></script>
+        <!--mounted app-->
+        <script>
+            const mountedApp = app.mount("#app"); 
+        </script>
+    </section>
 </body>
 
 </html>

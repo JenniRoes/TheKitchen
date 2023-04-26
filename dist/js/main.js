@@ -22,6 +22,12 @@ const app = Vue.createApp({
                 {id: 202, image: "./imgs/unsplash_OFismyezPnY(1).png", title: "Recipe title", level: "Easy", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "Update 3min ago"},
                 {id: 203, image: "./imgs/unsplash_OFismyezPnY(1).png", title: "Recipe title", level: "Easy", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "Update 3min ago"},
                 {id: 204, image: "./imgs/unsplash_OFismyezPnY(1).png", title: "Recipe title", level: "Easy", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "sUpdate 3min ago"}
+            ],
+            recipeslist:[
+                {id: 301, image: "./imgs/itemlist.png", title: "Recipe title", time: "Update 3min ago"},
+                {id: 302, image: "./imgs/itemlist.png", title: "Recipe title", time: "Update 3min ago"},
+                {id: 303, image: "./imgs/itemlist.png", title: "Recipe title", time: "Update 3min ago"},
+                {id: 304, image: "./imgs/itemlist.png", title: "Recipe title", time: "Update 3min ago"}
             ]
         }
     }

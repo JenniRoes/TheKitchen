@@ -1,6 +1,6 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins';
-@import url(../../../dist/imgs);
+@import url(./../../dist/imgs/);
 
 .line-deco {
     border-top: 0.1rem solid vars.$clr-black-200;
@@ -126,12 +126,12 @@
 }
 
 .banner-background{
-    background-image: url("../../../dist/imgs/Background.png");
+    background-image: url("./../../dist/imgs/Background.png");
     background-repeat: no-repeat;
 }
 
 .admin-background{
-    background-image: url("../../../dist/imgs/unsplash_jpkfc5_d-DI.png");
+    background-image: url("./../../dist/imgs/unsplash_jpkfc5_d-DI.png");
 }
 
 

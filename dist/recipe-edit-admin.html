@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--js bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../dev/main.css">
+    <!--title page-->
     <title>Recipe edit</title>
 </head>
+
 <body>
-    
+    <!--header-->
+    <header class="container-fluid navbar-color">
+        <!--navbar-->
+        <nav id="navbar-main" class="navbar navbar-expand-lg">
+            <a class="navbar-brand color-header" href="#">
+                <img src="../dist/imgs/logo-sm.png" class="ms-5  img-fluid d-inline-block align-text-middle" alt="logo">
+            </a>
+            <!--boton navbar-main-->
+            <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-4 justify-content-between" id="menu">
+                <ul class="navbar-nav gap-5 box-navbar">
+                    <li class=" position-relative"><a class="header-link" href="#">Home</a></li>
+                    <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
+                    <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
+                </ul>
+                <!--search placeholder and button-->
+                <div class="me-5 box-navbar">
+                    <form class="d-flex input-group" role="search">
+                        <input class="form-control me-2 input-search" type="search" placeholder="Search something..."
+                            aria-label="Search">
+                        <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                                alt="search icon"></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     <!--recipe edit form-->
+     <section class="d-flex mt-4">
+        <div class="col-4 ms-5">
+            <img src="./imgs/PlaceholderSquare.png" class="img-fluid" alt="photo preview">
+        </div>
+        <div class="col ms-4 me-5">
+            <h1>Recipe Basic Informations</h1>
+            <label class="form-label" for="title">Recipe title</label>
+            <input id="title" class="form-control" type="text" name="title">
+            <div class="row mt-2">
+                <div class="col ">
+                    <label class="form-label" for="category">Category</label>
+                    <!--<input id="category" class="form-control" type="text" name="category">-->
+                    <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                        <option selected>None</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+                <div class="col">
+                    <label class="form-label" for="difficulty">Difficulty</label>
+                    <input id="difficulty" class="form-control" type="text" name="difficulty">
+                </div>
+                <div class="col">
+                    <label class="form-label" for="event">Event</label>
+                    <input id="event" class="form-control" type="text" name="event">
+                </div>
+            </div>
+
+            <div class="col-4 mt-2">
+                <label class="form-label" for="tag">GOAT Tag</label>
+                <input id="tag" class="form-control" type="text" name="tag">
+            </div>
+
+            <h2 class="mt-4">Description</h2>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="prep-time">Preparation Time</label>
+                    <input id="prep-time" class="form-control" type="text" name="prep-time">
+                </div>
+                <div class="col">
+                    <label class="form-label" for="cooking">Cooking Time</label>
+                    <input id="cooking" class="form-control" type="text" name="cooking">
+                </div>
+                <div class="col">
+                    <label class="form-label" for="total-time">Total Time</label>
+                    <input id="total-time" class="form-control" type="text" name="total-time">
+                </div>
+                <div class="col">
+                    <label class="form-label" for="portions">Portions</label>
+                    <input id="portions" class="form-control" type="text" name="portions">
+                </div>
+            </div>
+            <label class="form-label mt-2" for="description">Description</label>
+            <input id="description" class="form-control input-xl" type="text" name="description">
+
+            <label class="form-label mt-2" for="ingredients">Ingredients</label>
+            <input id="ingredients" class="form-control" type="text" name="ingredients">
+
+            <label class="form-label mt-2" for="prepariation">Preparation</label>
+            <input id="prepariation" class="form-control input-xl" type="text" name="prepariation">
+
+        </div>
+
+    </section>
+
+    <!--buttons-->
+    <div class="d-flex flex-row-reverse me-3 mt-4">
+        <button class="btn-admin-red me-5 hover-grow">Discard</button>
+        <button class="btn-admin-orange me-2 hover-grow">Save</button>
+    </div>
+
+    <!--footer-->
+    <footer class="container-fluid footer-color mt-5 ">
+        <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
+            <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
+            <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
