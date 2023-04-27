@@ -25,8 +25,9 @@
 
 .size-img-big {
     @include mixins.img-size(16.62rem, 21.5rem);
+
     //media-query
-    @include mixins.respond-to(vars.$phone){
+    @include mixins.respond-to(vars.$phone) {
         height: 16.62rem;
         width: 24.25rem;
     }
@@ -40,21 +41,22 @@
     @include mixins.img-size(3.063rem, 1.9rem);
 }
 
-.size-img-list{
+.size-img-list {
     @include mixins.img-size(3.5rem, 15.375rem);
     border-radius: 0.5rem;
 }
 
-.size-img-detail{
+.size-img-detail {
     @include mixins.img-size(35.12rem, 33.12rem);
     margin-top: 0;
     border-radius: 0.2rem;
 }
 
-.size-img-categories{
+.size-img-categories {
     @include mixins.img-size(10rem, 13rem);
+
     //media-query
-    @include mixins.respond-to(vars.$phone){
+    @include mixins.respond-to(vars.$phone) {
         height: 10rem;
         width: 28rem;
     }
@@ -91,54 +93,77 @@
     font-weight: vars.$fw-med;
 }
 
-.top-border-photo{
+.top-border-photo {
     border: 0.063rem solid hidden;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-.recipe-display{
+.recipe-display {
     display: inline-flex !important;
 }
-.margin-cards-block{
+
+.margin-cards-block {
     margin-bottom: 5%;
 }
-.margin-cards{
+
+.margin-cards {
     margin-right: 0%;
+
     //media-query
-    @include mixins.respond-to(vars.$phone){
+    @include mixins.respond-to(vars.$phone) {
         margin-bottom: 5%;
     }
 }
-.margin-box{
+
+.margin-box {
     margin-left: 0%;
     margin-right: 0%;
+
     //media-query
-    @include mixins.respond-to(vars.$phone){
+    @include mixins.respond-to(vars.$phone) {
         margin-left: 0%;
         margin-right: 0%;
     }
 }
-.box-width{
+
+.box-width {
     max-width: 100%;
 }
-.margin-icon{
+
+.margin-icon {
     margin-top: 2rem;
 }
 
-.banner-background{
-    background-image: url("./../../dist/imgs/Background.png");
+.banner-background {
+    background-image: url("././../dist/imgs/Background.png");
     background-repeat: no-repeat;
 }
 
-.admin-background{
-    background-image: url("./../../dist/imgs/unsplash_jpkfc5_d-DI.png");
+.admin-background {
+    background-image: url("././../dist/imgs/unsplash_jpkfc5_d-DI.png");
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+    width: 364px;
+    height: 796px;
+    background-color: vars.$clr-orange-50;
+}
+
+.text-user-container {
+    width: 314px;
+    height: 463px;
 }
 
 
 //media queries general 
 @media screen and (max-width: 600px) {
-    
-    .center-img-detail{
+
+    .center-img-detail {
         max-width: 90%;
     }
 }

@@ -19,6 +19,7 @@
 
 .btn-signup-dark {
     @include mixins.btn-signup (2rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
+    background-color: vars.$clr-orange-200;
 }
 
 .btn-signup-dark:hover{

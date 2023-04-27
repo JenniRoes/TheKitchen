@@ -13715,6 +13715,7 @@ body {
   width: 18.5rem;
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  background-color: #FF9E45;
 }
 
 .btn-signup-dark:hover {
@@ -14164,12 +14165,35 @@ body {
 }
 
 .banner-background {
-  background-image: url("./../../dist/imgs/Background.png");
+  background-image: url("././../dist/imgs/Background.png");
   background-repeat: no-repeat;
 }
 
 .admin-background {
-  background-image: url("./../../dist/imgs/unsplash_jpkfc5_d-DI.png");
+  background-image: url("././../dist/imgs/unsplash_jpkfc5_d-DI.png");
+}
+
+.user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  width: 364px;
+  height: 796px;
+  background-color: #FFE0C2;
+}
+
+.text-user-container {
+  width: 314px;
+  height: 463px;
 }
 
 @media screen and (max-width: 600px) {
