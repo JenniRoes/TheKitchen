@@ -1,4 +1,5 @@
 @use '../abstracts/vars';
+@use '../abstracts/mixins';
 
 .header-link{
     color: vars.$clr-white;
@@ -24,4 +25,10 @@
 .navbar-color {
     background: vars.$clr-orange-200;
     color: vars.$clr-white;
+}
+
+.li-responsive{
+    @include mixins.respond-to(vars.$phone){     
+        margin-top: 2rem;
+    }
 }

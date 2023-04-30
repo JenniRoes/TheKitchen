@@ -134,29 +134,25 @@
     margin-top: 2rem;
 }
 
-.banner-background {
-    background-image: url("././../dist/imgs/Background.png");
-    background-repeat: no-repeat;
-}
 
 .admin-background {
-    background-image: url("././../dist/imgs/unsplash_jpkfc5_d-DI.png");
+    background-image: url("././../dist/imgs/background.png");
 }
 
-.user-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 32px;
-    width: 364px;
-    height: 796px;
-    background-color: vars.$clr-orange-50;
+.imagotipo-responsive {
+    @include mixins.respond-to(vars.$phone) {
+        width: 200px;
+        height: 140px;
+        margin-left: 30px;
+        padding-right: 45px;
+    }
 }
 
-.text-user-container {
-    width: 314px;
-    height: 463px;
+.isotipo-responsive {
+    @include mixins.respond-to(vars.$phone) {
+        width: 42px;
+        height: 30px;
+    }
 }
 
 

@@ -20,6 +20,9 @@
 .btn-signup-dark {
     @include mixins.btn-signup (2rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
     background-color: vars.$clr-orange-200;
+    font-size: 0.80rem;
+    color: vars.$clr-black;
+    text-decoration: none;
 }
 
 .btn-signup-dark:hover{
@@ -28,6 +31,11 @@
 
 .btn-signup-light {
     @include mixins.btn-signup (2rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
+    background-color: vars.$clr-orange-50;
+    font-size: 0.80rem;
+    text-decoration: none;
+    color: vars.$clr-orange-300;
+
 }
 
 .btn-signup-light:hover{
@@ -78,6 +86,11 @@
 .btn-long-dark {
     @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 27.5rem, 1.87rem, none, 0.5rem, none);
     justify-content: center;
+    background-color: vars.$clr-orange-200;
+    font-size: 0.80rem;
+    color: vars.$clr-black;
+    text-decoration: none;
+    font-weight: vars.$fw-med;
 }
 
 .btn-long-dark:hover{
@@ -87,6 +100,10 @@
 .btn-long-ligth {
     @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 27.5rem, 1.87rem, none, 0.5rem, none);
     justify-content: center;
+    background-color: vars.$clr-orange-50;
+    font-size: 0.80rem;
+    text-decoration: none;
+    color: vars.$clr-orange-300;
 }
 
 .btn-long-ligth:hover{

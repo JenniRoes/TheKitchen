@@ -36,3 +36,7 @@
     text-decoration: none !important;
     color: vars.$clr-black;
 }
+
+.user-name{
+    @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-md, vars.$clr-orange-300);
+}

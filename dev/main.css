@@ -13505,6 +13505,13 @@ body {
   color: #232323;
 }
 
+.user-name {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #FF6109;
+}
+
 .badge-orange {
   color: #ffffff;
   background-color: #FF6109;
@@ -13689,12 +13696,36 @@ body {
   padding-right: 6%;
 }
 
-.box-recipe {
+.card-recipe {
   border: 0.063rem solid #DADADA;
   border-radius: 0.75rem;
-  padding: 0%;
-  width: 14%;
-  margin: 1%;
+  padding: 0px;
+  width: 336px;
+  height: 305px;
+  position: relative;
+}
+
+.user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  width: 364px;
+  height: 796px;
+  background-color: #FFE0C2;
+}
+
+.text-user-container {
+  width: 314px;
+  height: 463px;
 }
 
 .btn-orange-dark {
@@ -13716,6 +13747,9 @@ body {
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
   background-color: #FF9E45;
+  font-size: 0.8rem;
+  color: #232323;
+  text-decoration: none;
 }
 
 .btn-signup-dark:hover {
@@ -13727,6 +13761,10 @@ body {
   width: 18.5rem;
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  background-color: #FFE0C2;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #FF6109;
 }
 
 .btn-signup-light:hover {
@@ -13889,6 +13927,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #FF9E45;
+  font-size: 0.8rem;
+  color: #232323;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .btn-long-dark:hover {
@@ -13916,6 +13959,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #FFE0C2;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #FF6109;
 }
 
 .btn-long-ligth:hover {
@@ -14164,36 +14211,24 @@ body {
   margin-top: 2rem;
 }
 
-.banner-background {
-  background-image: url("././../dist/imgs/Background.png");
-  background-repeat: no-repeat;
-}
-
 .admin-background {
-  background-image: url("././../dist/imgs/unsplash_jpkfc5_d-DI.png");
+  background-image: url("././../dist/imgs/background.png");
 }
 
-.user-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 0px;
-  gap: 32px;
-  width: 364px;
-  height: 796px;
-  background-color: #FFE0C2;
+@media only screen and (max-width: 480px) {
+  .imagotipo-responsive {
+    width: 200px;
+    height: 140px;
+    margin-left: 30px;
+    padding-right: 45px;
+  }
 }
 
-.text-user-container {
-  width: 314px;
-  height: 463px;
+@media only screen and (max-width: 480px) {
+  .isotipo-responsive {
+    width: 42px;
+    height: 30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -14244,4 +14279,10 @@ body {
 .navbar-color {
   background: #FF9E45;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 480px) {
+  .li-responsive {
+    margin-top: 2rem;
+  }
 }
