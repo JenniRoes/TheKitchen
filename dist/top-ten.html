@@ -19,28 +19,28 @@
     <title>Top 10</title>
 </head>
 
-<body class="banner-background">
+<body>
     <section id="app">
         <!--header-->
         <header class="container-fluid navbar-color">
             <!--navbar-->
             <nav id="navbar-main" class="navbar navbar-expand-lg">
                 <a class="navbar-brand color-header" href="#">
-                    <img src="../dist/imgs/logo-sm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
-                        alt="logo">
+                    <img src="../dist/imgs/logotipo-xsm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
+                        alt="logotipo">
                 </a>
                 <!--boton navbar-main-->
                 <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse ms-4 justify-content-between" id="menu">
-                    <ul class="navbar-nav gap-5 box-navbar">
-                        <li class=" position-relative"><a class="header-link" href="#">Home</a></li>
+                <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
+                    <ul class="navbar-nav gap-5 me-5">
+                        <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
                         <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
                         <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
                     </ul>
                     <!--search placeholder and button-->
-                    <div class="me-5 box-navbar">
+                    <div class="me-3 li-responsive">
                         <form class="d-flex input-group" role="search">
                             <input class="form-control me-2 input-search" type="search"
                                 placeholder="Search something..." aria-label="Search">
@@ -49,6 +49,8 @@
                         </form>
                     </div>
                 </div>
+                <!--user profile-->
+                <img class="me-5 pe-0" src="./imgs/avatar.png" alt="user profile">
             </nav>
         </header>
 
@@ -63,7 +65,7 @@
                         pulvinar placerat. </p>
                 </div>
                 <div class="col-3 ocultar">
-                    <p><img src="./imgs/Maskgroup.png" alt="photo food"></p>
+                    <p><img src="./imgs/banner-md.png" alt="photo food"></p>
                 </div>
             </div>
 
@@ -87,10 +89,10 @@
                                                 <div class="col-6">
                                                     <h5 class="card-title ms-3">{{item.title}}</h5>
                                                 </div>
-                                                <div class="col-6">
-                                                    <span class="badge badge-orange">{{item.category}}</span>
-                                                    <span class="badge badge-green">{{item.level}}</span>
-                                                    <span class="badge badge-orange">{{item.ocassion}}</span>
+                                                <div class="ms-3 mb-2">
+                                                    <span class="badge badge-orange p-1">{{item.category}}</span>
+                                                    <span class="badge badge-green p-1 ms-2">{{item.level}}</span>
+                                                    <span class="badge badge-orange p-1 ms-2">{{item.ocassion}}</span>
                                                 </div>
                                             </div>
                                             <p class="card-text overflow ms-3">{{item.description}} </p>
@@ -125,7 +127,7 @@
             <footer class="container-fluid footer-color mt-5 ">
                 <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
                     <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
-                    <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
+                    <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
                 </div>
             </footer>
 

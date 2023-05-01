@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--js bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="../dev/main.css">
     <!--title page-->
@@ -24,21 +26,21 @@
             <!--navbar-->
             <nav id="navbar-main" class="navbar navbar-expand-lg">
                 <a class="navbar-brand color-header" href="#">
-                    <img src="../dist/imgs/logo-sm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
-                        alt="logo">
+                    <img src="../dist/imgs/logotipo-xsm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
+                        alt="logotipo">
                 </a>
                 <!--boton navbar-main-->
                 <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse ms-4 justify-content-between" id="menu">
-                    <ul class="navbar-nav gap-5 box-navbar">
-                        <li class=" position-relative"><a class="header-link" href="#">Home</a></li>
+                <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
+                    <ul class="navbar-nav gap-5 me-5">
+                        <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
                         <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
                         <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
                     </ul>
                     <!--search placeholder and button-->
-                    <div class="me-5 box-navbar">
+                    <div class="me-3 li-responsive">
                         <form class="d-flex input-group" role="search">
                             <input class="form-control me-2 input-search" type="search"
                                 placeholder="Search something..." aria-label="Search">
@@ -47,14 +49,16 @@
                         </form>
                     </div>
                 </div>
+                <!--user profile-->
+                <img class="me-5 pe-0" src="./imgs/avatar.png" alt="user profile">
             </nav>
         </header>
 
         <!--recipe detail-->
         <div class="row  center mt-5 col-12 margin-box">
             <div class="center-img-detail col-md-4 col-lg-6">
-                <div class="card text-bg-dark  max-box-size">
-                    <img src="./imgs/unsplash_OFismyezPnY(13).png" alt="photo food">
+                <div class="card ">
+                    <img src="./imgs/recipedetail.png" alt="photo food">
                     <div class="card-img-overlay">
                         <div>
                             <p class="align-content-center"><span class="badge-orange-big ">Goat Meal</span></p>
@@ -67,15 +71,16 @@
                 </div>
                 <div class="">
                     <h1 class="mt-4">Recipe Title</h1>
+
                 </div>
-                <div>
-                    <span class="badge badge-orange">Entries</span>
-                    <span class="badge badge-green">Easy</span>
-                    <span class="badge badge-orange">All</span>
+                <div class="mt-2 ">
+                    <span class="badge badge-orange p-1">Entries</span>
+                    <span class="badge badge-green p-1 ms-2">Easy</span>
+                    <span class="badge badge-orange p-1 ms-2">All</span>
                 </div>
                 <div>
                     <h2 class="mt-4">Description</h2>
-                    <div class="row">
+                    <div class="row mt-4 mb-3">
                         <p class="label-time ms-3"><img src="imgs/icons/wash.svg" alt="preparation time icon">15min</p>
                         <p class="label-time ms-3"><img src="imgs/icons/local_fire_department.svg"
                                 alt="cooking time icon">30min</p>
@@ -96,7 +101,7 @@
                         gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam
                         sit.
                     </p>
-                    <h2 class="mt-2">Ingredients</h2>
+                    <h2 class="mt-5">Ingredients</h2>
                     <ul>
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
@@ -104,7 +109,7 @@
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
                     </ul>
-                    <h2 class="mt-2">Preparation</h2>
+                    <h2 class="mt-5">Preparation</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa.
                         Molestie
                         arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo
@@ -121,16 +126,16 @@
             </div>
 
             <!--related recipes-->
-            <div class="col-lg-5 center-img-detail" data-aos="fade-left">
-                <div class="row">
-                    <h2>Related Recipes</h2>
+            <div class="col-lg-5 center-img-detail" >
+                <div class="row ms-5 ps-4">
+                    <h2 class="ms-5 ps-5">Related Recipes</h2>
                 </div>
                 <div class="row center mt-3 recipe-display margin-cards margin-cards-block">
-                    <div v-for="(item, index) in relatedrecipes" class="col-sm-8 margin-cards">
-                        <div class="card" style="min-width:232px ;">
+                    <div v-for="(item, index) in relatedrecipes" class="col-sm-7 margin-cards mb-5" >
+                        <div class="card">
                             <img v-bind:src="item.image" class="card-img-top" alt="photo food">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between">
+                                <div>
                                     <h5 class="mt-2">{{item.title}}</h5>
                                     <h6><span class="badge badge-green mt-2">{{item.level}}</span></h6>
                                 </div>
@@ -152,24 +157,28 @@
         <footer class="container-fluid footer-color mt-5 ">
             <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
                 <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
-                <img src="../dist/imgs/logo-sm.png" class="img-fluid mt-4" alt="logo">
+                <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
             </div>
         </footer>
-
-        <!--Scripts-->
-        <!--bootstrap-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-            </script>
-        <!--Vuejs-->
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <!--js main-->
-        <script src="./js/main.js"></script>
-        <!--mounted app-->
-        <script>
-            const mountedApp = app.mount("#app"); 
-        </script>
     </section>
+    <!--Scripts-->
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+        </script>
+    <!--Vuejs-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--js main-->
+    <script src="./js/main.js"></script>
+    <!--mounted app-->
+    <script>
+        const mountedApp = app.mount("#app"); 
+    </script>
 </body>
 
 </html>

@@ -13520,7 +13520,7 @@ body {
 }
 
 .badge-green {
-  color: #232323;
+  color: #ffffff;
   background-color: #24E376;
   border-radius: 0.12rem;
   padding: 0.12rem;
@@ -13655,7 +13655,7 @@ body {
   position: absolute;
 }
 
-.top-recipes {
+.top-recipes-badge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13681,7 +13681,7 @@ body {
   color: #ffffff;
 }
 @media only screen and (max-width: 480px) {
-  .top-recipes {
+  .top-recipes-badge {
     border: 0.063rem solid #DADADA;
     border-radius: 0.75rem;
     padding: 0%;
@@ -13705,6 +13705,10 @@ body {
   position: relative;
 }
 
+.card-top-recipe {
+  width: 706px;
+}
+
 .user-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13726,6 +13730,17 @@ body {
 .text-user-container {
   width: 314px;
   height: 463px;
+}
+
+.recipes-container {
+  width: 1450px;
+  margin-left: 310px;
+}
+@media only screen and (max-width: 480px) {
+  .recipes-container {
+    margin-left: 2.3rem;
+    width: 324px;
+  }
 }
 
 .btn-orange-dark {
@@ -14105,7 +14120,7 @@ body {
 }
 
 .size-img-detail {
-  height: 35.12rem;
+  height: 31em;
   width: 33.12rem;
   margin-top: 0;
   border-radius: 0.2rem;
@@ -14241,10 +14256,18 @@ body {
   color: #ffffff;
   position: absolute;
   left: 0;
+  right: 0;
 }
 
-.footer-position-end {
-  bottom: 0rem;
+@media only screen and (min-width: 1200px) {
+  .footer-position-end {
+    bottom: 0rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .footer-position-end {
+    bottom: 0rem;
+  }
 }
 
 .header-link {

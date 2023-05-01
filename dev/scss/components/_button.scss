@@ -4,14 +4,14 @@
 //mixin btn-signup ($height, $width, $border-radius, $padding)
 //btn-basic($display, $flex-direction, $align, $padding, $gap, $width, $height, $background, $border-radius,$border)
 
-.btn-orange-dark{
+.btn-orange-dark {
     background: vars.$clr-orange-200;
     color: vars.$clr-black;
     text-decoration: none;
     border: none;
 }
 
-.btn-orange-ligth{
+.btn-orange-ligth {
     background: vars.$clr-orange-100;
     color: vars.$clr-orange-300;
     text-decoration: none;
@@ -25,7 +25,7 @@
     text-decoration: none;
 }
 
-.btn-signup-dark:hover{
+.btn-signup-dark:hover {
     color: vars.$clr-white;
 }
 
@@ -38,12 +38,12 @@
 
 }
 
-.btn-signup-light:hover{
+.btn-signup-light:hover {
     color: vars.$clr-black;
 }
 
 .btn-circular {
-    @include mixins.btn-basic(flex, row, flex-start, 0.37rem, 0, 2rem, 2rem, vars.$clr-orange-300, 100%, none);    
+    @include mixins.btn-basic(flex, row, flex-start, 0.37rem, 0, 2rem, 2rem, vars.$clr-orange-300, 100%, none);
 }
 
 .btn-item-list {
@@ -93,7 +93,7 @@
     font-weight: vars.$fw-med;
 }
 
-.btn-long-dark:hover{
+.btn-long-dark:hover {
     color: vars.$clr-white;
 }
 
@@ -106,7 +106,7 @@
     color: vars.$clr-orange-300;
 }
 
-.btn-long-ligth:hover{
+.btn-long-ligth:hover {
     color: vars.$clr-black;
 }
 
@@ -124,7 +124,7 @@
     justify-content: center;
 }
 
-  .hover-grow:hover, .hover-grow:focus, .hover-grow:active {
+.hover-grow:hover,.hover-grow:focus,.hover-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  }
+}

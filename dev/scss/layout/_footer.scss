@@ -1,12 +1,19 @@
 @use '../abstracts/vars';
+@use '../abstracts/mixins';
 
 .footer-color {
     background: vars.$clr-orange-200;
     color: vars.$clr-white;
     position: absolute;
     left: 0;
+    right: 0;
 }
 
 .footer-position-end{
-    bottom: 0rem;
+    @include mixins.respond-to(vars.$large-desktop){
+        bottom: 0rem;
+    }
+    @include mixins.respond-to(vars.$tablet-landscape){
+        bottom: 0rem;
+    }
 }

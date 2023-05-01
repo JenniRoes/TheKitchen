@@ -5,7 +5,7 @@
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-orange-300, 0.12rem, 0.12rem);
 }
 .badge-green {
-    @include mixins.basic-badge(vars.$clr-black, vars.$clr-green-100, 0.12rem, 0.12rem);
+    @include mixins.basic-badge(vars.$clr-white, vars.$clr-green-100, 0.12rem, 0.12rem);
 }
 
 .badge-orange-big{

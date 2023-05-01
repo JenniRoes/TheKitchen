@@ -47,7 +47,7 @@
 }
 
 .size-img-detail {
-    @include mixins.img-size(35.12rem, 33.12rem);
+    @include mixins.img-size(31em, 33.12rem);
     margin-top: 0;
     border-radius: 0.2rem;
 }

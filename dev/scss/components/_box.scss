@@ -51,7 +51,7 @@
     position: absolute;
 }
 
-.top-recipes {
+.top-recipes-badge {
     @include mixins.basic-box(flex, row, center, 0.25rem, 2.62rem, 2rem, 0rem 0rem 0.25rem 0.25rem, vars.$clr-orange-300);
     justify-content: center;
     gap: 0.25rem;
@@ -85,6 +85,10 @@
     position: relative;
 }
 
+.card-top-recipe{
+    width: 706px;
+}
+
 .user-container {
     display: flex;
     flex-direction: column;
@@ -101,3 +105,12 @@
     height: 463px;
 }
 
+.recipes-container{
+    width: 1450px;
+    margin-left: 310px;
+
+    @include mixins.respond-to(vars.$phone){
+        margin-left: 2.3rem;
+        width: 324px;
+    }
+}
