@@ -21,8 +21,8 @@
 
 <body>
     <section id="app">
-        <!--header-->
-        <header class="container-fluid navbar-color">
+         <!--header-->
+         <header class="container-fluid navbar-color">
             <!--navbar-->
             <nav id="navbar-main" class="navbar navbar-expand-lg">
                 <a class="navbar-brand color-header" href="#">
@@ -30,14 +30,15 @@
                         alt="logotipo">
                 </a>
                 <!--boton navbar-main-->
-                <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
                     <ul class="navbar-nav gap-5 me-5">
                         <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
-                        <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
-                        <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
+                        <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
+                        <li class=" position-relative"><a class="header-link" href="#">Categories</a></li>
+                        <li class="position-relative user-hidden"><a class="header-link" href="#">Profile</a></li>
                     </ul>
                     <!--search placeholder and button-->
                     <div class="me-3 li-responsive">
@@ -46,11 +47,14 @@
                                 placeholder="Search something..." aria-label="Search">
                             <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
                                     alt="search icon"></button>
+                            <!--user profile-->
+                            <a href="" class="header-link">
+                                <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
+                            </a>
                         </form>
                     </div>
                 </div>
-                <!--user profile-->
-                <img class="me-5 pe-0" src="./imgs/avatar.png" alt="user profile">
+
             </nav>
         </header>
 
@@ -64,64 +68,63 @@
                         eleifen consequat velit id euismod.Mauris nisi, suspendisse tristique ac urna. Fermentum sit enim porttitor et vitae. Vestibulum craspellentesque interdum sit ullamcorper. Sed purus fringilla pellentesque interdum volutpat elit
                         pulvinar placerat. </p>
                 </div>
-                <div class="col-3 ocultar">
+                <div class="col-3 banner-hidden">
                     <p><img src="./imgs/banner-md.png" alt="photo food"></p>
                 </div>
             </div>
 
-            <!--Top 10-->
-            <section class="container mt-4" >
-                <h2 class="mb-4">Top 10 recipes</h2>
-                <div class="justify-container">
-                    <div class="row">
-                        <div v-for="(item, index) in recipestopten" class="col-lg-6 mb-4">
-                            <!--inicial card-->
-                            <div class="card mb-3">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="img-fluid rounded-start top-recipes">{{item.position}}</div>
-                                        <img class="size-img-big img-fluid" v-bind:src="item.image" alt="photo food"
-                                            height="362" width="266">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card-body padding-0">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <h5 class="card-title ms-3">{{item.title}}</h5>
-                                                </div>
-                                                <div class="ms-3 mb-2">
-                                                    <span class="badge badge-orange p-1">{{item.category}}</span>
-                                                    <span class="badge badge-green p-1 ms-2">{{item.level}}</span>
-                                                    <span class="badge badge-orange p-1 ms-2">{{item.ocassion}}</span>
-                                                </div>
+             <!--Top 10-->
+        <section class="container mt-4" >
+            <h2 class="mb-4">Top 10 recipes</h2>
+            <div class="justify-container">
+                <div class="row">
+                    <div v-for="(item, index) in recipestopten" class="col-lg-6 mb-4">
+                        <!--inicial card-->
+                        <div class="card-top-recipe mb-3">
+                                <div class="img-container-top">
+                                    <div class="img-fluid rounded-start top-recipes-badge">{{item.position}}</div>
+                                    <img class="top-recipe-img" v-bind:src="item.image" alt="photo food"
+                                        height="362" width="266">
+                                </div>
+                                <div class="text-container-top">
+                                    <div class="card-body padding-0">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="card-title ms-3">{{item.title}}</h5>
                                             </div>
-                                            <p class="card-text overflow ms-3">{{item.description}} </p>
-                                            <div class="row ms-1 ms-3">
-                                                <p class="label-time"><img
-                                                        src="imgs/icons/nest_clock_farsight_analog-orange.svg"
-                                                        alt="preparation time icon">{{item.totaltime}}</p>
-                                                <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg"
-                                                        alt="portions icon">4-5</p>
+                                            <div class=" mb-2">
+                                                <span class="badge badge-orange p-1">{{item.category}}</span>
+                                                <span class="badge badge-green p-1">{{item.level}}</span>
+                                                <span class="badge badge-orange p-1">{{item.ocassion}}</span>
                                             </div>
-                                            <div class="row ms-2">
-                                                <div class="col-10">
-                                                    <p class="card-text"><small class="text-muted">{{item.time}}</small>
-                                                    </p>
-                                                </div>
-                                                <div class="col-1 ">
-                                                    <button class=" btn-circular mt-3 mb-3 hover-grow"><img
-                                                            src="./imgs/icons/favorite.svg"
-                                                            class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
-                                                </div>
+                                        </div>
+                                        <p class="card-text overflow">{{item.description}} </p>
+                                        <div class="row">
+                                            <p class="label-time"><img
+                                                    src="imgs/icons/nest_clock_farsight_analog-orange.svg"
+                                                    alt="preparation time icon">{{item.totaltime}}</p>
+                                            <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg"
+                                                    alt="portions icon">4-5</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <p class="card-text"><small class="text-muted">{{item.time}}</small>
+                                                </p>
+                                            </div>
+                                            <div class="col-1 ">
+                                                <button class=" btn-circular mt-3 mb-3 hover-grow"><img
+                                                        src="./imgs/icons/favorite.svg"
+                                                        class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--final card-->
                         </div>
+                        <!--final card-->
                     </div>
-            </section>
+                </div>
+        </section>
 
             <!--footer-->
             <footer class="container-fluid footer-color mt-5 ">

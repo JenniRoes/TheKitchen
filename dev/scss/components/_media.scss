@@ -25,12 +25,7 @@
 
 .size-img-big {
     @include mixins.img-size(16.62rem, 21.5rem);
-
-    //media-query
-    @include mixins.respond-to(vars.$phone) {
-        height: 16.62rem;
-        width: 24.25rem;
-    }
+    
 }
 
 .size-img-md {
@@ -156,10 +151,13 @@
 }
 
 
-//media queries general 
-@media screen and (max-width: 600px) {
-
+//media queries
+@include mixins.respond-to(vars.$phone) {
+    .banner-hidden {
+        display: none;
+    }
     .center-img-detail {
         max-width: 90%;
     }
 }
+

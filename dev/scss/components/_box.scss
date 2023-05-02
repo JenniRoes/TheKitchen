@@ -51,25 +51,6 @@
     position: absolute;
 }
 
-.top-recipes-badge {
-    @include mixins.basic-box(flex, row, center, 0.25rem, 2.62rem, 2rem, 0rem 0rem 0.25rem 0.25rem, vars.$clr-orange-300);
-    justify-content: center;
-    gap: 0.25rem;
-    position: absolute;
-    left: 1.5rem;
-    top: 0rem;
-    color: vars.$clr-white;
-
-    //media-query
-    @include mixins.respond-to(vars.$phone) {
-        border: 0.063rem solid vars.$clr-gray-100;
-        border-radius: 0.75rem;
-        padding: 0%;
-        width: 100%;
-        margin: 1%;
-    }
-}
-
 .box-bo {
     width: 100%;
     padding-left: 6%;
@@ -80,13 +61,58 @@
     border: 0.063rem solid vars.$clr-gray-100;
     border-radius: 0.75rem;
     padding: 0px;
-    width: 336px;
-    height: 305px;
+    min-width: 336px;
+    max-height: 305px;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.card-top-recipe{
-    width: 706px;
+
+
+.card-top-recipe {
+    display: flex;
+    flex-direction: row;
+    max-width: 680px;
+    border: 0.063rem solid vars.$clr-gray-100;
+    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container-top{
+    margin-left: 0;
+    width: 280px;
+    flex: 1 1 50%;
+}
+
+.img-container-top{
+    flex: 1 1 50%;
+    height: 240px;
+    width: 310px;
+    object-fit: cover;
+
+    @include mixins.respond-to(vars.$phone){
+    width: 325px;
+    height: 110px;
+    object-fit: cover;
+    }
+}
+
+
+.top-recipe-img {
+    width: 320px;
+    height: 250px;
+
+}
+
+
+.card-recipe img {
+    width: 100%;
+    max-height: 110px;
+    object-fit: cover;
 }
 
 .user-container {
@@ -105,12 +131,54 @@
     height: 463px;
 }
 
-.recipes-container{
+.recipes-container {
     width: 1450px;
-    margin-left: 310px;
+    margin-left: 250px;
 
-    @include mixins.respond-to(vars.$phone){
+    @include mixins.respond-to(vars.$phone) {
         margin-left: 2.3rem;
         width: 324px;
     }
+}
+
+.photo-hidden {
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.user-hidden {
+    @include mixins.respond-to(vars.$large-desktop) {
+        display: none;
+    }
+}
+
+@include mixins.respond-to(vars.$phone) {
+    .card-recipe {
+        flex-direction: row;
+    }
+
+    .image-container {
+        flex: 1 1 40%;
+    }
+
+    .detail-container {
+        flex: 1 1 60%;
+    }
+
+    .card-recipe img {
+        height: 100% !important;
+    }
+
+    .card-top-recipe{
+        flex-direction: column;
+        width: 300px !important;
+    }
+
+    .top-recipe-img{
+        width: 100%;
+        max-height: 110px;
+        object-fit: cover;
+    }
+    
 }

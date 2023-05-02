@@ -19,38 +19,42 @@
 
 <body>
     <section id="app">
-        <!--header-->
-        <header class="container-fluid navbar-color">
-            <!--navbar-->
-            <nav id="navbar-main" class="navbar navbar-expand-lg">
-                <a class="navbar-brand color-header" href="#">
-                    <img src="../dist/imgs/logotipo-xsm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
-                        alt="logotipo">
-                </a>
-                <!--boton navbar-main-->
-                <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
-                    <ul class="navbar-nav gap-5 me-5">
-                        <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
-                        <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
-                        <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
-                    </ul>
-                    <!--search placeholder and button-->
-                    <div class="me-3 li-responsive">
-                        <form class="d-flex input-group" role="search">
-                            <input class="form-control me-2 input-search" type="search"
-                                placeholder="Search something..." aria-label="Search">
-                            <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
-                                    alt="search icon"></button>
-                        </form>
-                    </div>
+       <!--header-->
+       <header class="container-fluid navbar-color">
+        <!--navbar-->
+        <nav id="navbar-main" class="navbar navbar-expand-lg">
+            <a class="navbar-brand color-header" href="#">
+                <img src="../dist/imgs/logotipo-xsm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
+                    alt="logotipo">
+            </a>
+            <!--boton navbar-main-->
+            <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
+                <ul class="navbar-nav gap-5 me-5">
+                    <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
+                    <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
+                    <li class=" position-relative"><a class="header-link" href="#">Categories</a></li>
+                    <li class="position-relative user-hidden"><a class="header-link" href="#">Profile</a></li>
+                </ul>
+                <!--search placeholder and button-->
+                <div class="me-3 li-responsive">
+                    <form class="d-flex input-group" role="search">
+                        <input class="form-control me-2 input-search" type="search"
+                            placeholder="Search something..." aria-label="Search">
+                        <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                                alt="search icon"></button>
+                        <!--user profile-->
+                        <a href="" class="header-link">
+                            <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
+                        </a>
+                    </form>
                 </div>
-                <!--user profile-->
-                <img class="me-5 pe-0" src="./imgs/avatar.png" alt="user profile">
-            </nav>
-        </header>
+            </div>
+
+        </nav>
+    </header>
 
 
         <section class="row justify-content-center ms-5">
@@ -79,26 +83,29 @@
                 <section class="container mt-4 mb-5 gap-5 ">
                     <h2 class="ms-5 ps-4">Your collection</h2>
                     <section class="row mt-4 gap-3 center">
-                        <!--inicial card-->
-                        <div v-for="(item, index) in recipes" class="position-relative card-recipe p-0 m-0">
-                            <img v-bind:src="item.image" class="img-fluid top-border-photo" alt="photo food">
-                            <div class="text-start ms-4 me-2">
-                                <div>
-                                    <h5 class="mt-2">{{item.title}}</h5>
-                                    <h6><span class="badge badge-green mt-2">{{item.level}}</span></h6>
-                                </div>
-                                <div>
-                                    <p class="pt-2 overflow ">{{item.description}}</p>
-                                </div>
-                                <div class="d-flex justify-content-between gap-1">
-                                    <h6 class="mt-3 opacity-50"><small>{{item.time}}</small></h6>
-                                    <button class=" btn-circular mt-3 mb-3 hover-grow"><img
-                                            src="../dist/imgs/icons/favorite.svg" class="img-fluid mx-auto mt-1"
-                                            alt="favorite icon"></button>
-                                </div>
-                            </div>
+                       <!--inicial card-->
+                <div v-for="(item, index) in recipes" class="card-recipe col-2 p-0 m-0">
+                    <div class="image-container">
+                        <img v-bind:src="item.image" class="img-fluid card-recipe-img top-border-photo"
+                            alt="photo food">
+                    </div>
+                    <div class="detail-container text-start ms-3 me-3">
+                        <div>
+                            <h5 class="mt-2">{{item.title}}</h5>
+                            <h6><span class="badge badge-green mt-2">{{item.level}}</span></h6>
                         </div>
-                        <!--final card-->
+                        <div>
+                            <p class="pt-2 overflow ">{{item.description}}</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center gap-1">
+                            <h6 class="mt-3 opacity-50"><small>{{item.time}}</small></h6>
+                            <button class=" btn-circular mt-3 mb-3 hover-grow"><img
+                                    src="../dist/imgs/icons/favorite.svg" class="img-fluid"
+                                    alt="favorite icon"></button>
+                        </div>
+                    </div>
+                </div>
+                <!--final card-->
                     </section>
                 </section>
             </div>

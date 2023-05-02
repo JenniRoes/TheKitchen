@@ -20,3 +20,14 @@
     left: 1rem;
     top: 1rem;
 }
+
+.top-recipes-badge {
+    @include mixins.basic-box(flex, row, center, 0.25rem, 2.62rem, 2rem, 0rem 0rem 0.25rem 0.25rem, vars.$clr-orange-300);
+    justify-content: center;
+    gap: 0.25rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 0rem;
+    color: vars.$clr-white;
+    
+}
