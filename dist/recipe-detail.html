@@ -21,7 +21,7 @@
 
 <body>
     <section id="app">
-        <!--header-->
+         <!--header-->
         <header class="container-fluid navbar-color">
             <!--navbar-->
             <nav id="navbar-main" class="navbar navbar-expand-lg">
@@ -30,32 +30,36 @@
                         alt="logotipo">
                 </a>
                 <!--boton navbar-main-->
-                <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
+                <div class="collapse navbar-collapse ms-4 justify-content-end" id="menu">
                     <ul class="navbar-nav gap-5 me-5">
                         <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
-                        <li class=" position-relative"><a class="header-link " href="#">Top Recipes</a></li>
-                        <li class=" position-relative"><a class="header-link " href="#">Categories</a></li>
+                        <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
+                        <li class=" position-relative"><a class="header-link" href="#">Categories</a></li>
+                        <li class="position-relative user-hidden"><a class="header-link" href="#">Profile</a></li>
                     </ul>
                     <!--search placeholder and button-->
                     <div class="me-3 li-responsive">
                         <form class="d-flex input-group" role="search">
                             <input class="form-control me-2 input-search" type="search"
                                 placeholder="Search something..." aria-label="Search">
-                            <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                            <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                                     alt="search icon"></button>
+                            <!--user profile-->
+                            <a href="" class="header-link">
+                                <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
+                            </a>
                         </form>
                     </div>
                 </div>
-                <!--user profile-->
-                <img class="me-5 pe-0" src="./imgs/avatar.png" alt="user profile">
+
             </nav>
         </header>
 
         <!--recipe detail-->
-        <div class="row  center mt-5 col-12 margin-box">
+        <div class="row center mt-5 col-12 margin-box">
             <div class="center-img-detail col-md-4 col-lg-6">
                 <div class="card ">
                     <img src="./imgs/recipedetail.png" alt="photo food">
@@ -126,14 +130,14 @@
             </div>
 
             <!--related recipes-->
-            <div class="col-lg-5 center-img-detail" >
+            <div class="col-lg-4 center-img-detail" >
                 <div class="row ms-5 ps-4">
-                    <h2 class="ms-5 ps-5">Related Recipes</h2>
+                    <h2 class="ms-4 ps-5 col title-responsive">Related Recipes</h2>
                 </div>
                 <div class="row center mt-3 recipe-display margin-cards margin-cards-block">
                     <div v-for="(item, index) in relatedrecipes" class="col-sm-7 margin-cards mb-5" >
                         <div class="card">
-                            <img v-bind:src="item.image" class="card-img-top" alt="photo food">
+                            <img v-bind:src="item.image" class="card-recipe-img detail-img" alt="photo food">
                             <div class="card-body">
                                 <div>
                                     <h5 class="mt-2">{{item.title}}</h5>

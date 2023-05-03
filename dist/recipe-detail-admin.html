@@ -27,95 +27,107 @@
                     alt="logotipo">
             </a>
             <!--boton navbar-main-->
-            <button class="navbar-toggler " data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+            <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
+            <div class="collapse navbar-collapse ms-4 justify-content-end" id="menu">
                 <ul class="navbar-nav gap-5 me-5">
-                    <li class=" position-relative li-responsive"><a class="header-link" href="#">Recipes</a></li>
-                    <li class=" position-relative"><a class="header-link " href="#">Users</a></li>
+                    <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
+                    <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
+                    <li class=" position-relative"><a class="header-link" href="#">Categories</a></li>
+                    <li class="position-relative user-hidden"><a class="header-link" href="#">Profile</a></li>
                 </ul>
                 <!--search placeholder and button-->
                 <div class="me-3 li-responsive">
                     <form class="d-flex input-group" role="search">
                         <input class="form-control me-2 input-search" type="search" placeholder="Search something..."
                             aria-label="Search">
-                        <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                        <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                                 alt="search icon"></button>
+                        <!--user profile-->
+                        <a href="" class="header-link">
+                            <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
+                        </a>
                     </form>
                 </div>
             </div>
-            <!--user profile-->
-            <img class="me-5 pe-0" src="./imgs/avatar.png" alt="user profile">
+
         </nav>
     </header>
 
     <!--recipe detail-->
-    <section class="d-flex mt-4 ms-5">
-        <div class="col-4 card">
-            <img src="./imgs/detail.png" class="img-fluid" alt="food photo">
-            <div class="card-img-overlay">
+        <section class="row mt-4 ms-5">
+            <div class="col-4 card img-detail">
+                <img src="./imgs/detail.png" class="img-fluid" alt="food photo">
+                <div class="card-img-overlay">
+                    <div>
+                        <p class="align-content-center"><span class="badge-orange-big pt-1">Goat Meal</span></p>
+                    </div>
+                    <div class="align-end">
+                        <button class=" btn-circular hover-grow"><img src="./imgs/icons/favorite.svg"
+                                class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col me-5 title-responsive">
+                <h1>Recipe title</h1>
                 <div>
-                    <p class="align-content-center"><span class="badge-orange-big pt-1">Goat Meal</span></p>
+                    <span class="badge badge-orange p-1">Entries</span>
+                    <span class="badge badge-green p-1">Easy</span>
+                    <span class="badge badge-orange p-1">All</span>
                 </div>
-                <div class="align-end">
-                    <button class=" btn-circular hover-grow"><img src="./imgs/icons/favorite.svg"
-                            class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
+                <h2 class="mt-4">Description</h2>
+                <div class="d-flex align-items-start mt-4 mb-4">
+                    <p class="label-time"><img src="imgs/icons/wash.svg" alt="preparation time icon">15min</p>
+                    <p class="label-time ms-2"><img src="imgs/icons/local_fire_department.svg"
+                            alt="cooking time icon">30min
+                    </p>
+                    <p class="label-time ms-2"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
+                            alt="total time icon">45min</p>
+                    <p class="label-time ms-2"><img src="imgs/icons/pie_chart_orange.svg" alt="portions time icon">4-5
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="col ms-0 ms-5">
-            <h1>Recipe title</h1>
-            <div>
-                <span class="badge badge-orange p-1">Entries</span>
-                <span class="badge badge-green p-1">Easy</span>
-                <span class="badge badge-orange p-1">All</span>
-            </div>
-            <h2 class="mt-4">Description</h2>
-            <div class="d-flex align-items-start mt-4 mb-4">
-                <p class="label-time"><img src="imgs/icons/wash.svg" alt="preparation time icon">15min</p>
-                <p class="label-time ms-2"><img src="imgs/icons/local_fire_department.svg" alt="cooking time icon">30min
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa. Molestie
+                    arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo elementum
+                    ac
+                    morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed fringilla.
+                    Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed nisl metus,
+                    fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet mauris. Dolor
+                    commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea tempus gravida
+                    maecenas.
+                    Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam sit.</p>
+                <h2 class="mt-5">Ingredients</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                </ul>
+                <h2 class="mt-5">Preparation</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa. Molestie
+                    arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo elementum
+                    ac morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed
+                    fringilla. Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed
+                    nisl metus, fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet
+                    mauris. Dolor commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea tempus
+                    gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam sit.
                 </p>
-                <p class="label-time ms-2"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
-                        alt="total time icon">45min</p>
-                <p class="label-time ms-2"><img src="imgs/icons/pie_chart_orange.svg" alt="portions time icon">4-5</p>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa. Molestie
-                arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo elementum ac
-                morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed fringilla.
-                Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed nisl metus,
-                fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet mauris. Dolor
-                commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea tempus gravida maecenas.
-                Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam sit.</p>
-            <h2 class="mt-5">Ingredients</h2>
-            <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-            </ul>
-            <h2 class="mt-5">Preparation</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh aenean facilisis sapien massa. Molestie
-                arcu phasellus nulla tellus a quam sit egestas. Ante morbi ultrices volutpat nisl commodo elementum
-                ac morbi. Pulvinar ac lorem morbi condimentum vestibulum. Aliquet velit viverra a turpis sed
-                fringilla. Amet, sit vestibulum porttitor lacus eu, tincidunt augue vel, massa. Volutpat non sed
-                nisl metus, fermentum sed suspendisse. Volutpat mus urna feugiat consequat. Eget fames elit amet
-                mauris. Dolor commodo tempor vitae natoque magna turpis. Nunc commodo vestibulum eget platea tempus
-                gravida maecenas. Adipiscing maecenas morbi adipiscing felis, tincidunt egestas tortor, diam sit.
-            </p>
+
+        </section>
+
+
+        <!--buttons-->
+        <div class="d-flex flex-row-reverse me-3 mt-4">
+            <button class="btn-admin-orange me-2 hover-grow">Edit</button>
+            <button class="btn-admin-red me-5 hover-grow">Delete</button>
+            
         </div>
+    
 
-    </section>
-
-    <!--buttons-->
-    <div class="d-flex flex-row-reverse me-3 mt-4">
-        <button class="btn-admin-red me-5 hover-grow">Delete</button>
-        <button class="btn-admin-orange me-2 hover-grow">Edit</button>
-    </div>
-
-    <!--footer-->
-    <footer class="container-fluid footer-position-end footer-color mt-5 ">
+     <!--footer-->
+     <footer class="container-fluid footer-color mt-5 ">
         <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
             <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
             <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">

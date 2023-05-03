@@ -9,11 +9,32 @@
     right: 0;
 }
 
-.footer-position-end{
-    @include mixins.respond-to(vars.$large-desktop){
+.footer-position-end {
+    @include mixins.respond-to(vars.$large-desktop) {
         bottom: 0rem;
     }
-    @include mixins.respond-to(vars.$tablet-landscape){
+
+    @include mixins.respond-to(vars.$tablet-landscape) {
+        bottom: 0rem;
+    }
+
+    @include mixins.respond-to(vars.$phone) {
+        bottom: 0rem;
+    }
+}
+
+
+.footer-relative {
+    @include mixins.respond-to(vars.$phone) {
+        position: relative;
+    }
+}
+
+.footer-signup{
+    @include mixins.respond-to(vars.$large-desktop) {
+        bottom: 0rem;
+    }
+    @include mixins.respond-to(vars.$tablet-landscape) {
         bottom: 0rem;
     }
 }

@@ -34,7 +34,7 @@
                 <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
+                <div class="collapse navbar-collapse ms-4 justify-content-end" id="menu">
                     <ul class="navbar-nav gap-5 me-5">
                         <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
                         <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
@@ -46,7 +46,7 @@
                         <form class="d-flex input-group" role="search">
                             <input class="form-control me-2 input-search" type="search"
                                 placeholder="Search something..." aria-label="Search">
-                            <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                            <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                                     alt="search icon"></button>
                             <!--user profile-->
                             <a href="" class="header-link">
@@ -101,7 +101,7 @@
                         <div class="d-flex justify-content-between align-items-center gap-1">
                             <h6 class="mt-3 opacity-50"><small>{{item.time}}</small></h6>
                             <button class=" btn-circular mt-3 mb-3 hover-grow"><img
-                                    src="../dist/imgs/icons/favorite.svg" class="img-fluid"
+                                    src="../dist/imgs/icons/favorite.svg" class="img-fluid mt-1"
                                     alt="favorite icon"></button>
                         </div>
                     </div>
@@ -123,33 +123,33 @@
                                     <img class="top-recipe-img" v-bind:src="item.image" alt="photo food"
                                         height="362" width="266">
                                 </div>
-                                <div class="text-container-top">
+                                <div class="text-container-top mt-4 me-3 ms-2">
                                     <div class="card-body padding-0">
                                         <div class="row">
                                             <div class="col-6">
                                                 <h5 class="card-title ms-3">{{item.title}}</h5>
                                             </div>
-                                            <div class=" mb-2">
+                                            <div class="ms-3 mb-2 mt-2">
                                                 <span class="badge badge-orange p-1">{{item.category}}</span>
-                                                <span class="badge badge-green p-1">{{item.level}}</span>
-                                                <span class="badge badge-orange p-1">{{item.ocassion}}</span>
+                                                <span class="badge badge-green p-1 ms-2">{{item.level}}</span>
+                                                <span class="badge badge-orange p-1 ms-2">{{item.ocassion}}</span>
                                             </div>
                                         </div>
-                                        <p class="card-text overflow">{{item.description}} </p>
-                                        <div class="row">
+                                        <p class="card-text overflow ms-3">{{item.description}} </p>
+                                        <div class="row ms-3 mt-2 mb-2">
                                             <p class="label-time"><img
                                                     src="imgs/icons/nest_clock_farsight_analog-orange.svg"
                                                     alt="preparation time icon">{{item.totaltime}}</p>
                                             <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg"
                                                     alt="portions icon">4-5</p>
                                         </div>
-                                        <div class="row">
+                                        <div class="row ms-2">
                                             <div class="col-10">
-                                                <p class="card-text"><small class="text-muted">{{item.time}}</small>
+                                                <p class="card-text mt-2"><small class="text-muted">{{item.time}}</small>
                                                 </p>
                                             </div>
                                             <div class="col-1 ">
-                                                <button class=" btn-circular mt-3 mb-3 hover-grow"><img
+                                                <button class=" btn-circular mt-1 mb-3 hover-grow"><img
                                                         src="./imgs/icons/favorite.svg"
                                                         class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
                                             </div>
@@ -170,7 +170,8 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes" class="card-recipe col-2 p-0 m-0">
                     <div class="image-container">
-                        <img v-bind:src="item.image" class="img-fluid top-border-photo" alt="photo food">
+                        <img v-bind:src="item.image" class="img-fluid card-recipe-img top-border-photo"
+                            alt="photo food">
                     </div>
                     <div class="detail-container text-start ms-3 me-3">
                         <div>
@@ -183,7 +184,7 @@
                         <div class="d-flex justify-content-between align-items-center gap-1">
                             <h6 class="mt-3 opacity-50"><small>{{item.time}}</small></h6>
                             <button class=" btn-circular mt-3 mb-3 hover-grow"><img
-                                    src="../dist/imgs/icons/favorite.svg" class="img-fluid"
+                                    src="../dist/imgs/icons/favorite.svg" class="img-fluid mt-1"
                                     alt="favorite icon"></button>
                         </div>
                     </div>
@@ -191,7 +192,7 @@
                 <!--final card-->
             </section>
         </section>
-    </section>
+
 
     <!--footer-->
     <footer class="container-fluid footer-color mt-5 ">
