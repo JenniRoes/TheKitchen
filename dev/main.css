@@ -13478,6 +13478,13 @@ body {
   color: #FF6109;
 }
 
+.text-account {
+  color: #FF6109;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .text-forms {
   color: #77787A;
   font-weight: 500;
@@ -13510,6 +13517,18 @@ body {
   font-weight: 500;
   font-size: 1.5rem;
   color: #FF6109;
+}
+@media only screen and (max-width: 480px) {
+  .user-name {
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .badge-orange {
@@ -13757,6 +13776,25 @@ body {
      object-fit: cover;
 }
 
+.profile-container {
+  width: 1800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 100px;
+}
+@media only screen and (max-width: 480px) {
+  .profile-container {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
 .user-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13769,15 +13807,43 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0px;
+  margin-top: 50px;
   gap: 32px;
   width: 364px;
-  height: 796px;
+  height: 860px;
   background-color: #FFE0C2;
+}
+@media only screen and (max-width: 480px) {
+  .user-container {
+    width: 100%;
+    height: 940px;
+    margin-top: 0;
+    color: #ffffff;
+    background-color: #FF6109;
+  }
 }
 
 .text-user-container {
   width: 314px;
   height: 463px;
+}
+@media only screen and (max-width: 480px) {
+  .text-user-container {
+    width: 326px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .btn-hidden {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .btn-hidden-desk {
+    display: none;
+    position: relative;
+  }
 }
 
 .recipes-container {
@@ -14237,8 +14303,8 @@ body {
 }
 
 .size-img-sm {
-  height: 3.063rem;
-  width: 1.9rem;
+  height: 2.073rem;
+  width: 0.2rem;
 }
 
 .size-img-list {
@@ -14390,20 +14456,8 @@ body {
   right: 0;
 }
 
-@media only screen and (min-width: 1200px) {
-  .footer-position-end {
-    bottom: 0rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .footer-position-end {
-    bottom: 0rem;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .footer-position-end {
-    bottom: 0rem;
-  }
+.footer-position-end {
+  bottom: 0rem;
 }
 
 @media only screen and (max-width: 480px) {

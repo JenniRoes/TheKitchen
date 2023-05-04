@@ -12,6 +12,14 @@
     color: vars.$clr-orange-300;
 }
 
+.text-account{
+    color: vars.$clr-orange-300;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: vars.$fw-med;
+
+}
+
 .text-forms{
     @include mixins.custom-font(vars.$clr-gray-400, vars.$fw-med);
 }
@@ -39,4 +47,10 @@
 
 .user-name{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-md, vars.$clr-orange-300);
+
+    @include mixins.respond-to(vars.$phone){
+        color: vars.$clr-white;
+        display: flex;
+        flex-direction: column;
+    }
 }

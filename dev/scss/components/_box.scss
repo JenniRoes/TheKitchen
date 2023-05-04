@@ -113,20 +113,60 @@
     object-fit: cover;
 }
 
+
+.profile-container {
+    width: 1800px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+
+    @include mixins.respond-to(vars.$phone) {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
 .user-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
+    margin-top: 50px;
     gap: 32px;
     width: 364px;
-    height: 796px;
+    height: 860px;
     background-color: vars.$clr-orange-50;
+
+    @include mixins.respond-to(vars.$phone) {
+        width: 100%;
+        height: 940px;
+        margin-top: 0;
+        color: vars.$clr-white;
+        background-color: vars.$clr-orange-300;
+    }
 }
 
 .text-user-container {
     width: 314px;
     height: 463px;
+
+    @include mixins.respond-to(vars.$phone) {
+        width: 326px;
+    }
+}
+
+.btn-hidden {
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.btn-hidden-desk {
+    @include mixins.respond-to(vars.$large-desktop) {
+        display: none;
+        position: relative;
+    }
 }
 
 .recipes-container {
@@ -214,6 +254,4 @@
         flex-direction: column;
     }
 }
-
-
 
