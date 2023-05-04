@@ -13531,6 +13531,11 @@ body {
   }
 }
 
+.recipe-title {
+  text-decoration: none;
+  color: #232323;
+}
+
 .badge-orange {
   color: #ffffff;
   background-color: #FF6109;

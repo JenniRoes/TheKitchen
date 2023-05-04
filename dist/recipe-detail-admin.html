@@ -32,10 +32,10 @@
             </button>
             <div class="collapse navbar-collapse ms-4 justify-content-end" id="menu">
                 <ul class="navbar-nav gap-5 me-5">
-                    <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
-                    <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
-                    <li class=" position-relative"><a class="header-link" href="#">Categories</a></li>
-                    <li class="position-relative user-hidden"><a class="header-link" href="#">Profile</a></li>
+                    <li class=" position-relative li-responsive"><a class="header-link" href="./home.html">Home</a></li>
+                    <li class=" position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
+                    <li class=" position-relative"><a class="header-link" href="./categories.html">Categories</a></li>
+                    <li class="position-relative user-hidden"><a class="header-link" href="./user-profile.html">Profile</a></li>
                 </ul>
                 <!--search placeholder and button-->
                 <div class="me-3 li-responsive">
@@ -45,7 +45,7 @@
                         <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                                 alt="search icon"></button>
                         <!--user profile-->
-                        <a href="" class="header-link">
+                        <a href="./user-profile.html" class="header-link">
                             <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
                         </a>
                     </form>
@@ -120,8 +120,8 @@
 
         <!--buttons-->
         <div class="d-flex flex-row-reverse me-3 mt-4">
-            <button class="btn-admin-orange me-2 hover-grow">Edit</button>
-            <button class="btn-admin-red me-5 hover-grow">Delete</button>
+            <a class="btn-admin-orange me-2 hover-grow recipe-title" href="./recipe-edit-admin.html">Edit</a>
+            <a class="btn-admin-red me-5 hover-grow recipe-title" href="./recipe-list-admin.html">Delete</a>
             
         </div>
     

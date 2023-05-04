@@ -33,10 +33,10 @@
                 </button>
                 <div class="collapse navbar-collapse ms-4 justify-content-end " id="menu">
                     <ul class="navbar-nav gap-5 me-5">
-                        <li class=" position-relative li-responsive"><a class="header-link" href="#">Home</a></li>
-                        <li class=" position-relative"><a class="header-link" href="#">Top Recipes</a></li>
-                        <li class=" position-relative"><a class="header-link" href="#">Categories</a></li>
-                        <li class="position-relative user-hidden"><a class="header-link" href="#">Profile</a></li>
+                        <li class=" position-relative li-responsive"><a class="header-link" href="./home.html">Home</a></li>
+                        <li class=" position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
+                        <li class=" position-relative"><a class="header-link" href="./categories.html">Categories</a></li>
+                        <li class="position-relative user-hidden"><a class="header-link" href="./user-profile.html">Profile</a></li>
                     </ul>
                     <!--search placeholder and button-->
                     <div class="me-3 li-responsive">
@@ -46,7 +46,7 @@
                             <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
                                     alt="search icon"></button>
                             <!--user profile-->
-                            <a href="" class="header-link">
+                            <a href="./user-profile.html" class="header-link">
                                 <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
                             </a>
                         </form>
@@ -75,12 +75,12 @@
                         commodo vestibulum eget platea tempus gravida maecenas. Adipiscing maecenas morbi adipiscing
                         felis, tincidunt egestas tortor, diam sit.</p>
                     <button class="btn btn-signup-dark mt-4 btn-hidden">Edit profile</button>
-                    <button class="btn btn-signup-dark mt-4 btn-hidden">Log out</button>
+                    <a href="./login.html" class="btn btn-signup-dark mt-4 btn-hidden">Log out</a>
                     <!--buttons for mobile responsive-->
                 <div class="center row mb-5 mt-5 btn-hidden-desk">
-                    <button class="btn btn-signup-light mt-4 ">Edit profile</button>
-                    <button class="btn btn-signup-light mt-4">Your recipes collection</button>
-                    <button class="btn btn-signup-dark mt-4 ">Log out</button>
+                    <a href="./edit-profile.html" class="btn btn-signup-light mt-4 recipe-title">Edit profile</a>
+                    <a href="./recipes-collection.html" class="btn btn-signup-light mt-4 recipe-title">Your recipes collection</a>
+                    <a href="./login.html" class="btn btn-signup-dark mt-4 recipe-title">Log out</a>
                 </div>
                 </div>
                 
@@ -100,7 +100,7 @@
                             </div>
                             <div class="detail-container text-start ms-3 me-3">
                                 <div>
-                                    <h5 class="mt-2">{{item.title}}</h5>
+                                    <h5 class="mt-2"><a class="recipe-title" href="./recipe-detail.html">{{item.title}}</a></h5>
                                     <h6><span class="badge badge-green mt-2">{{item.level}}</span></h6>
                                 </div>
                                 <div>
