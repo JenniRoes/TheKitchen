@@ -23,53 +23,6 @@
     @include mixins.img-size(12.5rem, 12.5rem);
 }
 
-.size-img-big {
-    @include mixins.img-size(16.62rem, 21.5rem);
-    
-}
-
-.size-img-md {
-    @include mixins.img-size(14.62rem, 21.5rem);
-}
-
-.size-img-sm {
-    @include mixins.img-size(2.073rem, 0.20rem);
-}
-
-.size-img-list {
-    @include mixins.img-size(3.5rem, 15.375rem);
-    border-radius: 0.5rem;
-}
-
-.size-img-detail {
-    @include mixins.img-size(31em, 33.12rem);
-    margin-top: 0;
-    border-radius: 0.2rem;
-}
-
-.size-img-categories {
-    @include mixins.img-size(10rem, 13rem);
-
-    //media-query
-    @include mixins.respond-to(vars.$phone) {
-        height: 10rem;
-        width: 28rem;
-    }
-}
-
-.img-retote {
-    transform: rotate(90deg);
-}
-
-.color-input {
-    border-color: vars.$clr-orange-300;
-}
-
-.border-photo-card {
-    border: 0.12rem solid vars.$clr-gray-200;
-    border-radius: 0.75rem 0rem 0rem 0.75rem;
-}
-
 .label-time {
     display: flex;
     flex-direction: row;
@@ -150,6 +103,17 @@
     }
 }
 
+.photo-hidden {
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.user-hidden {
+    @include mixins.respond-to(vars.$large-desktop) {
+        display: none;
+    }
+}
 
 //media queries
 @include mixins.respond-to(vars.$phone) {

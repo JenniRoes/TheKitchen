@@ -1,11 +1,8 @@
 @use '../abstracts/vars';
+
 .input-wrapper {
     position: relative;
   }
-
-.input.password {
-    padding: 0.93rem 2.18rem 0.93rem 0.93rem;
-}
 
 .input-icon {
     color: vars.$clr-black-100;

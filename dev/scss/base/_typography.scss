@@ -28,23 +28,6 @@
     @include mixins.custom-font(vars.$clr-black, vars.$fw-med);
 }
 
-.text-nevbar{
-    color: vars.$clr-white !important ;
-}
-
-.text-cards-categories{
-    font-weight: vars.$fs-xsm;
-}
-
-.text-label-time{
-    font-size: vars.$fs-xsm;
-}
-
-.text-title-recipe{
-    text-decoration: none !important;
-    color: vars.$clr-black;
-}
-
 .user-name{
     @include mixins.set-font(vars.$ff-primary, vars.$fw-med, vars.$fs-md, vars.$clr-orange-300);
 
@@ -55,7 +38,14 @@
     }
 }
 
-.recipe-title{
+.link-title{
     text-decoration: none;
     color: vars.$clr-black;
+}
+
+.title-responsive {
+    @include mixins.respond-to(vars.$phone) {
+        margin-top: 5rem;
+
+    }
 }

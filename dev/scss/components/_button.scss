@@ -4,19 +4,6 @@
 //mixin btn-signup ($height, $width, $border-radius, $padding)
 //btn-basic($display, $flex-direction, $align, $padding, $gap, $width, $height, $background, $border-radius,$border)
 
-.btn-orange-dark {
-    background: vars.$clr-orange-200;
-    color: vars.$clr-black;
-    text-decoration: none;
-    border: none;
-}
-
-.btn-orange-ligth {
-    background: vars.$clr-orange-100;
-    color: vars.$clr-orange-300;
-    text-decoration: none;
-}
-
 .btn-signup-dark {
     @include mixins.btn-signup (2rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
     background-color: vars.$clr-orange-200;
@@ -97,19 +84,6 @@
     color: vars.$clr-white;
 }
 
-.btn-long-ligth {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 27.5rem, 1.87rem, none, 0.5rem, none);
-    justify-content: center;
-    background-color: vars.$clr-orange-50;
-    font-size: 0.80rem;
-    text-decoration: none;
-    color: vars.$clr-orange-300;
-}
-
-.btn-long-ligth:hover {
-    color: vars.$clr-black;
-}
-
 .hover-grow {
     display: inline-block;
     vertical-align: middle;
@@ -127,4 +101,17 @@
 .hover-grow:hover,.hover-grow:focus,.hover-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.btn-hidden {
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.btn-hidden-desk {
+    @include mixins.respond-to(vars.$large-desktop) {
+        display: none;
+        position: relative;
+    }
 }
