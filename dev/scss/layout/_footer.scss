@@ -7,17 +7,16 @@
     position: absolute;
     left: 0;
     right: 0;
-
 }
 
 .footer-position-end {
         bottom: 0rem;
 }
 
-
 .footer-relative {
     @include mixins.respond-to(vars.$phone) {
         position: relative;
+        bottom: 0;
     }
 }
 

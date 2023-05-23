@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +16,10 @@
     <!--title page-->
     <title>Edit profile</title>
 </head>
+
 <body>
-     <!--header-->
-     <header class="container-fluid navbar-color">
+    <!--header-->
+    <header class="container-fluid navbar-color">
         <!--navbar-->
         <nav id="navbar-main" class="navbar navbar-expand-lg">
             <a class="navbar-brand color-header" href="#">
@@ -28,19 +30,20 @@
             <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse ms-4 justify-content-end" id="menu">
+            <div class="collapse navbar-collapse ms-4 justify-content-end mt-2 mb-2" id="menu">
                 <ul class="navbar-nav gap-5 me-5">
                     <li class=" position-relative li-responsive"><a class="header-link" href="./home.html">Home</a></li>
                     <li class=" position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
                     <li class=" position-relative"><a class="header-link" href="./categories.html">Categories</a></li>
-                    <li class="position-relative user-hidden"><a class="header-link" href="./user-profile.html">Profile</a></li>
+                    <li class="position-relative user-hidden"><a class="header-link"
+                            href="./user-profile.html">Profile</a></li>
                 </ul>
                 <!--search placeholder and button-->
                 <div class="me-3 li-responsive">
                     <form class="d-flex input-group" role="search">
-                        <input class="form-control me-2 input-search" type="search"
-                            placeholder="Search something..." aria-label="Search">
-                        <button class="btn btn-search" type="submit"><img src="./imgs/icons/search.svg"
+                        <input class="form-control me-2 input-search" type="search" placeholder="Search something..."
+                            aria-label="Search">
+                        <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                                 alt="search icon"></button>
                         <!--user profile-->
                         <a href="./user-profile.html" class="header-link">
@@ -55,10 +58,10 @@
 
     <!--user edit form-->
     <section class="d-flex edit-container mt-4">
-        <div class="col-4 ms-4 mb-5">
+        <div class="col-4 ms-2 mb-5">
             <img src="./imgs/placeholder_square_sm.png" class="" alt="photo preview">
         </div>
-        <div class="col ms-4 me-5">
+        <div class="col ms-2 me-5">
             <h1 class="mb-4">User Basic Informations</h1>
             <label class="form-label" for="title">User name</label>
             <input id="title" class="form-control" type="text" name="title">
@@ -67,19 +70,24 @@
             <label class="form-label mt-2" for="description">About me</label>
             <input id="description" class="form-control input-xl" type="text" name="description">
         </div>
-
     </section>
 
-    <!--buttons-->
-    <div class="center row me-3 mt-5 ms-4 mb-5">
+    <!--buttons mobile-->
+    <div class="center row me-3 mt-5 ms-4 mb-5 btn-hidden-desk">
         <a href="./user-profile.html" class="btn btn-signup-dark link-title">Save</a>
         <a href="./user-profile.html" class="btn btn-signup-light mt-4 link-title">Discard</a>
+    </div>
+    <!--buttons desktop-->
+    <div class="row mt-5 mb-5 btn-hidden me-5 btn-container d-flex justify-content-end">
+        <a href="./user-profile.html" class="btn btn-sm-red link-title me-auto">Delete account</a>
+            <a href="./user-profile.html" class="btn btn-sm-light link-title me-2">Discard</a>
+            <a href="./user-profile.html" class="btn btn-sm-dark link-title">Save</a>
     </div>
 
 
 
-     <!--footer-->
-     <footer class="container-fluid footer-color">
+    <!--footer-->
+    <footer class="container-fluid footer-signup footer-color">
         <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
             <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
             <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
@@ -102,4 +110,5 @@
     </script>
 </body>
 </body>
+
 </html>

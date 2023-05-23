@@ -5,11 +5,15 @@
 //btn-basic($display, $flex-direction, $align, $padding, $gap, $width, $height, $background, $border-radius,$border)
 
 .btn-signup-dark {
-    @include mixins.btn-signup (2rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
+    @include mixins.btn-signup (37px, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
     background-color: vars.$clr-orange-200;
-    font-size: 0.80rem;
-    color: vars.$clr-black;
+    font-size: 14px;
+    color: vars.$clr-white;
     text-decoration: none;
+
+    @include mixins.respond-to(vars.$large-desktop) {
+        width: 400px;
+    }
 }
 
 .btn-signup-dark:hover {
@@ -17,12 +21,15 @@
 }
 
 .btn-signup-light {
-    @include mixins.btn-signup (2rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
+    @include mixins.btn-signup (37px, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
     background-color: vars.$clr-orange-50;
-    font-size: 0.80rem;
+    font-size: 14px;
     text-decoration: none;
     color: vars.$clr-orange-300;
 
+    @include mixins.respond-to(vars.$large-desktop) {
+        width: 400px;
+    }
 }
 
 .btn-signup-light:hover {
@@ -70,12 +77,12 @@
     justify-content: center;
 }
 
-.btn-long-dark {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 27.5rem, 1.87rem, none, 0.5rem, none);
+.btn-xxl-dark {
+    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 436px, 35px, none, 0.5rem, none);
     justify-content: center;
     background-color: vars.$clr-orange-200;
-    font-size: 0.80rem;
-    color: vars.$clr-black;
+    font-size: 14px;
+    color: vars.$clr-white;
     text-decoration: none;
     font-weight: vars.$fw-med;
 }
@@ -98,7 +105,9 @@
     justify-content: center;
 }
 
-.hover-grow:hover,.hover-grow:focus,.hover-grow:active {
+.hover-grow:hover,
+.hover-grow:focus,
+.hover-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
@@ -114,4 +123,130 @@
         display: none;
         position: relative;
     }
+}
+
+.btn-xl-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 406px;
+    height: 37px;
+    background: #FF9E45;
+    border-radius: 8px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+
+    @include mixins.respond-to(vars.$phone) {
+        width: 312px;
+    }
+}
+
+.btn-xl-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 406px;
+    height: 37px;
+    background: #FFE0C2;
+    border-radius: 8px;
+    color: #FF6109;
+    text-decoration: none;
+    font-size: 14px;
+
+    @include mixins.respond-to(vars.$phone) {
+        width: 312px;
+    }
+}
+
+.btn-md-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 295px;
+    height: 30px;
+    background: #FF9E45;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: vars.$clr-white;
+
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.btn-md-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 295px;
+    height: 30px;
+    border: 1px solid #FF9E45;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #FF9E45;
+
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.btn-sm-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 192px;
+    height: 30px;
+    background: #FF9E45;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: vars.$clr-white;
+}
+
+.btn-sm-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 192px;
+    height: 30px;
+    background: #FFE0C2;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #FF9E45;
+}
+
+.btn-sm-red {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 6px;
+    width: 192px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #FF4848;
 }

@@ -6,7 +6,7 @@
 
 //login and signup
 .container-login {
-    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 31rem, 20.5rem, 0.75rem, vars.$clr-white);
+    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 466px, 22.5rem, 0.75rem, vars.$clr-white);
     gap: 1rem;
 }
 
@@ -28,19 +28,32 @@
 }
 
 .container-pass-big {
-    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 31rem, 14.75rem, 0.75rem, vars.$clr-gray-95);
+    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 31rem, 270px, 0.75rem, vars.$clr-gray-95);
     gap: 1rem;
     position: absolute;
 }
 
 .container-pass-small {
-    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 31rem, 12.4rem, 0.75rem, vars.$clr-gray-95);
+    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 496px, 203px, 0.75rem, vars.$clr-gray-95);
     gap: 1rem;
     position: absolute;
+    width: 496px;
+height: 203px;
 }
 
 
 //recipes
+.recipes-container {
+    width: 92%;
+    margin: auto;
+    right: 0;
+
+    @include mixins.respond-to(vars.$phone) {
+        margin-left: 2.3rem;
+        width: 324px;
+    }
+}
+
 .card-recipe {
     border: 0.063rem solid vars.$clr-gray-100;
     border-radius: 0.75rem;
@@ -100,10 +113,10 @@
 
 //user profile
 .profile-container {
-    width: 1800px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-left: 100px;
+    margin: auto;
 
     @include mixins.respond-to(vars.$phone) {
         margin-left: 0;
@@ -138,16 +151,7 @@
 
     @include mixins.respond-to(vars.$phone) {
         width: 326px;
-    }
-}
-
-.recipes-container {
-    width: 1450px;
-    margin-left: 250px;
-
-    @include mixins.respond-to(vars.$phone) {
-        margin-left: 2.3rem;
-        width: 324px;
+        height: 196px;
     }
 }
 
@@ -207,5 +211,10 @@
         object-fit: cover;
     }
 
+}
+
+.btn-container {
+    width: 1000px;
+    margin-left: 580px;
 }
 
