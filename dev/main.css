@@ -13432,6 +13432,10 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.m-right {
+  margin-right: 70px;
+}
+
 .text-question {
   color: #77787A;
   font-weight: 400;
@@ -13646,9 +13650,9 @@ body {
 }
 
 .recipes-container {
-  width: 92%;
-  margin: auto;
+  width: 90%;
   right: 0;
+  margin-left: 110px;
 }
 @media only screen and (max-width: 480px) {
   .recipes-container {
@@ -13689,7 +13693,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  max-width: 680px;
+  max-width: 670px;
   border: 0.063rem solid #DADADA;
   border-radius: 0.75rem;
   position: relative;
@@ -13709,7 +13713,7 @@ body {
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
   height: 240px;
-  width: 310px;
+  width: 280px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -13723,7 +13727,7 @@ body {
 }
 
 .top-recipe-img {
-  width: 320px;
+  width: 280px;
   height: 250px;
 }
 

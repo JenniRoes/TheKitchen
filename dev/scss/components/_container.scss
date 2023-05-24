@@ -44,9 +44,9 @@ height: 203px;
 
 //recipes
 .recipes-container {
-    width: 92%;
-    margin: auto;
+    width: 90%;
     right: 0;
+    margin-left: 110px;
 
     @include mixins.respond-to(vars.$phone) {
         margin-left: 2.3rem;
@@ -79,7 +79,7 @@ height: 203px;
 .card-top-recipe {
     display: flex;
     flex-direction: row;
-    max-width: 680px;
+    max-width: 670px;
     border: 0.063rem solid vars.$clr-gray-100;
     border-radius: 0.75rem;
     position: relative;
@@ -95,7 +95,7 @@ height: 203px;
 .img-container-top {
     flex: 1 1 50%;
     height: 240px;
-    width: 310px;
+    width: 280px;
     object-fit: cover;
 
     @include mixins.respond-to(vars.$phone) {
@@ -106,7 +106,7 @@ height: 203px;
 }
 
 .top-recipe-img {
-    width: 320px;
+    width: 280px;
     height: 250px;
 
 }
