@@ -2,6 +2,7 @@ app.component('recipe-card',{
     props:{
         image:{
             type: String,
+            default: "Food photo"
         },
         title:{
             type: String,
@@ -15,9 +16,12 @@ app.component('recipe-card',{
             type: String,
             default: "Lorem Ipsum"
         },
+        portions:{
+
+        },
         likes:{
             type: Number,
-            default: 0 + "likes"
+            default: 0
         }
     },
     template:
