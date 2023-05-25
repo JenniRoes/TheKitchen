@@ -17,7 +17,7 @@ app.component('recipe-card',{
             default: "Lorem Ipsum"
         },
         portions:{
-
+            type: String
         },
         likes:{
             type: Number,
@@ -27,7 +27,7 @@ app.component('recipe-card',{
     template:
     /*html*/
     ` <!--inicial card-->
-    <div class="card-recipe">
+    <div class="card-recipe col-2 p-0 m-0">
         <div class="image-container">
             <img v-bind:src="image" class="img-fluid card-recipe-img top-border-photo"
                 alt="photo food">

@@ -1,7 +1,7 @@
 app.component('top-recipe-card',{
     props:{
         position:{
-            type: Number
+            type: String
         },
         image:{
             type: String,

@@ -79,9 +79,9 @@
         <!--category-->
         <section class="recipes-container mt-4 mb-5 gap-5">
             <h2>Desserts</h2>
-            <section class="row mt-4 gap-5">
+            <section class="row mt-4 ">
                 <!--inicial card-->
-                <div v-for="(item, index) in recipes" class="col-2 p-0 m-right">
+                <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
                         :description="item.description" :likes="item.likes"></recipe-card>
                 </div>
@@ -90,11 +90,11 @@
         </section>
 
         <!--category-->
-        <section class="recipes-container mt-4 mb-5 gap-5">
+        <section class="recipes-container mt-4 mb-4">
             <h2>Entries</h2>
-            <section class="row mt-4 gap-5">
+            <section class="row mt-4">
                 <!--inicial card-->
-                <div v-for="(item, index) in recipes" class="col-2 p-0 m-right">
+                <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
                         :description="item.description" :likes="item.likes"></recipe-card>
                 </div>

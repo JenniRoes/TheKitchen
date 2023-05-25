@@ -84,11 +84,11 @@
 
         <!--feed-->
         <!--inspiration your meals-->
-        <section class="recipes-container mt-4 mb-5 gap-5">
+        <section class="recipes-container mt-4 mb-5">
             <h2>Inspiration for your meals</h2>
-            <section class="row mt-4 gap-5">
+            <section class="row mt-4">
                 <!--inicial card-->
-                <div v-for="(item, index) in recipes" class="col-2 p-0 m-right">
+                <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
                         :description="item.description" :likes="item.likes"></recipe-card>
                 </div>
@@ -103,24 +103,28 @@
                 <div class="row">
                     <div v-for="(item, index) in recipestop" class="col-lg-6 mb-4">
                         <!--inicial card-->
-                        <top-recipe-card :position="item.position" :image="item.image" :title="item.title" :category="item.category" :level="item.level" :ocassion="item.ocassion" :description="item.description" :totaltime="item.totaltime" :portions="item.portions" :likes="item.likes"></top-recipe-card>
+                        <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
+                            :category="item.category" :level="item.level" :ocassion="item.ocassion"
+                            :description="item.description" :totaltime="item.totaltime" :portions="item.portions"
+                            :likes="item.likes"></top-recipe-card>
                         <!--final card-->
                     </div>
                 </div>
+            </div>
         </section>
 
-        <!--inspiration your meals-->
-        <section class="recipes-container mt-4 mb-5 gap-5">
-            <h2>Inspiration for your meals</h2>
-            <section class="row mt-4 gap-5">
-                <!--inicial card-->
-                <div v-for="(item, index) in recipes" class="col-2 p-0 m-right">
-                    <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes"></recipe-card>
-                </div>
-                <!--final card-->
-            </section>
+       <!--inspiration your meals-->
+       <section class="recipes-container mt-4 mb-5">
+        <h2>Inspiration for your meals</h2>
+        <section class="row mt-4">
+            <!--inicial card-->
+            <div v-for="(item, index) in recipes" class="col mb-5">
+                <recipe-card :image="item.image" :category="item.category" :title="item.title"
+                    :description="item.description" :likes="item.likes"></recipe-card>
+            </div>
+            <!--final card-->
         </section>
+    </section>
 
         <!--footer-->
         <footer class="container-fluid footer-color mt-5 ">
