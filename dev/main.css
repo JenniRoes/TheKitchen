@@ -13570,7 +13570,7 @@ body {
           align-items: center;
   padding: 1.5rem 1rem;
   width: 466px;
-  height: 22.5rem;
+  height: auto;
   border-radius: 0.75rem;
   background-color: #ffffff;
   gap: 1rem;
@@ -14521,6 +14521,12 @@ body {
 @media only screen and (max-width: 480px) {
   .footer-relative {
     position: relative;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-mobile {
     bottom: 0;
   }
 }

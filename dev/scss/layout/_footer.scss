@@ -20,6 +20,12 @@
     }
 }
 
+.footer-mobile {
+    @include mixins.respond-to(vars.$phone) {
+        bottom: 0;
+    }
+}
+
 .footer-signup{
     @include mixins.respond-to(vars.$large-desktop) {
         bottom: 0rem;

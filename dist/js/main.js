@@ -34,6 +34,12 @@ const app = Vue.createApp({
                 {id: 108, image:"./imgs/toprecipe.png", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", time: "Update 3min ago", position: "#8"},
                 {id: 109, image:"./imgs/toprecipe.png", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", time: "Update 3min ago", position: "#9"},
                 {id: 110, image:"./imgs/toprecipe.png", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", time: "Update 3min ago", position: "#10"}
+            ],
+            recipeslist:[
+                {id: 21, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0},
+                {id: 22, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0},
+                {id: 23, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0},
+                {id: 24, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0}
             ]
         }
     }

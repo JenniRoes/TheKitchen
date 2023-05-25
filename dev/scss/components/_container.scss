@@ -6,7 +6,7 @@
 
 //login and signup
 .container-login {
-    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 466px, 22.5rem, 0.75rem, vars.$clr-white);
+    @include mixins.basic-box(flex, column, center, 1.5rem 1rem, 466px, auto, 0.75rem, vars.$clr-white);
     gap: 1rem;
 }
 
