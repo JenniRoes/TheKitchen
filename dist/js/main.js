@@ -40,6 +40,12 @@ const app = Vue.createApp({
                 {id: 22, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0},
                 {id: 23, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0},
                 {id: 24, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0}
+            ],
+            userslist:[
+                {id: 31, image: "./imgs/userlist.png", title: "User name"},
+                {id: 32, image: "./imgs/userlist.png", title: "User name"},
+                {id: 33, image: "./imgs/userlist.png", title: "User name"},
+                {id: 34, image: "./imgs/userlist.png", title: "User name"}
             ]
         }
     }

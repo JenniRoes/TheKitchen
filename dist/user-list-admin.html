@@ -14,7 +14,7 @@
     <!--css-->
     <link rel="stylesheet" href="../dev/main.css">
     <!--title page-->
-    <title>Recipe list</title>
+    <title>User list</title>
 </head>
 
 <body>
@@ -63,45 +63,29 @@
         <!--banner-->
         <div class="recipes-container row ms-5 ps-5 me-5">
             <div class="col-6 me-5">
-                <h1 class="mt-5 ms-4">The Kitchen Recipes</h1>
+                <h1 class="mt-5 ms-4">The Kitchen Users</h1>
             </div>
             <div class="col-4 ms-5">
                 <p><img class="img-fluid ms-5" src="./imgs/banner-sm.png" alt="banner"></p>
             </div>
         </div>
 
-        <!--user and options-->
-        <div class="recipes-container d-flex justify-content-end mt-5 ms-5 me-5 pe-5 ps-5">
-            <a class="btn btn-sm-light hover-grow me-5" href="./recipe-edit-admin.html">New recipe</a>
-        </div>
-
         <!--feed-->
         <!--all categories-->
         <div class="recipes-container mt-5">
-            <h4 class="ms-4 mb-5">All items</h4>
-            <div class="d-flex mb-5"  v-for=" (item, index) in recipeslist">
+            <h4 class="ms-4 mb-5">All users</h4>
+            <div class="d-flex mb-5"  v-for=" (item, index) in userslist">
                 <!--inicial card-->
-                <admin-recipe-card :image="item.image" :title="item.title" :likes="item.likes"></admin-recipe-card>
+                <admin-user-card :image="item.image" :title="item.title" :likes="item.likes"></admin-user-card>
                 <!--final card-->
                 <!--inicial card-->
-                <admin-recipe-card :image="item.image" :title="item.title" :likes="item.likes"></admin-recipe-card>
+                <admin-user-card :image="item.image" :title="item.title" :likes="item.likes"></admin-user-card>
                 <!--final card-->
             </div>
 
-            <!--category-->
-            <div class="mt-5">
-                <h4 class="ms-4 mb-5">Soups</h4>
-                <div class="d-flex mb-5"  v-for=" (item, index) in recipeslist">
-                    <!--inicial card-->
-                    <admin-recipe-card :image="item.image" :title="item.title" :likes="item.likes"></admin-recipe-card>
-                    <!--final card-->
-                    <!--inicial card-->
-                    <admin-recipe-card :image="item.image" :title="item.title" :likes="item.likes"></admin-recipe-card>
-                    <!--final card-->
-                </div>
                                    
         <!--footer-->
-        <footer class="container-fluid footer-color mt-5 ">
+        <footer class="container-fluid footer-position-end footer-color mt-5 ">
             <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
                 <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
                 <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
@@ -118,7 +102,7 @@
     <!--js main-->
     <script src="./js/main.js"></script>
     <!--components-->
-    <script src="./js/components/AdminRecipeCard.js"></script>
+    <script src="./js/components/AdminUserCard.js"></script>
     <!--mounted app-->
     <script>
         const mountedApp = app.mount("#app"); 
