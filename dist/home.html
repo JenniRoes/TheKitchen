@@ -64,21 +64,8 @@
 
         <!--banner-->
         <div class="recipes-container">
-            <div class="row">
-                <div class="col-lg-5 ">
-                    <h1 class="mt-5">The Kitchen</h1>
-                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem est lectus
-                        telluspellentesque at purus. Dictumst blandit odio orci elit non donec sodales. Nullam quam
-                        pharetra,
-                        eleifendconsequat velit id euismod.
-                        Mauris nisi, suspendisse tristique ac urna. Fermentum sit enim porttitor et vitae. Vestibulum
-                        craspellentesque interdum sit ullamcorper. Sed purus fringilla pellentesque interdum volutpat
-                        elit
-                        pulvinarplacerat. </p>
-                </div>
-                <div class="col-4 ms-5 banner-hidden">
-                    <p><img src="../dist/imgs/banner-md.png" class="" alt="photo food"></p>
-                </div>
+            <div>
+                <banner title="The Kitchen"></banner>
             </div>
         </div>
 
@@ -113,18 +100,18 @@
             </div>
         </section>
 
-       <!--inspiration your meals-->
-       <section class="recipes-container mt-4 mb-5">
-        <h2>Inspiration for your meals</h2>
-        <section class="row mt-4">
-            <!--inicial card-->
-            <div v-for="(item, index) in recipes" class="col mb-5">
-                <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                    :description="item.description" :likes="item.likes"></recipe-card>
-            </div>
-            <!--final card-->
+        <!--inspiration your meals-->
+        <section class="recipes-container mt-4 mb-5">
+            <h2>Inspiration for your meals</h2>
+            <section class="row mt-4">
+                <!--inicial card-->
+                <div v-for="(item, index) in recipes" class="col mb-5">
+                    <recipe-card :image="item.image" :category="item.category" :title="item.title"
+                        :description="item.description" :likes="item.likes"></recipe-card>
+                </div>
+                <!--final card-->
+            </section>
         </section>
-    </section>
 
         <!--footer-->
         <footer class="container-fluid footer-color mt-5 ">
@@ -152,9 +139,10 @@
     <!--components-->
     <script src="./js/components/RecipeCard.js"></script>
     <script src="./js/components/TopRecipeCard.js"></script>
+    <script src="./js/components/Banner.js"></script>
     <!--mounted app-->
     <script>
-        const mountedApp = app.mount("#app"); //verificar que la aplicación haya sido cargada
+        const mountedApp = app.mount("#app");
     </script>
 </body>
 

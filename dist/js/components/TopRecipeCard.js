@@ -1,89 +1,84 @@
-app.component('top-recipe-card',{
-    props:{
-        position:{
+app.component('top-recipe-card', {
+    props: {
+        position: {
             type: String
         },
-        image:{
+        image: {
             type: String,
             default: "Food photo"
         },
-        title:{
+        title: {
             type: String,
             default: "Recipe Title"
         },
-        category:{ 
+        category: {
             type: String,
             default: "Category"
         },
-        level:{
+        level: {
             type: String,
             default: "Level"
         },
-        ocassion:{
+        ocassion: {
             type: String,
             default: "Ocassion"
         },
-        description:{
+        description: {
             type: String,
             default: "Lorem Ipsum"
         },
-        totaltime:{
+        totaltime: {
             type: String,
             default: "Total time"
         },
-        portions:{
+        portions: {
             type: String,
             default: "Portions"
         },
-        likes:{
+        likes: {
             type: Number,
             default: 0
         }
     },
     template:
-    /*html*/
-    `<!--inicial card-->
-    <div class="card-top-recipe mb-3">
-    <div class="img-container-top">
-        <div class="img-fluid rounded-start top-recipes-badge">{{position}}</div>
-        <img class="top-recipe-img" v-bind:src="image" alt="photo food" height="362"
-            width="266">
-    </div>
-    <div class="text-container-top mt-4 me-3 ms-2">
-        <div class="card-body p-0">
-            <div class="row">
-                <div class="col-6">
-                    <h5 class="card-title ms-3"><a class="link-title"
-                            href="./recipe-detail.html">{{title}}</a></h5>
+        /*html*/
+        `<!--inicial card-->
+        <div class="card-top-recipe mb-3">
+        <div class="img-container-top">
+            <div class="img-fluid rounded-start top-recipes-badge">{{position}}</div>
+            <img class="top-recipe-img" v-bind:src="image" alt="photo food">
+        </div>
+        <div class="text-container-top mt-4 me-3 ms-2">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title ms-3"><a class="link-title" href="./recipe-detail.html">{{title}}</a></h5>
+                    </div>
+                    <div class="ms-3 mb-2 mt-2">
+                        <span class="badge badge-orange p-1">{{category}}</span>
+                        <span class="badge badge-green p-1 ms-2">{{level}}</span>
+                        <span class="badge badge-orange p-1 ms-2">{{ocassion}}</span>
+                    </div>
                 </div>
-                <div class="ms-3 mb-2 mt-2">
-                    <span class="badge badge-orange p-1">{{category}}</span>
-                    <span class="badge badge-green p-1 ms-2">{{level}}</span>
-                    <span class="badge badge-orange p-1 ms-2">{{ocassion}}</span>
-                </div>
-            </div>
-            <p class="card-text overflow ms-3">{{description}} </p>
-            <div class="row ms-3 mt-2 mb-2">
-                <p class="label-time"><img
-                        src="imgs/icons/nest_clock_farsight_analog-orange.svg"
-                        alt="preparation time icon">{{totaltime}}</p>
-                <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg"
-                        alt="portions icon">{{portions}}</p>
-            </div>
-            <div class="row ms-2">
-                <div class="col-10">
-                    <p class="card-text mt-2"><small class="text-muted">{{likes}} likes</small>
+                <p class="card-text overflow ms-3">{{description}} </p>
+                <div class="row ms-3 mt-2 mb-2">
+                    <p class="label-time"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
+                            alt="preparation time icon">{{totaltime}}</p>
+                    <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg" alt="portions icon">{{portions}}
                     </p>
                 </div>
-                <div class="col-1 ">
-                    <button class=" btn-circular mt-1 mb-3 hover-grow"><img
-                            src="./imgs/icons/favorite.svg" class="img-fluid mx-auto mt-1"
-                            alt="favorite icon"></button>
+                <div class="row ms-2">
+                    <div class="col-10">
+                        <p class="card-text mt-2"><small class="text-muted">{{likes}} likes</small>
+                        </p>
+                    </div>
+                    <div class="col-1 ">
+                        <button class=" btn-circular mt-1 mb-3 hover-grow"><img src="./imgs/icons/favorite.svg"
+                                class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 <!--final card-->`
 });
