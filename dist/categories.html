@@ -70,7 +70,7 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes"></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"></recipe-card>
                 </div>
                 <!--final card-->
             </section>

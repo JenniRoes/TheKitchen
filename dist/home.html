@@ -77,7 +77,7 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes"></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"></recipe-card>
                 </div>
                 <!--final card-->
             </section>
@@ -93,7 +93,7 @@
                         <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
                             :category="item.category" :level="item.level" :ocassion="item.ocassion"
                             :description="item.description" :totaltime="item.totaltime" :portions="item.portions"
-                            :likes="item.likes"></top-recipe-card>
+                            :likes="item.likes" v-on:recipeslike="onClickTopLike(index)"></top-recipe-card>
                         <!--final card-->
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes" class="col mb-5">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes"></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"></recipe-card>
                 </div>
                 <!--final card-->
             </section>

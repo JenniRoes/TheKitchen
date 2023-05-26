@@ -48,5 +48,13 @@ const app = Vue.createApp({
                 {id: 34, image: "./imgs/userlist.png", title: "User name"}
             ]
         }
+    },
+    methods: {
+        onClickRecipeLike(index) {
+            this.recipes[index].likes += 1;
+        },
+        onClickTopLike(index) {
+            this.recipestop[index].likes += 1;
+        },
     }
 });

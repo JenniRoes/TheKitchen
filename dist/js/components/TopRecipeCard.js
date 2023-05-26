@@ -40,6 +40,12 @@ app.component('top-recipe-card', {
             default: 0
         }
     },
+    methods: {
+        onClickTopLike(){
+            console.log("LIKE");
+            this.$emit('recipeslike', this.index);
+        }
+    },
     template:
         /*html*/
         `<!--inicial card-->
@@ -73,7 +79,7 @@ app.component('top-recipe-card', {
                         </p>
                     </div>
                     <div class="col-1 ">
-                        <button class=" btn-circular mt-1 mb-3 hover-grow"><img src="./imgs/icons/favorite.svg"
+                        <button class=" btn-circular mt-1 mb-3 hover-grow" v-on:click="onClickTopLike()"><img src="./imgs/icons/favorite.svg"
                                 class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
                     </div>
                 </div>
