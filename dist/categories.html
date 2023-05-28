@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--js bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <!-- AOS animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="../dev/main.css">
     <!--title page-->
@@ -31,9 +29,9 @@
                 </button>
                 <div class="collapse navbar-collapse ms-4 justify-content-end mt-2 mb-2" id="menu">
                     <ul class="navbar-nav gap-5 me-5">
-                        <li class=" position-relative li-responsive"><a class="header-link" href="./home.html">Home</a></li>
-                        <li class=" position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
-                        <li class=" position-relative"><a class="header-link" href="./categories.html">Categories</a></li>
+                        <li class="position-relative li-responsive"><a class="header-link" href="./home.html">Home</a></li>
+                        <li class="position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
+                        <li class="position-relative"><a class="header-link" href="./categories.html">Categories</a></li>
                         <li class="position-relative user-hidden"><a class="header-link" href="./user-profile.html">Profile</a></li>
                     </ul>
                     <!--search placeholder and button-->
@@ -54,7 +52,6 @@
             </nav>
         </header>
 
-
         <!--banner-->
         <div class="recipes-container">
             <div>
@@ -62,28 +59,26 @@
             </div>
         </div>
 
+        <!--filter by category-->
+        <div class="row mt-5 mb-5 me-5">
+                <div class="recipes-container">
+                    <p><small>Filter by:</small></p>
+                    <ul class="mb-2 filter-category">
+                        <li v-for="(category, index) in categories" class="position-relative filter-category">
+                            <filter-category :category="category.category" v-on:selectedcategory="onClickSelectedCategory"></filter-category>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
         <!--feed-->
         <!--category-->
         <section class="recipes-container mt-4 mb-5 gap-5">
-            <h2>Desserts</h2>
             <section class="row mt-4 ">
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
                         :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"></recipe-card>
-                </div>
-                <!--final card-->
-            </section>
-        </section>
-
-        <!--category-->
-        <section class="recipes-container mt-4 mb-4">
-            <h2>Entries</h2>
-            <section class="row mt-4">
-                <!--inicial card-->
-                <div v-for="(item, index) in recipes" class="col mb-4">
-                    <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes"></recipe-card>
                 </div>
                 <!--final card-->
             </section>
@@ -99,25 +94,23 @@
     </section>
 
     <!--Scripts-->
-    <!-- AOS animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
     <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
         </script>
     <!--Vuejs-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+     <!--axios recipes api-->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--js main-->
     <script src="./js/main.js"></script>
     <!--components-->
     <script src="./js/components/RecipeCard.js"></script>
     <script src="./js/components/Banner.js"></script>
+    <script src="./js/components/FilterCategory.js"></script>
     <!--mounted app-->
     <script>
-        const mountedApp = app.mount("#app"); //verificar que la aplicación haya sido cargada
+        const mountedApp = app.mount("#app"); 
     </script>
 </body>
 

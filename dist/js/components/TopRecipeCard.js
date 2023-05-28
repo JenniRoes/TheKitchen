@@ -1,7 +1,7 @@
 app.component('top-recipe-card', {
     props: {
         position: {
-            type: String
+            type: Number
         },
         image: {
             type: String,
@@ -51,7 +51,7 @@ app.component('top-recipe-card', {
         `<!--inicial card-->
         <div class="card-top-recipe mb-3">
         <div class="img-container-top">
-            <div class="img-fluid rounded-start top-recipes-badge">{{position}}</div>
+            <div class="img-fluid rounded-start top-recipes-badge">#{{position}}</div>
             <img class="top-recipe-img" v-bind:src="image" alt="photo food">
         </div>
         <div class="text-container-top mt-4 me-3 ms-2">

@@ -14458,10 +14458,6 @@ body {
   margin-top: 2rem;
 }
 
-.admin-background {
-  background-image: url("././../dist/imgs/background.png");
-}
-
 @media only screen and (max-width: 480px) {
   .imagotipo-responsive {
     width: 200px;
@@ -14496,6 +14492,20 @@ body {
 
 .navbar-toggler {
   border: var(--bs-border-width) solid var(--bs-body-bg);
+}
+
+.filter-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (max-width: 480px) {

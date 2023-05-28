@@ -82,11 +82,6 @@
     margin-top: 2rem;
 }
 
-
-.admin-background {
-    background-image: url("././../dist/imgs/background.png");
-}
-
 .imagotipo-responsive {
     @include mixins.respond-to(vars.$phone) {
         width: 200px;
@@ -121,6 +116,13 @@
 
 .navbar-toggler {
     border: var(--bs-border-width) solid var(--bs-body-bg);
+}
+
+.filter-category {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-between;
 }
 
 //media queries

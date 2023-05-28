@@ -86,7 +86,7 @@
             <h2 class="mb-4">Top 10 recipes</h2>
             <div class="justify-container">
                 <div class="row">
-                    <div v-for="(item, index) in recipes.slice(9, 13)" class="col-lg-6 mb-4">
+                    <div v-for="(item, index) in recipes.slice(8, 12)" class="col-lg-6 mb-4">
                         <!--inicial card-->
                         <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
                             :category="item.category" :level="item.level" :ocassion="item.ocassion"
@@ -103,7 +103,7 @@
             <h2>Inspiration for your meals</h2>
             <section class="row mt-4">
                 <!--inicial card-->
-                <div v-for="(item, index) in recipes.slice(14, 22)" class="col mb-5">
+                <div v-for="(item, index) in recipes.slice(13, 21)" class="col mb-5">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
                         :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)" :data="item"></recipe-card>
                 </div>
