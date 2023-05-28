@@ -2,20 +2,7 @@ const app = Vue.createApp({
     data() { 
         return {
             recipes: [ 
-                { id: 1, image: "./imgs/recipe-one.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 2, image: "./imgs/recipe-two.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 3, image: "./imgs/recipe-three.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 4, image: "./imgs/recipe-four.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 5, image: "./imgs/recipe-five.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 6, image: "./imgs/recipe-six.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 7, image: "./imgs/recipe-seven.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"},
-                { id: 8, image: "./imgs/recipe-eight.jpg", title: "Recipe title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", likes: 0, category: "Category"}
-            ],
-            recipestop:[
-                {id: 101, image:"./imgs/recipe-two.jpg", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", likes: 0, position: "#1"},
-                {id: 102, image:"./imgs/recipe-two.jpg", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", likes: 0, position: "#2"},
-                {id: 103, image:"./imgs/recipe-two.jpg", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", likes: 0, position: "#3"},
-                {id: 104, image:"./imgs/recipe-two.jpg", title:"Recipe title", category: "Entries", level: "Easy", ocassion: "All", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", totaltime: "45min", portions: "4-5", likes: 0, position: "#4"}
+                
             ],
             relatedrecipes:[
                 {id: 201, image: "./imgs/recipe-two.jpg", title: "Recipe title", level: "Easy", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "Update 3min ago"},
@@ -49,12 +36,44 @@ const app = Vue.createApp({
             ]
         }
     },
+    mounted:function() {
+        axios({
+            method: 'get',
+            url: 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'
+        })
+        .then(
+            (response) => {
+                let items = response.data.meals;
+
+                this.recipes = [];
+
+                //default recipes of home page
+                items.forEach(element => {
+                    this.recipes.push({ 
+                        id: element.idMeal, 
+                        image: element.strMealThumb, 
+                        title: element.strMeal,
+                        category: 'Seafood',
+                        totaltime: "20 mins",
+                        level: "Easy",
+                        likes: 0,
+                        portions: "4-5",
+                        position: "#1",
+                        ocassion: "Everyday",
+                        ingredients: "NA",
+                        description: "Delicious recipes of The Kitchen web site"
+                    });
+                });
+        
+            }
+        )
+        .catch(
+            error => console.log(error)
+        );
+    },
     methods: {
         onClickRecipeLike(index) {
             this.recipes[index].likes += 1;
-        },
-        onClickTopLike(index) {
-            this.recipestop[index].likes += 1;
-        },
+        }
     }
 });
