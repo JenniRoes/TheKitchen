@@ -38,6 +38,10 @@ app.component('top-recipe-card', {
         likes: {
             type: Number,
             default: 0
+        },
+        id:{
+            type: String,
+            default: "1"
         }
     },
     methods: {
@@ -58,7 +62,7 @@ app.component('top-recipe-card', {
             <div class="card-body p-0">
                 <div class="row">
                     <div class="col-6">
-                        <h5 class="card-title ms-3"><a class="link-title" href="./recipe-detail.html">{{title}}</a></h5>
+                        <h5 class="card-title ms-3"><a class="link-title" :href="'recipe-detail.html?id=' + id">{{title}}</a></h5>
                     </div>
                     <div class="ms-3 mb-2 mt-2">
                         <span class="badge badge-orange p-1">{{category}}</span>

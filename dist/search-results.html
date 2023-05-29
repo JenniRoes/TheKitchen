@@ -14,39 +14,31 @@
     <!--css-->
     <link rel="stylesheet" href="../dev/main.css">
     <!--title page-->
-    <title>Top 10</title>
+    <title>Search results</title>
 </head>
 
 <body>
     <section id="app">
         <!--header-->
         <header class="container-fluid navbar-color">
-            <!--navbar-->
             <navbar></navbar>
         </header>
 
         <!--banner-->
         <div class="recipes-container">
             <div>
-                <banner title="Community Top"></banner>
+                <banner title="Your results"></banner>
             </div>
         </div>
 
-        <!--Top 10-->
-        <section class="recipes-container mt-5">
-            <h2 class="mb-4">Top 10 recipes</h2>
-            <div class="justify-container">
-                <div class="row">
-                    <div v-for="(item, index) in recipes.slice(0, 10)" class="col-lg-6 mb-4">
-                        <!--inicial card-->
-                        <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
-                            :category="item.category" :level="item.level" :ocassion="item.ocassion"
-                            :description="item.description" :totaltime="item.totaltime" :portions="item.portions"
-                            :likes="item.likes"  v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"></top-recipe-card>
-                        <!--final card-->
-                    </div>
-                </div>
-        </section>
+
+        <!--results-->
+        <div v-for="(item, index) in searchResults" class="col mb-5">
+            <recipe-card :key="index" :image="item.image" :title="item.title" :category="item.category"
+                :description="item.description" :likes="item.likes" :id="item.id"
+                v-on:recipelike="onClickRecipeLike(index)" v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+        </div>
+
 
         <!--footer-->
         <footer class="container-fluid footer-color mt-5 ">
@@ -56,7 +48,6 @@
             </div>
         </footer>
     </section>
-
     <!--Scripts-->
     <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -69,7 +60,7 @@
     <!--js main-->
     <script src="./js/main.js"></script>
     <!--components-->
-    <script src="./js/components/TopRecipeCard.js"></script>
+    <script src="./js/components/RecipeCard.js"></script>
     <script src="./js/components/Banner.js"></script>
     <script src="./js/components/Navbar.js"></script>
     <!--mounted app-->

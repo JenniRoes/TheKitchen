@@ -1,21 +1,39 @@
-app.component('navbar',{
-    data() {
-        return {
-          keyword: '',
-        };
-      },
-      methods: {
-        async searchRecipe() {
-          try {
-            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${this.keyword}`);
-            const recipes = response.data.meals;
-            // Hacer algo con los resultados de la búsqueda, por ejemplo, mostrarlos en una página de resultados.
-          } catch (error) {
-            console.error(error);
-          }
-        },
-      },
-    template:
+app.component('navbar', {
+  data() {
+    return {
+      keyword: '',
+      searchResults: []
+    }
+  },
+  methods: {
+    searchRecipe(keyword) {
+      axios({
+        method: 'get',
+        url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`
+      })
+        .then(response => {
+          console.log(response.data.meals);
+
+          this.searchResults = [];
+          let items = response.data.meals;
+
+          items.forEach(element => {
+            this.searchResults.push({
+              id: element.idMeal,
+              image: element.strMealThumb,
+              title: element.strMeal,
+              category: element.strCategory,
+              likes: 0,
+              ocassion: "Everyday",
+              ingredients: "NA",
+              description: "Delicious recipes of The Kitchen web site"
+            });
+          });
+        })
+        .catch(error => console.log(error));
+    }
+  },
+  template:
     /*html*/
     `<!--navbar-->
     <nav id="navbar-main" class="navbar navbar-expand-lg">
@@ -39,8 +57,8 @@ app.component('navbar',{
         </ul>
         <!--search placeholder and button-->
         <div class="me-3 li-responsive">
-            <form class="d-flex input-group" role="search">
-                <input class="form-control me-2 input-search" type="text" v-model="keyword"
+            <form class="d-flex input-group" action="search-results.html" method="get" role="search" @submit.prevent="searchRecipe(keyword)">
+                <input v-model="keyword" class="form-control me-2 input-search" type="text"
                     placeholder="Search something..." aria-label="Search">
                 <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                         alt="search icon"></button>

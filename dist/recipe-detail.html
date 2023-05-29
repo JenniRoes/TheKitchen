@@ -39,7 +39,7 @@
                 <div v-for="(item, index) in recipes.slice(0, 4)" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
                         :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"
-                        :data="item" :id="item.id" v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+                        :data="item" :id="item.id"></recipe-card>
                     <!--final card-->
                 </div>
             </div>

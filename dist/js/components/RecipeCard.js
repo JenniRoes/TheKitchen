@@ -32,9 +32,6 @@ app.component('recipe-card',{
         onClickRecipeLike(){
             //console.log("LIKE");
             this.$emit('recipelike', this.index);
-        },
-        onClickViewRecipe(){
-            this.$emit('recipedetail', this.id);
         }
     },
     template:
@@ -55,7 +52,7 @@ app.component('recipe-card',{
             </div>
             <div class="d-flex justify-content-between align-items-center gap-1">
                 <h6 class="mt-3 opacity-50"><small>{{likes}} likes</small></h6>
-                <button class=" btn-circular mt-3 mb-3 hover-grow" v-on:click="onClickRecipeLike()"><img
+                <button class=" btn-circular mt-3 mb-3 hover-grow" v-on:click="onClickRecipeLike(index)"><img
                         src="../dist/imgs/icons/favorite.svg" class="img-fluid mt-1"
                         alt="favorite icon"></button>
             </div>

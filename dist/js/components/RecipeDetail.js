@@ -4,6 +4,7 @@ app.component('recipe-detail',{
             id : "",
             image : "",
             title : "",
+            tag: "",
             category : "",
             totaltime : "",
             level : "",
@@ -39,7 +40,7 @@ app.component('recipe-detail',{
 
                         let items = response.data.meals[0];
                         
-                        console.log(response);
+                        //console.log(response);
 
                         this.id = items.idMeal; 
                         this.image = items.strMealThumb;

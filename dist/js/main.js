@@ -2,12 +2,6 @@ const app = Vue.createApp({
     data() {
         return {
             recipes: [],
-            relatedrecipes: [
-                { id: 201, image: "./imgs/recipe-two.jpg", title: "Recipe title", level: "Easy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "Update 3min ago" },
-                { id: 202, image: "./imgs/recipe-two.jpg", title: "Recipe title", level: "Easy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "Update 3min ago" },
-                { id: 203, image: "./imgs/recipe-two.jpg", title: "Recipe title", level: "Easy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "Update 3min ago" },
-                { id: 204, image: "./imgs/recipe-two.jpg", title: "Recipe title", level: "Easy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Loremipsum dolor sit amet, co. Lorem ipsum dolor sit amet, co", time: "sUpdate 3min ago" }
-            ],
             recipeslist: [
                 { id: 21, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0 },
                 { id: 22, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0 },
@@ -20,7 +14,8 @@ const app = Vue.createApp({
                 { id: 33, image: "./imgs/userlist.png", title: "User name" },
                 { id: 34, image: "./imgs/userlist.png", title: "User name" }
             ],
-            categories: []
+            categories: [],
+            searchResults: []
         }
     },
     mounted: function () {
@@ -112,7 +107,7 @@ const app = Vue.createApp({
                 .catch(
                     error => console.log(error)
                 );
-        }
+        } 
     }
 });
 
