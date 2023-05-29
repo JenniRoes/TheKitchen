@@ -1,36 +1,14 @@
 app.component('navbar', {
   data() {
     return {
+      inputValue: '',
       keyword: '',
-      searchResults: []
     }
   },
   methods: {
-    searchRecipe(keyword) {
-      axios({
-        method: 'get',
-        url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`
-      })
-        .then(response => {
-          console.log(response.data.meals);
-
-          this.searchResults = [];
-          let items = response.data.meals;
-
-          items.forEach(element => {
-            this.searchResults.push({
-              id: element.idMeal,
-              image: element.strMealThumb,
-              title: element.strMeal,
-              category: element.strCategory,
-              likes: 0,
-              ocassion: "Everyday",
-              ingredients: "NA",
-              description: "Delicious recipes of The Kitchen web site"
-            });
-          });
-        })
-        .catch(error => console.log(error));
+    onClickSearch(keyword) {
+      this.keyword = this.inputValue;
+      this.$emit('searchRecipes', this.keyword);
     }
   },
   template:
@@ -57,8 +35,8 @@ app.component('navbar', {
         </ul>
         <!--search placeholder and button-->
         <div class="me-3 li-responsive">
-            <form class="d-flex input-group" action="search-results.html" method="get" role="search" @submit.prevent="searchRecipe(keyword)">
-                <input v-model="keyword" class="form-control me-2 input-search" type="text"
+            <form class="d-flex input-group" action="search.html" method="get" role="search">
+                <input v-model="inputValue" class="form-control me-2 input-search" type="text" name="keyword"
                     placeholder="Search something..." aria-label="Search">
                 <button class="btn btn-search rounded-end" type="submit"><img src="./imgs/icons/search.svg"
                         alt="search icon"></button>

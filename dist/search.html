@@ -24,21 +24,10 @@
             <navbar></navbar>
         </header>
 
-        <!--banner-->
-        <div class="recipes-container">
-            <div>
-                <banner title="Your results"></banner>
-            </div>
-        </div>
-
-
         <!--results-->
-        <div v-for="(item, index) in searchResults" class="col mb-5">
-            <recipe-card :key="index" :image="item.image" :title="item.title" :category="item.category"
-                :description="item.description" :likes="item.likes" :id="item.id"
-                v-on:recipelike="onClickRecipeLike(index)" v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+        <div class="">
+            <search></search>
         </div>
-
 
         <!--footer-->
         <footer class="container-fluid footer-color mt-5 ">
@@ -63,6 +52,7 @@
     <script src="./js/components/RecipeCard.js"></script>
     <script src="./js/components/Banner.js"></script>
     <script src="./js/components/Navbar.js"></script>
+    <script src="./js/components/Search.js"></script>
     <!--mounted app-->
     <script>
         const mountedApp = app.mount("#app");
