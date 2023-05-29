@@ -13685,6 +13685,13 @@ body {
      object-fit: cover;
 }
 
+.detail-img {
+  width: 1024px;
+  height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .card-top-recipe {
   display: -webkit-box;
   display: -ms-flexbox;
