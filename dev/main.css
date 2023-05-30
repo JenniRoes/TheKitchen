@@ -13865,6 +13865,10 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .detail-mobile {
+    width: 95%;
+    right: 0;
+  }
 }
 .btn-container {
   width: 1000px;
@@ -14463,6 +14467,10 @@ body {
 
 .margin-icon {
   margin-top: 2rem;
+}
+
+.admin-background {
+  background-image: url("././../dist/imgs/background.png");
 }
 
 @media only screen and (max-width: 480px) {

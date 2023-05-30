@@ -83,7 +83,7 @@ app.component('recipe-detail',{
         </div>
         <div class="d-flex justify-content-between">
             <h1 class="mt-4">{{title}}</h1>
-            <h6 class="mt-3 opacity-50"><small>{{likes}} likes</small></h6>
+            <h6 class="mt-3 opacity-50 photo-hidden"><small>{{likes}} likes</small></h6>
         </div>
         <div class="mt-2 mb-5">
             <span class="badge badge-orange p-1">{{category}}</span>

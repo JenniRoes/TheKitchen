@@ -82,6 +82,10 @@
     margin-top: 2rem;
 }
 
+.admin-background {
+    background-image: url("././../dist/imgs/background.png");
+}
+
 .imagotipo-responsive {
     @include mixins.respond-to(vars.$phone) {
         width: 200px;
