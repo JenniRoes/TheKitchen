@@ -37,7 +37,7 @@
             <h2 class="mb-4">Top 10 recipes</h2>
             <div class="justify-container">
                 <div class="row">
-                    <div v-for="(item, index) in recipes.slice(0, 10)" class="col-lg-6 mb-4">
+                    <div v-for="(item, index) in recipesten" class="col-lg-6 mb-4">
                         <!--inicial card-->
                         <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
                             :category="item.category" :level="item.level" :ocassion="item.ocassion"

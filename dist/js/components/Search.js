@@ -23,31 +23,31 @@ app.component('search', {
         getResults() {
             axios({
                 method: 'get',
-                url: "https://www.themealdb.com/api/json/v1/1/search.php?s=" + this.keyword
+                url: 'http://localhost/primerprueba/public/api/recipes/searchbyname/' + this.keyword
 
             })
                 .then(
                     (response) => {
 
-                        let resultsRecipes = response.data.meals;
+                        let resultsRecipes = response.data;
 
                         console.log(resultsRecipes);
 
                         resultsRecipes.forEach((element) => {
 
                             this.resultsRecipes.push({
-                                id: element.idMeal,
-                                image: element.strMealThumb,
-                                title: element.strMeal,
-                                category: element.strCategory,
-                                totaltime: "20 mins",
-                                level: "Easy",
-                                likes: 0,
-                                portions: "4-5",
+                                id: element.id,
+                                image: 'http://localhost/primerprueba/public/storage/imgs/' + element.image,
+                                title: element.name,
+                                category: element.category,
+                                totaltime: element.total_time,
+                                level: element.level,
+                                likes: element.likes,
+                                portions: element.portions,
                                 position: 1,
-                                ocassion: "Everyday",
+                                ocassion: element.occasion,
                                 ingredients: "NA",
-                                description: "Delicious recipes of The Kitchen web site",
+                                description: element.description,
                                 preparation: "NA"
                             })
                         });
@@ -67,7 +67,8 @@ app.component('search', {
         <div v-if="resultsRecipes != null">
             <h4 class='ms-2 mt-3'>Results for <span class='fw-bolder text-orange'>{{this.keyword}}</span></h4>
         </div>
-        <div  class="row mt-5">
+        </div>
+        <div  class="row mt-5 recipes-container">
             <div v-for="(item, index) in resultsRecipes" class="col mb-4">
             <recipe-card :image="item.image" :category="item.category" :title="item.title"
             :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"></recipe-card>

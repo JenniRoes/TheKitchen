@@ -24,8 +24,8 @@ app.component('recipe-card',{
             default: 0
         },
         id:{
-            type: String,
-            default: "1"
+            type: Number,
+            default: 1
         }
     },
     methods: {
@@ -44,7 +44,7 @@ app.component('recipe-card',{
         </div>
         <div class="detail-container text-start ms-3 me-3">
             <div>
-                <h5 class="mt-2"><a class="link-title" :href="'recipe-detail.html?id=' + id" v-on:click="onClickViewRecipe(id)">{{title}}</a></h5>
+                <h5 class="mt-2 overflow-title"><a class="link-title" :href="'recipe-detail.html?id=' + id" v-on:click="onClickViewRecipe(id)">{{title}}</a></h5>
                 <h6><span class="badge badge-orange mt-2 p-1">{{category}}</span></h6>
             </div>
             <div>

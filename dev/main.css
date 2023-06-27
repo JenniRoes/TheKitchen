@@ -13494,6 +13494,19 @@ body {
   }
 }
 
+.overflow-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.top-title {
+  width: 350px;
+}
+
 .badge-orange {
   color: #ffffff;
   background-color: #FF6109;
@@ -13506,6 +13519,35 @@ body {
   background-color: #24E376;
   border-radius: 0.12rem;
   padding: 0.12rem;
+  font-size: 11.16px;
+  font-weight: bold;
+}
+
+.badge-yellow {
+  color: #000000;
+  background-color: #FFF961;
+  border-radius: 0.12rem;
+  padding: 0.12rem;
+  font-size: 11.16px;
+  font-weight: bold;
+}
+
+.badge-red {
+  color: #ffffff;
+  background-color: #FF4848;
+  border-radius: 0.12rem;
+  padding: 0.12rem;
+  font-size: 11.16px;
+  font-weight: bold;
+}
+
+.badge-default {
+  color: #ffffff;
+  background-color: #24E376;
+  border-radius: 0.12rem;
+  padding: 0.12rem;
+  font-size: 11.16px;
+  font-weight: bold;
 }
 
 .badge-orange-big {

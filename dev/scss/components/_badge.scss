@@ -6,6 +6,23 @@
 }
 .badge-green {
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-green-100, 0.12rem, 0.12rem);
+    font-size: 11.16px;
+    font-weight: bold;
+}
+.badge-yellow {
+    @include mixins.basic-badge(vars.$clr-black-200, vars.$clr-yellow-100, 0.12rem, 0.12rem);
+    font-size: 11.16px;
+    font-weight: bold;
+}
+.badge-red {
+    @include mixins.basic-badge(vars.$clr-white, vars.$clr-red-100, 0.12rem, 0.12rem);
+    font-size: 11.16px;
+    font-weight: bold;
+}
+.badge-default {
+    @include mixins.basic-badge(vars.$clr-white, vars.$clr-green-100, 0.12rem, 0.12rem);
+    font-size: 11.16px;
+    font-weight: bold;
 }
 
 .badge-orange-big{

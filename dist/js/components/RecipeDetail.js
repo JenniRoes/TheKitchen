@@ -32,37 +32,47 @@ app.component('recipe-detail',{
         getDetails(id){
             axios({
                 method: 'get',
-                url: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id
+                url: 'http://localhost/primerprueba/public/api/recipes/recipe/'+id
 
             })
                 .then(
                     (response) => {
 
-                        let items = response.data.meals[0];
+                        let items = response.data[0];
                         
-                        //console.log(response);
+                        console.log(response);
 
-                        this.id = items.idMeal; 
-                        this.image = items.strMealThumb;
-                        this.title = items.strMeal;
-                        this.category = items.strCategory;
-                        this.totaltime = "20 mins";
-                        this.level = "Easy";
-                        this.likes = 2;
-                        this.description = "Delicious recipes of The Kitchen web site"
-                        this.portions = "4-5";
+                        this.id = items.id; 
+                        this.image = 'http://localhost/primerprueba/public/storage/imgs/'+items.image;
+                        this.title = items.name;
+                        this.category = items.category;
+                        this.totaltime = items.total_time;
+                        this.level = items.level;
+                        this.likes = items.likes;
+                        this.description = items.description;
+                        this.portions = items.portions;
                         this.position= 1;
-                        this.occasion = "Everyday";
+                        this.occasion = items.occasion;
                         this.tag = "Delicious!";
-                        this.preparation = items.strInstructions;
-                        this.ingredients = items.strIngredient1;
-
-
+                        this.preparation = items.preparation_instructions;
+                        this.ingredients = items.ingredients;
                     }
                 )
                 .catch(
                     error => console.log(error)
                 );
+        }
+    },
+    computed: {
+        badgeClass() {
+            if (this.level === 'Easy Recipes') {
+                return 'badge-green';
+            } else if (this.level === 'Intermediate Recipes') {
+                return 'badge-yellow';
+            } else if (this.level === 'Advanced Recipes') {
+                return 'badge-red';
+            }
+            return 'badge-default';
         }
     },
     template:
@@ -87,7 +97,7 @@ app.component('recipe-detail',{
         </div>
         <div class="mt-2 mb-5">
             <span class="badge badge-orange p-1">{{category}}</span>
-            <span class="badge badge-green p-1 ms-2">{{level}}</span>
+            <span :class="badgeClass + ' p-1 ms-2'">{{level}}</span>
             <span class="badge badge-orange p-1 ms-2">{{occasion}}</span>
         </div>
         <div>

@@ -16,7 +16,7 @@ app.component('navbar', {
     `<!--navbar-->
     <nav id="navbar-main" class="navbar navbar-expand-lg">
     <a class="navbar-brand color-header" href="#">
-        <img src="../dist/imgs/logotipo-xsm.png" class="ms-5  img-fluid d-inline-block align-text-middle"
+        <img src="../dist/imgs/logotipo-xsm.png" class="ms-5 img-fluid d-inline-block align-text-middle"
             alt="logotipo">
     </a>
     <!--boton navbar-main-->

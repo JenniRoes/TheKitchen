@@ -28,26 +28,38 @@ app.component('top-recipe-card', {
             default: "Lorem Ipsum"
         },
         totaltime: {
-            type: String,
-            default: "Total time"
+            type: Number,
+            default: 0
         },
         portions: {
-            type: String,
-            default: "Portions"
+            type: Number,
+            default: 0
         },
         likes: {
             type: Number,
             default: 0
         },
         id:{
-            type: String,
-            default: "1"
+            type: Number,
+            default: 1
         }
     },
     methods: {
         onClickRecipeLike(){
             //console.log("LIKE");
             this.$emit('recipelike', this.index);
+        },
+    },
+    computed: {
+        badgeClass() {
+            if (this.level === 'Easy Recipes') {
+                return 'badge-green';
+            } else if (this.level === 'Intermediate Recipes') {
+                return 'badge-yellow';
+            } else if (this.level === 'Advanced Recipes') {
+                return 'badge-red';
+            }
+            return 'badge-default';
         }
     },
     template:
@@ -62,20 +74,19 @@ app.component('top-recipe-card', {
             <div class="card-body p-0">
                 <div class="row">
                     <div class="col-6">
-                        <h5 class="card-title ms-3"><a class="link-title" :href="'recipe-detail.html?id=' + id">{{title}}</a></h5>
+                        <h5 class="card-title ms-3"><a class="link-title overflow-title top-title" :href="'recipe-detail.html?id=' + id">{{title}}</a></h5>
                     </div>
                     <div class="ms-3 mb-2 mt-2">
                         <span class="badge badge-orange p-1">{{category}}</span>
-                        <span class="badge badge-green p-1 ms-2">{{level}}</span>
+                        <span :class="badgeClass + ' p-1 ms-2'">{{level}}</span>
                         <span class="badge badge-orange p-1 ms-2">{{ocassion}}</span>
                     </div>
                 </div>
                 <p class="card-text overflow ms-3">{{description}} </p>
                 <div class="row ms-3 mt-2 mb-2">
                     <p class="label-time"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
-                            alt="preparation time icon">{{totaltime}}</p>
-                    <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg" alt="portions icon">{{portions}}
-                    </p>
+                            alt="preparation time icon">{{totaltime}} min</p>
+                    <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg" alt="portions icon">{{portions}}</p>
                 </div>
                 <div class="row ms-2">
                     <div class="col-10">
