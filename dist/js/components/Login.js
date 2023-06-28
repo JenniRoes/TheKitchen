@@ -28,7 +28,7 @@ app.component('login', {
           <!--initial card-->
           <div class="row container-login col-md-12 center mb-5">
               <form class="mt-2 mb-2">
-                  <label class="form-label text-forms" for="user">User</label>
+                  <label class="form-label text-forms" for="user">Email</label>
                   <input id="user" class="form-control" type="text" name="user">
                   <label for="password" class="form-label mt-4 text-forms">Password <span
                           class="text-question"><a href="./pass-recovery-one.html" class="text-question"> Forgot?</a></span></label>

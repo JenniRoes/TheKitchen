@@ -97,9 +97,7 @@ const app = Vue.createApp({
                             portions: element.portions,
                             position: index + 1,
                             ocassion: element.occasion,
-                            ingredients: "NA",
-                            description:  element.description,
-                            preparation: "NA"
+                            description:  element.description
                         });
                     });
 

@@ -1,61 +1,69 @@
-app.component('recipe-detail',{
+app.component('recipe-detail', {
     data() {
         return {
-            id : "",
-            image : "",
-            title : "",
+            id: "",
+            image: "",
+            title: "",
             tag: "",
-            category : "",
-            totaltime : "",
-            level : "",
-            likes : "",
-            description : "",
-            portions : "",
-            occasion : "",
-            position : "",
-            preparation : "",
-            ingredients: ""
+            category: "",
+            totaltime: "",
+            preparationtime: "",
+            cookingtime: "",
+            level: "",
+            likes: "",
+            description: "",
+            portions: "",
+            occasion: "",
+            position: "",
+            preparation: "",
+            ingredients: [],
+            relatedRecipes: []
         }
     },
     mounted() {
 
-            const params = window.location.search;
-            //console.log(params);
-            const urlParams = new URLSearchParams(params);
-            const id = urlParams.get("id");
-            //console.log("este es el id" +id);
+        const params = window.location.search;
+        //console.log(params);
+        const urlParams = new URLSearchParams(params);
+        const id = urlParams.get("id");
+        //console.log("este es el id" +id);
 
-            this.getDetails(id);
-       
+        this.getDetails(id);
+
     },
     methods: {
-        getDetails(id){
+        getDetails(id) {
             axios({
                 method: 'get',
-                url: 'http://localhost/primerprueba/public/api/recipes/recipe/'+id
+                url: 'http://localhost/primerprueba/public/api/recipes/recipe/' + id
 
             })
                 .then(
                     (response) => {
+                        //console.log(response);
 
-                        let items = response.data[0];
-                        
-                        console.log(response);
+                        let recipe = response.data[0][0];
+                        let ingredients = response.data[1];
+                        let relatedRecipes = response.data[2];
 
-                        this.id = items.id; 
-                        this.image = 'http://localhost/primerprueba/public/storage/imgs/'+items.image;
-                        this.title = items.name;
-                        this.category = items.category;
-                        this.totaltime = items.total_time;
-                        this.level = items.level;
-                        this.likes = items.likes;
-                        this.description = items.description;
-                        this.portions = items.portions;
-                        this.position= 1;
-                        this.occasion = items.occasion;
+                        this.id = recipe.id;
+                        this.image = 'http://localhost/primerprueba/public/storage/imgs/' + recipe.image;
+                        this.title = recipe.name;
+                        this.category = recipe.category;
+                        this.preparationtime = recipe.preparation_time;
+                        this.cookingtime = recipe.cooking_time;
+                        this.totaltime = recipe.total_time;
+                        this.level = recipe.level;
+                        this.likes = recipe.likes;
+                        this.description = recipe.description;
+                        this.portions = recipe.portions;
+                        this.position = 1;
+                        this.occasion = recipe.occasion;
                         this.tag = "Delicious!";
-                        this.preparation = items.preparation_instructions;
-                        this.ingredients = items.ingredients;
+                        this.preparation = recipe.preparation_instructions;
+                        this.ingredients = ingredients;
+
+                        this.relatedRecipes = response.data[2];
                     }
                 )
                 .catch(
@@ -76,9 +84,10 @@ app.component('recipe-detail',{
         }
     },
     template:
-    /*html*/
-    `
-    <div class="center-img-detail">
+        /*html*/
+        `
+    <div class="row recipes-container detail-mobile">
+    <div class="center-img-detail col me-5">
         <div class="card">
             <img v-bind:src="image" class="detail-img" alt="photo food">
             <div class="card-img-overlay">
@@ -103,21 +112,35 @@ app.component('recipe-detail',{
         <div>
             <h2 class="mt-5">Description</h2>
             <div class="row mt-4 mb-3">
-                <p class="label-time ms-3"><img src="imgs/icons/wash.svg" alt="preparation time icon">15min</p>
+                <p class="label-time ms-3"><img src="imgs/icons/wash.svg" alt="preparation time icon">{{preparationtime}} min</p>
                 <p class="label-time ms-3"><img src="imgs/icons/local_fire_department.svg"
-                        alt="cooking time icon">30min</p>
+                        alt="cooking time icon">{{cookingtime}} min</p>
                 <p class="label-time ms-3"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
-                        alt="total time icon">{{totaltime}}</p>
+                        alt="total time icon">{{totaltime}} min</p>
                 <p class="label-time ms-3"><img src="imgs/icons/pie_chart_orange.svg" alt="portions icon">{{portions}}</p>
             </div>
             <p>{{description}}</p>
             <h2 class="mt-5 mb-2">Ingredients</h2>
             <ul>
-                <li>{{ingredients}}</li>
+                <li  v-for="ingredient in ingredients" :key="ingredient.id">{{ingredient.amount}} {{ingredient.measurement_unit}} {{ingredient.description}}</li>
             </ul>
             <h2 class="mt-5">Preparation</h2>
             <p>{{preparation}}</p>
         </div>
         </div>
-    `
+        <!--related recipes-->
+        <div class="col">
+                <div class="">
+                    <h2 class="col mb-5">Related Recipes</h2>
+                </div>
+                <!--inicial card-->
+                <div v-for="item in relatedRecipes" :key="item.id" class="col mb-4">
+                    <recipe-card :image="'http://localhost/primerprueba/public/storage/imgs/' + item.image" :category="item.category" :title="item.name"
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"
+                        :data="item" :id="item.id"></recipe-card>
+                    <!--final card-->
+                </div>
+            </div>
+        </div>
+        `
 });

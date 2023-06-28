@@ -14189,6 +14189,7 @@ body {
   font-size: 14px;
   color: white;
   text-decoration: none;
+  border: none;
 }
 @media only screen and (max-width: 480px) {
   .btn-xl-dark {
@@ -14219,6 +14220,7 @@ body {
   color: #FF6109;
   text-decoration: none;
   font-size: 14px;
+  border: none;
 }
 @media only screen and (max-width: 480px) {
   .btn-xl-light {

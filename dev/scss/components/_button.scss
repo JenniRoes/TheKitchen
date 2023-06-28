@@ -139,6 +139,7 @@
     font-size: 14px;
     color: white;
     text-decoration: none;
+    border: none;
 
     @include mixins.respond-to(vars.$phone) {
         width: 312px;
@@ -159,6 +160,7 @@
     color: #FF6109;
     text-decoration: none;
     font-size: 14px;
+    border: none;
 
     @include mixins.respond-to(vars.$phone) {
         width: 312px;

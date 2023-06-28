@@ -25,25 +25,13 @@
             <navbar></navbar>
         </header>
 
-        <div class="row recipes-container detail-mobile">
             <!--recipe detail-->
             <div class="mt-5 me-5 col">
                 <recipe-detail></recipe-detail>
             </div>
             <!--related recipes-->
-            <div class="col mt-5">
-                <div class="">
-                    <h2 class="col mb-5">Related Recipes</h2>
-                </div>
-                <!--inicial card-->
-                <div v-for="(item, index) in recipes.slice(0, 4)" class="col mb-4">
-                    <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"
-                        :data="item" :id="item.id"></recipe-card>
-                    <!--final card-->
-                </div>
-            </div>
-        </div>
+            
+      
 
         <!--footer-->
         <footer class="container-fluid footer-color mt-5 ">
