@@ -34,8 +34,8 @@
                 <p><small>Filter by:</small></p>
                 <ul class="mb-2 filter-category">
                     <li v-for="(category, index) in categories" class="position-relative filter-category">
-                        <filter-category :category="category.category"
-                            v-on:selectedcategory="onClickSelectedCategory"></filter-category>
+                        <filter-category :category="category.category" :index="category.id"
+                            v-on:selectedcategory="onClickSelectedCategory(index)"></filter-category>
                     </li>
                 </ul>
             </div>

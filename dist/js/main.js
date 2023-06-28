@@ -3,22 +3,8 @@ const app = Vue.createApp({
         return {
             recipes: [],
             recipesten: [],
-            recipeslist: [
-                { id: 21, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0 },
-                { id: 22, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0 },
-                { id: 23, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0 },
-                { id: 24, image: "./imgs/itemlist.png", title: "Recipe title", likes: 0 }
-            ],
-            userslist: [
-                { id: 31, image: "./imgs/userlist.png", title: "User name" },
-                { id: 32, image: "./imgs/userlist.png", title: "User name" },
-                { id: 33, image: "./imgs/userlist.png", title: "User name" },
-                { id: 34, image: "./imgs/userlist.png", title: "User name" }
-            ],
-            categories: [],
+            categories: [{id: 0, category: "None"}],
             searchResults: [],
-            positions: [{position: 1}, {position: 2}, {position: 3}, {position: 4}, {position: 5}, 
-                {position: 6}, {position: 7}, {position: 8}, {position: 9}, {position: 10}],
         }
     },
     mounted: function () {
@@ -57,14 +43,8 @@ const app = Vue.createApp({
                             image:'http://localhost/primerprueba/public/storage/imgs/' + element.image,
                             title: element.name,
                             category: 'Breakfast',
-                            totaltime: element.total_time,
-                            level: element.level,
                             likes: element.likes,
-                            portions: element.portions,
-                            ocassion: element.occasion,
-                            ingredients: "NA",
                             description:  element.description,
-                            preparation: "NA"
                         });
                     });
 
@@ -74,7 +54,7 @@ const app = Vue.createApp({
                 error => console.log(error)
             );
 
-            //recipes for top ten
+        //recipes for top ten
         axios({
             method: 'get',
             url: 'http://localhost/primerprueba/public/api/recipes/top10'
@@ -90,7 +70,7 @@ const app = Vue.createApp({
                             id: element.id,
                             image:'http://localhost/primerprueba/public/storage/imgs/' + element.image,
                             title: element.name,
-                            category: 'Breakfast',
+                            category: element.category,
                             totaltime: element.total_time,
                             level: element.level,
                             likes: element.likes,
@@ -115,24 +95,23 @@ const app = Vue.createApp({
             //filter by category for categories page
             axios({
                 method: 'get',
-                url: 'http://localhost/primerprueba/public/api/recipes/filterby/category/'
+                url: 'http://localhost/primerprueba/public/api/recipes/filterby/category/' + category
             })
                 .then(
                     (response) => {
-                        console.log(response.data);
+                        //console.log(response.data);
                         
                         this.recipes = [];
-                         let items = response.data;
+                        let items = response.data;
 
                         items.forEach(element => {
                             this.recipes.push({
                                 id: element.id,
                                 image: 'http://localhost/primerprueba/public/storage/imgs/' + element.image,
                                 title: element.name,
-                                category: category,
-                                likes: 0,
+                                category: element.category,
+                                likes: element.likes,
                                 ocassion: element.occasion,
-                                ingredients: "NA",
                                 description: element.description
                             });
                         });

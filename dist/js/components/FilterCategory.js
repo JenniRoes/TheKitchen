@@ -14,5 +14,4 @@ app.component('filter-category',{ //metodo que responde al click
     template:
     /*html*/
     `<button class="btn" v-on:click="onClickCategoryButton"><small class="text-muted">{{category}}</small></button>`
-    
 })
