@@ -22,13 +22,11 @@ app.component('signup', {
             // Realizar la solicitud POST al endpoint de registro
             axios.post('http://localhost/primerprueba/public/api/users/register', data)
                 .then(response => {
-                    // Registro exitoso
                     console.log(response.data);
                     // Redirigir a ../../login
                     window.location.href = '../../login.html';
                 })
                 .catch(error => {
-                    // Error en el registro
                     console.error(error);
                 });
         }
@@ -59,7 +57,7 @@ app.component('signup', {
             
         <!--buttons-->
         <div class="col center-button">
-            <div class="row center"><a href="./login.html" class="center btn-signup-light mt-4 mb-3 hover-grow">Log in</a></div>
+            <div class="row center"><a href="login.html" class="center btn-signup-light mt-4 mb-3 hover-grow">Log in</a></div>
             <div class="">
                 <span class=" line-deco mb-3 mx-auto"></span>
             </div>

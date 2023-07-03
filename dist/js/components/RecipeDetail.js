@@ -26,7 +26,6 @@ app.component('recipe-detail', {
         //console.log(params);
         const urlParams = new URLSearchParams(params);
         const id = urlParams.get("id");
-        //console.log("este es el id" +id);
 
         this.getDetails(id);
 

@@ -4,20 +4,19 @@ app.component('login', {
         const user = document.getElementById('user').value;
         const password = document.getElementById('password').value;
   
-        // Realizar la solicitud de inicio de sesión al API
         axios.post('http://localhost/primerprueba/public/api/users/login', {
           email: user,
           password: password
         })
         .then(response => {
-          // Solicitud de inicio de sesión exitosa
-          // Redirigir al usuario a ../../home.html
+          //this.token = response.data.accessToken;
+          //console.log(token);
+          localStorage.setItem('token', response.data.accessToken);
           window.location.href = 'http://localhost/proyecto_interactivasII/dist/home.html';
         })
         .catch(error => {
-          // Error en la solicitud de inicio de sesión
           console.log(error);
-          // Puedes mostrar un mensaje de error o tomar otras acciones según tus necesidades
+          alert("No se encuentra registrado o ha ingresado los datos incorrectamente")
         });
       }
     },
@@ -42,7 +41,6 @@ app.component('login', {
                           <span class=" line-deco mt-4 mb-3 mx-auto"></span>
                       </div>
                       <div class="row center"><a href="./signup.html" class="center btn-xl-light mt-2 hover-grow">Sign up</a></div>
-                      <a class=" center text-orange mt-5" href="./recipe-list-admin.html"><small>Admin Access</small></a>
                   </div>
               </form>
           </div>
