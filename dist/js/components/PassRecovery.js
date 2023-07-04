@@ -1,8 +1,25 @@
-app.component('pass-recovery',{
-    
+app.component('pass-recovery', {
+    methods: {
+        newPassword() {
+            const email = document.getElementById('email').value;
+
+            axios.post('http://localhost/primerprueba/public/api/users/recoverpassword', {
+                email: email,
+            })
+                .then(response => {
+                    //console.log(response.data.password);
+                    localStorage.setItem('password', response.data.password);
+                    window.location.href = 'http://localhost/proyecto_interactivasII/dist/pass-recovery-three.html';
+                })
+                .catch(error => {
+                    console.log(error);
+                    alert("No se encuentra registrado o ha ingresado los datos incorrectamente")
+                });
+        }
+    },
     template:
-    /*html*/
-    `
+        /*html*/
+        `
     <div class="container center mt-5">
     <div class="row">
         <img src="./imgs/imagotipo-xl.png" class="imagotipo-responsive mt-5 mb-5" alt="logo">
@@ -17,7 +34,7 @@ app.component('pass-recovery',{
                 <input id="email" class="form-control" type="email" name="email">
             <div class="col col-md-12 center-button margin-box ">
                 <div class="row center margin-box">
-                    <a href="./pass-recovery-three.html" class="center btn-xxl-dark hover-grow mt-4">Reset password</a>
+                    <a href="#" class="center btn-xxl-dark hover-grow mt-4" @click="newPassword">Reset password</a>
                 </div>
             </div>
             </form>
