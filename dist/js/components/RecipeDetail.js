@@ -17,7 +17,9 @@ app.component('recipe-detail', {
             position: "",
             preparation: "",
             ingredients: [],
-            relatedRecipes: []
+            relatedRecipes: [],
+            userId: ''
+
         }
     },
     mounted() {
@@ -39,7 +41,8 @@ app.component('recipe-detail', {
             })
                 .then(
                     (response) => {
-                        //console.log(response);
+                        console.log(id);
+                        localStorage.setItem('idRecipe', id);
 
                         let recipe = response.data[0][0];
                         let ingredients = response.data[1];
@@ -68,6 +71,31 @@ app.component('recipe-detail', {
                 .catch(
                     error => console.log(error)
                 );
+        },
+        saveRecipe(id) {
+            axios({
+                method: 'get',
+                url: 'http://localhost/primerprueba/public/api/users/getuserid',
+            })
+                .then((response) => {
+                        userId = response.data.uid;
+                        idRecipe = localStorage.getItem('idRecipe');
+                        
+                        axios({
+                            method: 'get',
+                            url: 'http://localhost/primerprueba/public/api/users/saverecipe/' + userId + '/' + idRecipe
+                        })
+                            .then((response) => {
+                                console.log(idRecipe);
+                                console.log(response);
+                            })
+                            .catch((error) => console.log(error));
+                    
+                })
+                .catch(
+                    error => console.log(error)
+
+                );
         }
     },
     computed: {
@@ -94,7 +122,7 @@ app.component('recipe-detail', {
                     <p class="align-content-center"><span class="badge-orange-big p-1">{{tag}}</span></p>
                 </div>
                 <div class="align-end">
-                    <button class=" btn-circular hover-grow"><img src="./imgs/icons/save.svg"
+                    <button class=" btn-circular hover-grow" @click= "saveRecipe"><img src="./imgs/icons/save.svg"
                             class="img-fluid mx-auto" alt="save icon"></button>
                 </div>
             </div>

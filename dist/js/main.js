@@ -3,121 +3,99 @@ const app = Vue.createApp({
         return {
             recipes: [],
             recipesten: [],
-            categories: [{id: 0, category: "None"}],
+            categories: [{ id: 0, category: "None" }],
             searchResults: [],
-            userId : null
+            userId: null,
+            savedRecipes: []
         }
     },
-    mounted: function () {
-        //filter by category 
-        axios({
-            method: 'get',
-            url: 'http://localhost/primerprueba/public/api/recipes/categories'
-        })
-            .then(
-
-                (response) => {
-                    let items = response.data;
-                    items.forEach((element, index) => {
-                        this.categories.push({ id: index, category: element.category});
-                    });
-                }
-            )
-            .catch(
-                error => console.log(error)
-            );
-
-        //default recipes for home page
-        axios({
-            method: 'get',
-            url: 'http://localhost/primerprueba/public/api/recipes/all'
-        })
-            .then(
-                (response) => {
-                    let items = response.data;
-
-                    this.recipes = [];
-
-                    items.forEach(element => {
-                        this.recipes.push({
-                            id: element.id,
-                            image:'http://localhost/primerprueba/public/storage/imgs/' + element.image,
-                            title: element.name,
-                            category: 'Breakfast',
-                            likes: element.likes,
-                            description:  element.description,
-                        });
-                    });
-
-                }
-            )
-            .catch(
-                error => console.log(error)
-            );
-
-        //recipes for top ten
-        axios({
-            method: 'get',
-            url: 'http://localhost/primerprueba/public/api/recipes/top10'
-        })
-            .then(
-                (response) => {
-                    let items = response.data;
-
-                    this.recipesten = [];
-
-                    items.forEach((element, index) => {
-                        this.recipesten.push({
-                            id: element.id,
-                            image:'http://localhost/primerprueba/public/storage/imgs/' + element.image,
-                            title: element.name,
-                            category: element.category,
-                            totaltime: element.total_time,
-                            level: element.level,
-                            likes: element.likes,
-                            portions: element.portions,
-                            position: index + 1,
-                            ocassion: element.occasion,
-                            description:  element.description
-                        });
-                    });
-
-                }
-            )
-            .catch(
-                error => console.log(error)
-            );
-
-            //get user id
-            axios({
-                method: 'get',
-                url: 'http://localhost/primerprueba/public/api/users/getuserid'
-              })
-              .then(response => {
-                if (response.data.code === 200) {
-                  this.userId = response.data.uid;
-                }
-              })
-              .catch(error => console.log(error));
-    },
+    mounted: async function () {
+        try {
+          // category filters 
+          const categoriesResponse = await axios.get('http://localhost/primerprueba/public/api/recipes/categories');
+          let categories = categoriesResponse.data;
+          categories.forEach((element, index) => {
+            this.categories.push({ id: index, category: element.category });
+          });
+      
+          // default recipes for home page
+          const defaultRecipesResponse = await axios.get('http://localhost/primerprueba/public/api/recipes/all');
+          let defaultRecipes = defaultRecipesResponse.data;
+          this.recipes = [];
+          defaultRecipes.forEach(element => {
+            this.recipes.push({
+              id: element.id,
+              image: 'http://localhost/primerprueba/public/storage/imgs/' + element.image,
+              title: element.name,
+              category: 'Breakfast',
+              likes: element.likes,
+              description: element.description,
+            });
+          });
+      
+          // recipes fot top ten page
+          const topTenRecipesResponse = await axios.get('http://localhost/primerprueba/public/api/recipes/top10');
+          let topTenRecipes = topTenRecipesResponse.data;
+          this.recipesten = [];
+          topTenRecipes.forEach((element, index) => {
+            this.recipesten.push({
+              id: element.id,
+              image: 'http://localhost/primerprueba/public/storage/imgs/' + element.image,
+              title: element.name,
+              category: element.category,
+              totaltime: element.total_time,
+              level: element.level,
+              likes: element.likes,
+              portions: element.portions,
+              position: index + 1,
+              ocassion: element.occasion,
+              description: element.description
+            });
+          });
+      
+          // det user id
+          const userIdResponse = await axios.get('http://localhost/primerprueba/public/api/users/getuserid');
+          if (userIdResponse.data.code === 200) {
+            this.userId = userIdResponse.data.uid;
+      
+            // show save recipes
+            const savedRecipesResponse = await axios.get('http://localhost/primerprueba/public/api/users/savedrecipes/' + this.userId);
+            let savedRecipes = savedRecipesResponse.data;
+      
+            this.savedRecipes = [];
+            savedRecipes.forEach(element => {
+              this.savedRecipes.push({
+                id: element.id,
+                image: 'http://localhost/primerprueba/public/storage/imgs/' + element.image,
+                title: element.name,
+                category: 'Breakfast',
+                likes: element.likes,
+                description: element.description
+              });
+            });
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      },
     methods: {
-        onClickRecipeLike: function(id) {
+        onClickRecipeLike: function (id) {
             this.recipes.forEach(recipe => {
                 if (recipe.id === id) {
 
                     axios({
                         method: 'get',
-                        url: 'http://localhost/primerprueba/public/api/users/likes/'+ this.userId + '/' + id
+                        url: 'http://localhost/primerprueba/public/api/users/likes/' + this.userId + '/' + id
                     })
-                    .then(
-                        (response) => {
-                            console.log(response);
-                
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    )
+                        .then(
+                            (response) => {
+                                console.log(response);
+
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        )
                 }
             });
         },
@@ -130,7 +108,7 @@ const app = Vue.createApp({
                 .then(
                     (response) => {
                         //console.log(response.data);
-                        
+
                         this.recipes = [];
                         let items = response.data;
 
@@ -151,9 +129,6 @@ const app = Vue.createApp({
                 .catch(
                     error => console.log(error)
                 );
-        } 
+        }
     }
 });
-
-
-

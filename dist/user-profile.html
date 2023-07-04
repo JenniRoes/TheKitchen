@@ -36,20 +36,26 @@
                     <h2 class="ms-4 ps-4">Your collection</h2>
                     <section class="row mt-4 ms-5 gap-5">
                         <!--inicial card-->
-                        <div v-for="(item, index) in recipes.slice(0, 9)" class="col-3 p-0 me-5">
+                        <div v-for="(item, index) in savedRecipes" class="col-3 p-0 me-5">
                             <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                                :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"></recipe-card>
+                                :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></recipe-card>
                         </div>
                         <!--final card-->
                     </section>
                 </section>
             </div>
         </section>
+
+        <!--footer-->
+        <footer class="container-fluid footer-color">
+            <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
+                <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
+                <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
+            </div>
+        </footer>
     </section>
 
-    <!--footer-->
-    <footer class="container-fluid footer-color">
-        <div class="d-flex justify-content-between ps--
+   
 
     <!--Scripts-->
     <!--bootstrap-->

@@ -41,10 +41,10 @@
                 <h2>Your collection</h2>
                 <section class="row mt-4">
                     <!--inicial card-->
-                    <div v-for="(item, index) in recipes.slice(0, 9)" class="col mb-4">
+                    <div v-for="(item, index) in savedRecipes" class="col mb-4">
                         <recipe-card :image="item.image" :category="item.category" :title="item.title"
                             :description="item.description" :likes="item.likes"
-                            v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"
+                            v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"
                             ></recipe-card>
                     </div>
                     <!--final card-->

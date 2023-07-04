@@ -9,8 +9,12 @@ app.component('login', {
           password: password
         })
         .then(response => {
-          //console.log(response.data.user);
+          console.log(response.data.user);
           localStorage.setItem('token', response.data.accessToken);
+          localStorage.setItem('name', response.data.user.name);
+          localStorage.setItem('lastname', response.data.user.last_name);
+          localStorage.setItem('country', response.data.user.country);
+          localStorage.setItem('email', response.data.user.email);
           window.location.href = 'http://localhost/proyecto_interactivasII/dist/home.html';
         })
         .catch(error => {
