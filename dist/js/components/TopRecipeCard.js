@@ -94,7 +94,7 @@ app.component('top-recipe-card', {
                         </p>
                     </div>
                     <div class="col-1 ">
-                        <button class=" btn-circular mt-1 mb-3 hover-grow" v-on:click="onClickRecipeLike()"><img src="./imgs/icons/favorite.svg"
+                        <button class=" btn-circular mt-1 mb-3 hover-grow" v-on:click="onClickRecipeLike(index)"><img src="./imgs/icons/favorite.svg"
                                 class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
                     </div>
                 </div>
