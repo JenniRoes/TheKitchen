@@ -53,5 +53,6 @@ app.component('user-profile', {
           <p>Email: {{ email }}</p>
           <a href="./login.html" class="btn btn-md-line mt-5 btn-hidden" @click= "logout">Log out</a>
         </div>
-      </div>`
+      </div>
+      `
   });

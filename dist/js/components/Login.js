@@ -9,8 +9,7 @@ app.component('login', {
           password: password
         })
         .then(response => {
-          //this.token = response.data.accessToken;
-          //console.log(token);
+          //console.log(response.data.user);
           localStorage.setItem('token', response.data.accessToken);
           window.location.href = 'http://localhost/proyecto_interactivasII/dist/home.html';
         })

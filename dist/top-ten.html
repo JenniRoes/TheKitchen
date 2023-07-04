@@ -42,7 +42,7 @@
                         <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
                             :category="item.category" :level="item.level" :ocassion="item.ocassion"
                             :description="item.description" :totaltime="item.totaltime" :portions="item.portions"
-                            :likes="item.likes"  v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"></top-recipe-card>
+                            :likes="item.likes"  v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></top-recipe-card>
                         <!--final card-->
                     </div>
                 </div>

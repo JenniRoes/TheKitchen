@@ -94,8 +94,8 @@ app.component('recipe-detail', {
                     <p class="align-content-center"><span class="badge-orange-big p-1">{{tag}}</span></p>
                 </div>
                 <div class="align-end">
-                    <button class=" btn-circular hover-grow" v-on:click="onClickRecipeLike()"><img src="./imgs/icons/favorite.svg"
-                            class="img-fluid mx-auto mt-1" alt="favorite icon"></button>
+                    <button class=" btn-circular hover-grow"><img src="./imgs/icons/save.svg"
+                            class="img-fluid mx-auto" alt="save icon"></button>
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@ app.component('recipe-detail', {
                 <!--inicial card-->
                 <div v-for="item in relatedRecipes" :key="item.id" class="col mb-4">
                     <recipe-card :image="'http://localhost/primerprueba/public/storage/imgs/' + item.image" :category="item.category" :title="item.name"
-                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)"
+                        :description="item.description" :likes="item.likes"
                         :data="item" :id="item.id"></recipe-card>
                     <!--final card-->
                 </div>

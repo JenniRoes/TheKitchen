@@ -5,6 +5,7 @@ const app = Vue.createApp({
             recipesten: [],
             categories: [{id: 0, category: "None"}],
             searchResults: [],
+            userId : null
         }
     },
     mounted: function () {
@@ -86,10 +87,39 @@ const app = Vue.createApp({
             .catch(
                 error => console.log(error)
             );
+
+            //get user id
+            axios({
+                method: 'get',
+                url: 'http://localhost/primerprueba/public/api/users/getuserid'
+              })
+              .then(response => {
+                if (response.data.code === 200) {
+                  this.userId = response.data.uid;
+                }
+              })
+              .catch(error => console.log(error));
     },
     methods: {
-        onClickRecipeLike(index) {
-            this.recipes[index].likes += 1;
+        onClickRecipeLike: function(id) {
+            this.recipes.forEach(recipe => {
+                if (recipe.id === id) {
+
+                    axios({
+                        method: 'get',
+                        url: 'http://localhost/primerprueba/public/api/users/likes/'+ this.userId + '/' + id
+                    })
+                    .then(
+                        (response) => {
+                            console.log(response);
+                
+                        }
+                    )
+                    .catch(
+                        error => console.log(error)
+                    )
+                }
+            });
         },
         onClickSelectedCategory(category) {
             //filter by category for categories page

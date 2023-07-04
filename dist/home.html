@@ -41,7 +41,7 @@
                 <!--inicial card-->  
                 <div v-for="(item, index) in recipes.slice(0, 8)" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id" ></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id" ></recipe-card>
                 </div>
                 <!--final card-->
             </section>
@@ -71,7 +71,7 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes.slice(13, 21)" class="col mb-5">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></recipe-card>
                 </div>
                 <!--final card-->
             </section>
