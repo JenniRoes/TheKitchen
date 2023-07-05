@@ -26,17 +26,17 @@
         </header>
 
 
-        <section class="row justify-content-center profile-container">
+        <section class="row profile-container">
             <!--user profile-->
             <user-profile></user-profile>
 
             <!--user collection-->
-            <div class="col-8 ps-2 mt-4 btn-hidden">
+            <div class="col-9 mt-4 obj-hidden">
                 <section class="container mt-4 mb-5">
-                    <h2 class="ms-4 ps-4">Your collection</h2>
-                    <section class="row mt-4 ms-5 gap-5">
+                    <h2 class="ms-1">Your collection</h2>
+                    <section class="row mt-4 ms-1 gap-5">
                         <!--inicial card-->
-                        <div v-for="(item, index) in savedRecipes" class="col-3 p-0 me-5">
+                        <div v-for="(item, index) in savedRecipes" class="col-lg-3 p-0 me-5 gap-5">
                             <recipe-card :image="item.image" :category="item.category" :title="item.title"
                                 :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></recipe-card>
                         </div>

@@ -57,11 +57,12 @@ app.component('signup', {
             
         <!--buttons-->
         <div class="col center-button">
-            <div class="row center"><a href="login.html" class="center btn-signup-light mt-4 mb-3 hover-grow">Log in</a></div>
             <div class="">
+            <div class="row center"><a href="./login.html" class="center btn-signup-dark mt-4 mb-3 hover-grow" @click="registerUser">Sign up</a></div>
                 <span class=" line-deco mb-3 mx-auto"></span>
+                <div class="row center"><a href="login.html" class="center btn-signup-light mb-4 hover-grow">Log in</a></div>
             </div>
-            <div class="row center"><a href="./login.html" class="center btn-signup-dark mb-4 hover-grow" @click="registerUser">Sign up</a></div>
+            
         </div>
     </div>
 </div>`

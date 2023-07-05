@@ -46,23 +46,6 @@
     border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-.recipe-display {
-    display: inline-flex !important;
-}
-
-.margin-cards-block {
-    margin-bottom: 5%;
-}
-
-.margin-cards {
-    margin-right: 0%;
-
-    //media-query
-    @include mixins.respond-to(vars.$phone) {
-        margin-bottom: 5%;
-    }
-}
-
 .margin-box {
     margin-left: 0%;
     margin-right: 0%;
@@ -78,39 +61,23 @@
     max-width: 100%;
 }
 
-.margin-icon {
-    margin-top: 2rem;
-}
-
 .admin-background {
     background-image: url("././../dist/imgs/background.png");
 }
 
 .imagotipo-responsive {
     @include mixins.respond-to(vars.$phone) {
-        width: 200px;
-        height: 140px;
-        margin-left: 30px;
-        padding-right: 45px;
+        width: 12.5rem;
+        height: 8.75rem;
+        margin-left: 1.875rem;
+        padding-right: 2.813rem;
     }
 }
 
 .isotipo-responsive {
     @include mixins.respond-to(vars.$phone) {
-        width: 42px;
-        height: 30px;
-    }
-}
-
-.photo-hidden {
-    @include mixins.respond-to(vars.$phone) {
-        display: none;
-    }
-}
-
-.user-hidden {
-    @include mixins.respond-to(vars.$large-desktop) {
-        display: none;
+        width: 2.625rem;
+        height: 1.875rem;
     }
 }
 
@@ -122,11 +89,17 @@
     border: var(--bs-border-width) solid var(--bs-body-bg);
 }
 
-.filter-category {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    justify-content: space-between;
+.obj-hidden {
+    @include mixins.respond-to(vars.$phone) {
+        display: none;
+    }
+}
+
+.obj-hidden-desk {
+    @include mixins.respond-to(vars.$large-desktop) {
+        display: none;
+        position: relative;
+    }
 }
 
 //media queries
@@ -134,8 +107,36 @@
     .banner-hidden {
         display: none;
     }
+
     .center-img-detail {
         max-width: 90%;
     }
+
+    .logo-mobile {
+        margin-left: 0.3rem;
+        padding-left: 0rem;
+    }
+
+    .m-related-recipes {
+        margin-left: 0rem;
+        margin-top: 1.5rem;
+    }
 }
 
+@include mixins.respond-to(vars.$large-desktop) {
+    .logo-mobile {
+        margin-left: 1.7rem;
+        padding-left: 0rem;
+    }
+
+    .user-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        ;
+    }
+
+    .m-related-recipes {
+        margin-left: 2rem;
+    }
+
+}

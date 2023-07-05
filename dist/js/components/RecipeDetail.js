@@ -113,8 +113,8 @@ app.component('recipe-detail', {
     template:
         /*html*/
         `
-    <div class="row recipes-container detail-mobile">
-    <div class="center-img-detail col me-5">
+    <div class="row recipes-details detail-mobile">
+    <div class="center-img-detail col">
         <div class="card">
             <img v-bind:src="image" class="detail-img" alt="photo food">
             <div class="card-img-overlay">
@@ -156,7 +156,7 @@ app.component('recipe-detail', {
         </div>
         </div>
         <!--related recipes-->
-        <div class="col">
+        <div class="col m-related-recipes">
                 <div class="">
                     <h2 class="col mb-5">Related Recipes</h2>
                 </div>

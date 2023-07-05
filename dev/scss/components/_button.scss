@@ -5,14 +5,14 @@
 //btn-basic($display, $flex-direction, $align, $padding, $gap, $width, $height, $background, $border-radius,$border)
 
 .btn-signup-dark {
-    @include mixins.btn-signup (37px, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
+    @include mixins.btn-signup (2.313rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
     background-color: vars.$clr-orange-200;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: vars.$clr-white;
     text-decoration: none;
 
     @include mixins.respond-to(vars.$large-desktop) {
-        width: 400px;
+        width: 25rem;
     }
 }
 
@@ -21,14 +21,14 @@
 }
 
 .btn-signup-light {
-    @include mixins.btn-signup (37px, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
+    @include mixins.btn-signup (2.313rem, 18.5rem, 0.5rem, 0.5rem 0.75rem 0.5rem 0.75rem);
     background-color: vars.$clr-orange-50;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-decoration: none;
     color: vars.$clr-orange-300;
 
     @include mixins.respond-to(vars.$large-desktop) {
-        width: 400px;
+        width: 25rem;
     }
 }
 
@@ -40,35 +40,11 @@
     @include mixins.btn-basic(flex, row, flex-start, 0.37rem, 0, 2rem, 2rem, vars.$clr-orange-300, 100%, none);
 }
 
-.btn-item-list {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 10.5rem, 1.87rem, vars.$clr-orange-200, 0.5rem, none);
-    justify-content: center;
-}
-
-.btn-admin-orange {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 6.12rem, 1.87rem, vars.$clr-orange-200, 0.5rem, none);
-    justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.btn-admin-red {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 6.12rem, 1.87rem, vars.$clr-red-100, 0.5rem, none);
-    justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-
-.btn-add {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 12.12rem, 1.87rem, vars.$clr-orange-200, 0.5rem, none);
-    justify-content: center;
-}
-
 .btn-search {
     background: vars.$clr-orange-50;
-    border: 1px solid vars.$clr-orange-300;
+    border: 0.063rem solid vars.$clr-orange-300;
     border-radius: 0.5rem;
+    height: 2.5rem;
 }
 
 .center-button {
@@ -78,10 +54,9 @@
 }
 
 .btn-xxl-dark {
-    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 436px, 35px, none, 0.5rem, none);
+    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.37rem, 27.25rem, 2.188rem, vars.$clr-orange-200, 0.5rem, none);
     justify-content: center;
-    background-color: vars.$clr-orange-200;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: vars.$clr-white;
     text-decoration: none;
     font-weight: vars.$fw-med;
@@ -112,143 +87,54 @@
     transform: scale(1.1);
 }
 
-.btn-hidden {
-    @include mixins.respond-to(vars.$phone) {
-        display: none;
-    }
-}
+.filter-category {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-between;
 
-.btn-hidden-desk {
-    @include mixins.respond-to(vars.$large-desktop) {
-        display: none;
-        position: relative;
+    @include mixins.respond-to(vars.$phone) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.625rem;
     }
 }
 
 .btn-xl-dark {
-    display: flex;
-    flex-direction: column;
+    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.375rem, 25.375rem, 2.313rem, vars.$clr-orange-200, 0.5rem, none);
+
     justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 406px;
-    height: 37px;
-    background: #FF9E45;
-    border-radius: 8px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: white;
     text-decoration: none;
-    border: none;
 
     @include mixins.respond-to(vars.$phone) {
-        width: 312px;
+        width: 19.5rem;
     }
 }
 
 .btn-xl-light {
-    display: flex;
-    flex-direction: column;
+    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.375rem, 25.375rem, 2.313rem, vars.$clr-orange-50, 0.5rem, none);
+
     justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 406px;
-    height: 37px;
-    background: #FFE0C2;
-    border-radius: 8px;
     color: #FF6109;
     text-decoration: none;
-    font-size: 14px;
-    border: none;
+    font-size: 0.875rem;
 
     @include mixins.respond-to(vars.$phone) {
-        width: 312px;
+        width: 19.5rem;
     }
 }
 
 .btn-md-dark {
-    display: flex;
-    flex-direction: column;
+    @include mixins.btn-basic(flex, column, center, 0.5rem 0.75rem, 0.375rem, 18.438rem, 1.875rem, vars.$clr-orange-200, 0.5rem, none);
+
     justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 295px;
-    height: 30px;
-    background: #FF9E45;
-    border-radius: 8px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: vars.$clr-white;
 
     @include mixins.respond-to(vars.$phone) {
         display: none;
     }
-}
-
-.btn-md-line {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 295px;
-    height: 30px;
-    border: 1px solid #FF9E45;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #FF9E45;
-
-    @include mixins.respond-to(vars.$phone) {
-        display: none;
-    }
-}
-
-.btn-sm-dark {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 192px;
-    height: 30px;
-    background: #FF9E45;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-    color: vars.$clr-white;
-}
-
-.btn-sm-light {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 192px;
-    height: 30px;
-    background: #FFE0C2;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #FF9E45;
-}
-
-.btn-sm-red {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 6px;
-    width: 192px;
-    height: 30px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #FF4848;
 }

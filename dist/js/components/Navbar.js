@@ -15,8 +15,8 @@ app.component('navbar', {
     /*html*/
     `<!--navbar-->
     <nav id="navbar-main" class="navbar navbar-expand-lg">
-    <a class="navbar-brand color-header" href="#">
-        <img src="../dist/imgs/logotipo-xsm.png" class="ms-5 img-fluid d-inline-block align-text-middle"
+    <a class="navbar-brand logo-mobile color-header" href="#">
+        <img src="../dist/imgs/logotipo-xsm.png" class="logo-mobile img-fluid d-inline-block align-text-middle"
             alt="logotipo">
     </a>
     <!--boton navbar-main-->
@@ -27,10 +27,10 @@ app.component('navbar', {
         <ul class="navbar-nav gap-5 me-5">
             <li class=" position-relative li-responsive"><a class="header-link" href="./home.html">Home</a>
             </li>
-            <li class=" position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
-            <li class=" position-relative"><a class="header-link" href="./categories.html">Categories</a>
+            <li class="position-relative"><a class="header-link" href="./top-ten.html">Top Recipes</a></li>
+            <li class="position-relative"><a class="header-link" href="./categories.html">Categories</a>
             </li>
-            <li class="position-relative user-hidden"><a class="header-link"
+            <li class="position-relative obj-hidden-desk"><a class="header-link"
                     href="./user-profile.html">Profile</a></li>
         </ul>
         <!--search placeholder and button-->
@@ -42,7 +42,7 @@ app.component('navbar', {
                         alt="search icon"></button>
                 <!--user profile-->
                 <a href="./user-profile.html" class="header-link">
-                    <img class="ms-4 me-5 pe-0 photo-hidden" src="./imgs/avatar.png" alt="user profile">
+                    <img class="ms-4 me-5 pe-0 photo-hidden user-icon" src="./imgs/icons/user.svg" alt="user profile">
                 </a>
             </form>
         </div>

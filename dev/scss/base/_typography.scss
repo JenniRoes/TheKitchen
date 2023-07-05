@@ -1,26 +1,30 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins';
 
-.text-question{
+.text-question {
     @include mixins.custom-font(vars.$clr-gray-400, vars.$fw-reg);
 
     text-decoration: underline;
     opacity: 0.8;
 }
 
-.text-orange{
+.text-orange {
     color: vars.$clr-orange-300;
 }
 
-.text-account{
+.text-account {
     color: vars.$clr-orange-300;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25px;
     font-weight: vars.$fw-med;
 
 }
 
-.text-forms{
+.text-account:hover {
+    color: vars.$clr-orange-50;
+}
+
+.text-forms {
     @include mixins.custom-font(vars.$clr-gray-400, vars.$fw-med);
 }
 
@@ -43,11 +47,8 @@
     color: vars.$clr-black;
 }
 
-.title-responsive {
-    @include mixins.respond-to(vars.$phone) {
-        margin-top: 5rem;
-
-    }
+.link-title:hover {
+    color: vars.$clr-red-100;
 }
 
 .overflow-title {
@@ -60,7 +61,6 @@
     -webkit-box-orient: vertical;
 }
 
-
 .top-title {
-    width: 350px;
+    width: 21.875rem;
 }

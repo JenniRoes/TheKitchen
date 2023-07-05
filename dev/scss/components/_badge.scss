@@ -1,31 +1,33 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins';
 
+//@mixin basic-badge($clr-font, $clr-background, $border-radius, $padding)
+
 .badge-orange {
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-orange-300, 0.12rem, 0.12rem);
 }
 .badge-green {
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-green-100, 0.12rem, 0.12rem);
-    font-size: 11.16px;
+    font-size: 0.698rem;
     font-weight: bold;
 }
 .badge-yellow {
     @include mixins.basic-badge(vars.$clr-black-200, vars.$clr-yellow-100, 0.12rem, 0.12rem);
-    font-size: 11.16px;
+    font-size: 0.698rem;
     font-weight: bold;
 }
 .badge-red {
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-red-100, 0.12rem, 0.12rem);
-    font-size: 11.16px;
+    font-size: 0.698rem;
     font-weight: bold;
 }
 .badge-default {
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-green-100, 0.12rem, 0.12rem);
-    font-size: 11.16px;
+    font-size: 0.698rem;
     font-weight: bold;
 }
 
-.badge-orange-big{
+.badge-orange-big {
     @include mixins.basic-badge(vars.$clr-white, vars.$clr-orange-300, 0.12rem, 0.37rem);
     display: flex;
     flex-direction: row;

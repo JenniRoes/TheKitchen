@@ -79,6 +79,13 @@ const app = Vue.createApp({
         }
       },
     methods: {
+      updateRecipeLikes(id, likes) {
+        this.recipes.forEach(recipe => {
+          if (recipe.id === id) {
+            recipe.likes = likes;
+          }
+        });
+      },
         onClickRecipeLike: function (id) {
             this.recipes.forEach(recipe => {
                 if (recipe.id === id) {
@@ -90,7 +97,6 @@ const app = Vue.createApp({
                         .then(
                             (response) => {
                                 console.log(response);
-
                             }
                         )
                         .catch(

@@ -1,8 +1,8 @@
 @use '../abstracts/vars';
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 html {
@@ -32,8 +32,4 @@ body {
     /* number of lines to show */
     line-clamp: 2;
     -webkit-box-orient: vertical;
-}
-
-.m-right {
-    margin-right: 70px;
 }

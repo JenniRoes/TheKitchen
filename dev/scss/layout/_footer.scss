@@ -16,13 +16,20 @@
 .footer-relative {
     @include mixins.respond-to(vars.$phone) {
         position: relative;
-        bottom: 0;
+        bottom: 0rem;
+    }
+}
+
+.footer-relative-desk {
+    @include mixins.respond-to(vars.$large-desktop) {
+        position: relative;
+        bottom: 0rem;
     }
 }
 
 .footer-mobile {
     @include mixins.respond-to(vars.$phone) {
-        bottom: 0;
+        bottom: 0rem;
     }
 }
 

@@ -9,7 +9,7 @@ app.component('pass-recovery', {
                 .then(response => {
                     //console.log(response.data.password);
                     localStorage.setItem('password', response.data.password);
-                    window.location.href = 'http://localhost/proyecto_interactivasII/dist/pass-recovery-three.html';
+                    window.location.href = 'http://localhost/proyecto_interactivasII/dist/pass-recovery-two.html';
                 })
                 .catch(error => {
                     console.log(error);
@@ -20,12 +20,12 @@ app.component('pass-recovery', {
     template:
         /*html*/
         `
-    <div class="container center mt-5">
+    <div class="container center mt-2 mb-5">
     <div class="row">
-        <img src="./imgs/imagotipo-xl.png" class="imagotipo-responsive mt-5 mb-5" alt="logo">
+        <img src="./imgs/imagotipo-xl.png" class="imagotipo-responsive mt-5 mb-2" alt="logo">
     </div>
 </div>
-<div class="row container center mt-1 col-md-12 margin-box box-width">
+<div class="row container center mt-1 col-md-12 margin-box box-width mb-5">
     <div class="row container-pass-big col-md-10 center center-img-detail">
         <div>
             <p class="text-center mt-2">Enter your email and we’ll send you a link to reset your password</p>

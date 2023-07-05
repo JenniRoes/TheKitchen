@@ -1,9 +1,13 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins';
 
-.header-link{
+.header-link {
     color: vars.$clr-white;
     text-decoration: none;
+}
+
+.header-link:hover {
+    color: vars.$clr-red-100;
 }
 
 .navbar-color {
