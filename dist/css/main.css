@@ -14201,7 +14201,7 @@ body {
 }
 
 .admin-background {
-  background-image: url("././../dist/imgs/background.png");
+  background-image: url("../imgs/background.png");
 }
 
 @media only screen and (max-width: 480px) {
