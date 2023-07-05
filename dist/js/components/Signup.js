@@ -1,7 +1,6 @@
 app.component('signup', {
     methods: {
         registerUser() {
-            // Obtener los valores de los campos de entrada
             const name = document.getElementById('name').value;
             const lastName = document.getElementById('lastname').value;
             const country = document.getElementById('country').value;
@@ -19,11 +18,8 @@ app.component('signup', {
                 password: password
             };
 
-            // Realizar la solicitud POST al endpoint de registro
             axios.post('http://localhost/primerprueba/public/api/users/register', data)
-                .then(response => {
-                    console.log(response.data);
-                    // Redirigir a ../../login
+                .then(response => {    
                     window.location.href = '../../login.html';
                 })
                 .catch(error => {

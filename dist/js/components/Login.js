@@ -9,7 +9,6 @@ app.component('login', {
           password: password
         })
         .then(response => {
-          console.log(response.data.user);
           localStorage.setItem('token', response.data.accessToken);
           localStorage.setItem('name', response.data.user.name);
           localStorage.setItem('lastname', response.data.user.last_name);
@@ -27,7 +26,7 @@ app.component('login', {
       /*html*/
       ` <!--form-->
       <div class="row container center mt-1 mb-5 col-md-12 margin-box box-width">
-          <!--initial card-->
+          <!--initial form-->
           <div class="row container-login col-md-12 center mb-5">
               <form class="mt-2 mb-2">
                   <label class="form-label text-forms" for="user">Email</label>
@@ -37,7 +36,6 @@ app.component('login', {
                   <input id="password" type="password" class="form-control color-input">
                   <div class="col center-button">
                       <div class="row center">
-                        <!-- Agregar el evento 'click' para llamar al método 'loginUser' -->
                         <a href="#" class="center btn-xl-dark mt-4 hover-grow" @click="loginUser">Log in</a>
                       </div>
                       <div>
@@ -47,6 +45,6 @@ app.component('login', {
                   </div>
               </form>
           </div>
-          <!--final card-->
+          <!--final form-->
       </div>`
   });

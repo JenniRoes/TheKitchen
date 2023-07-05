@@ -10,8 +10,6 @@ app.component('search', {
         }
     },
     mounted() {
-        console.log(this.resultsRecipes)
-
         const params = window.location.search;
         const urlParams = new URLSearchParams(params);
         const routeTxt = urlParams.get("keyword");
@@ -31,8 +29,6 @@ app.component('search', {
 
                         let resultsRecipes = response.data;
 
-                        console.log(resultsRecipes);
-
                         resultsRecipes.forEach((element) => {
 
                             this.resultsRecipes.push({
@@ -44,11 +40,8 @@ app.component('search', {
                                 level: element.level,
                                 likes: element.likes,
                                 portions: element.portions,
-                                position: 1,
                                 ocassion: element.occasion,
-                                ingredients: "NA",
-                                description: element.description,
-                                preparation: "NA"
+                                description: element.description
                             })
                         });
                     }
@@ -71,7 +64,7 @@ app.component('search', {
         <div  class="row mt-5 recipes-container">
             <div v-for="(item, index) in resultsRecipes" class="col mb-4">
             <recipe-card :image="item.image" :category="item.category" :title="item.title"
-            :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike(index)" :data="item" :id="item.id"></recipe-card>
+            :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike":data="item" :id="item.id"></recipe-card>
             </div>
         </div>
         <div v-if="resultsRecipes == ''">

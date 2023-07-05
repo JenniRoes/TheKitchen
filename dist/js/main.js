@@ -13,9 +13,14 @@ const app = Vue.createApp({
         try {
           // category filters 
           const categoriesResponse = await axios.get('http://localhost/primerprueba/public/api/recipes/categories');
+
           let categories = categoriesResponse.data;
+
           categories.forEach((element, index) => {
-            this.categories.push({ id: index, category: element.category });
+            this.categories.push({ 
+              id: index, 
+              category: element.category 
+            });
           });
       
           // default recipes for home page
@@ -53,7 +58,7 @@ const app = Vue.createApp({
             });
           });
       
-          // det user id
+          // get user id
           const userIdResponse = await axios.get('http://localhost/primerprueba/public/api/users/getuserid');
           if (userIdResponse.data.code === 200) {
             this.userId = userIdResponse.data.uid;
@@ -79,31 +84,21 @@ const app = Vue.createApp({
         }
       },
     methods: {
-      updateRecipeLikes(id, likes) {
-        this.recipes.forEach(recipe => {
-          if (recipe.id === id) {
-            recipe.likes = likes;
-          }
-        });
-      },
         onClickRecipeLike: function (id) {
-            this.recipes.forEach(recipe => {
-                if (recipe.id === id) {
+          const recipe = this.recipes.find(recipe => recipe.id === id);
 
-                    axios({
-                        method: 'get',
-                        url: 'http://localhost/primerprueba/public/api/users/likes/' + this.userId + '/' + id
-                    })
-                        .then(
-                            (response) => {
-                                console.log(response);
-                            }
-                        )
-                        .catch(
-                            error => console.log(error)
-                        )
-                }
-            });
+          axios.get('http://localhost/primerprueba/public/api/users/likes/' + this.userId + '/' + id)
+              .then(response => {
+                  if (response.data.code === 400) {
+                      alert("You already voted for this recipe");
+                  } else {
+                      const updatedLikes = response.data.likes;
+                      if (recipe) {
+                          recipe.likes = updatedLikes;
+                      }
+                  }
+              })
+              .catch(error => console.log(error));
         },
         onClickSelectedCategory(category) {
             //filter by category for categories page
