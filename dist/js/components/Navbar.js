@@ -42,7 +42,7 @@ app.component('navbar', {
                         alt="search icon"></button>
                 <!--user profile-->
                 <a href="./user-profile.html" class="header-link">
-                    <img class="ms-4 me-5 pe-0 photo-hidden user-icon" src="./imgs/icons/user.svg" alt="user profile">
+                    <img class="ms-4 me-5 pe-0 obj-hidden user-icon" src="./imgs/icons/user.svg" alt="user profile">
                 </a>
             </form>
         </div>

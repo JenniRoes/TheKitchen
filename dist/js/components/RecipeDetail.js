@@ -86,8 +86,9 @@ app.component('recipe-detail', {
                             url: 'http://localhost/primerprueba/public/api/users/saverecipe/' + userId + '/' + idRecipe
                         })
                             .then((response) => {
-                                console.log(idRecipe);
-                                console.log(response);
+                                //console.log(idRecipe);
+                                //console.log(response);
+                                alert("The recipe has been added to your collection");
                             })
                             .catch((error) => console.log(error));
                     
