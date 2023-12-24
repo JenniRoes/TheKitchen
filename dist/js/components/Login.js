@@ -14,11 +14,11 @@ app.component('login', {
           localStorage.setItem('lastname', response.data.user.last_name);
           localStorage.setItem('country', response.data.user.country);
           localStorage.setItem('email', response.data.user.email);
-          window.location.href = 'http://localhost/proyecto_interactivasII/dist/home.html';
+          window.location.href = 'http://localhost/TheKitchen/dist/home.html';
         })
         .catch(error => {
           console.log(error);
-          alert("No se encuentra registrado o ha ingresado los datos incorrectamente")
+          window.location.href = 'http://localhost/TheKitchen/dist/error.html';
         });
       }
     },

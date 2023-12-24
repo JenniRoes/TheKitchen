@@ -48,7 +48,7 @@ app.component('recipe-card',{
                 <h6><span class="badge badge-orange mt-2 p-1">{{category}}</span></h6>
             </div>
             <div>
-                <p class="pt-2 overflow ">{{description}}</p>
+                <p class=" overflow-card ">{{description}}</p>
             </div>
             <div class="d-flex justify-content-between align-items-center gap-1">
                 <h6 class="mt-3 opacity-50"><small>{{likes}} likes</small></h6>

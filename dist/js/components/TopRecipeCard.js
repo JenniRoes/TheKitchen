@@ -82,7 +82,7 @@ app.component('top-recipe-card', {
                         <span class="badge badge-orange p-1 ms-2">{{ocassion}}</span>
                     </div>
                 </div>
-                <p class="card-text overflow ms-3">{{description}} </p>
+                <p class="card-text overflow">{{description}} </p>
                 <div class="row ms-3 mt-2 mb-2">
                     <p class="label-time"><img src="imgs/icons/nest_clock_farsight_analog-orange.svg"
                             alt="preparation time icon">{{totaltime}} min</p>
