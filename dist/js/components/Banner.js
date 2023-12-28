@@ -20,5 +20,4 @@ app.component('banner',{
         <p><img src="../dist/imgs/banner-md.png" class="" alt="photo food"></p>
     </div>
 </div>`
-
 });

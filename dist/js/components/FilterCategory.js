@@ -7,7 +7,6 @@ app.component('filter-category',{ //metodo que responde al click
     },
     methods:{
         onClickCategoryButton(){
-            //console.log(this.name);
             this.$emit('selectedcategory', this.category);
         }
     },

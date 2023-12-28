@@ -10,7 +10,7 @@
     <!--css-->
     <link rel="stylesheet" href="../dist/css/main.css">
     <!--title page-->
-    <title>Categories</title>
+    <title>TheKitchen|Categories</title>
 </head>
 
 <body>
@@ -18,13 +18,15 @@
         <!--header-->
         <header class="container-fluid navbar-color">
             <!--navbar-->
-           <navbar></navbar>
+            <navbar></navbar>
         </header>
 
         <!--banner-->
         <div class="recipes-container">
             <div>
-                <banner title="Our Categories" description="Explore our wide variety of culinary categories on this page dedicated to foodies. From desserts to soups and drinks, you'll find a diverse range of options here to satisfy your preferences and dietary needs. Whether you're looking for a specific recipe or just want to explore new ideas, our categories will help you easily navigate our collection and find the type of dish you're in the mood for. Get ready to delight your senses and discover new delights in each category."></banner>
+                <banner title="Our Categories"
+                    description="Explore our wide variety of culinary categories on this page dedicated to foodies. From desserts to soups and drinks, you'll find a diverse range of options here to satisfy your preferences and dietary needs. Whether you're looking for a specific recipe or just want to explore new ideas, our categories will help you easily navigate our collection and find the type of dish you're in the mood for. Get ready to delight your senses and discover new delights in each category.">
+                </banner>
             </div>
         </div>
 
@@ -48,8 +50,8 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes"
-                        v-on:recipelike="onClickRecipeLike" :id="item.id"></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike"
+                        :id="item.id"></recipe-card>
                 </div>
                 <!--final card-->
             </section>

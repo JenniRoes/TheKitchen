@@ -38,7 +38,7 @@ const app = Vue.createApp({
         });
       });
 
-      // recipes fot top ten page
+      // recipes for top ten page
       const topTenRecipesResponse = await axios.get('http://localhost/primerprueba/public/api/recipes/top10');
       let topTenRecipes = topTenRecipesResponse.data;
       this.recipesten = [];
@@ -84,6 +84,7 @@ const app = Vue.createApp({
     }
   },
   methods: {
+    //Likes function
     onClickRecipeLike: function (id) {
       const recipe = this.recipes.find(recipe => recipe.id === id);
 
@@ -100,15 +101,14 @@ const app = Vue.createApp({
         })
         .catch(error => console.log(error));
     },
+    //filter by category for categories page
     onClickSelectedCategory(category) {
-      //filter by category for categories page
       axios({
         method: 'get',
         url: 'http://localhost/primerprueba/public/api/recipes/filterby/category/' + category
       })
         .then(
           (response) => {
-            //console.log(response.data);
 
             this.recipes = [];
             let items = response.data;

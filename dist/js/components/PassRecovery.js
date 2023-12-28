@@ -7,13 +7,12 @@ app.component('pass-recovery', {
                 email: email,
             })
                 .then(response => {
-                    //console.log(response.data.password);
                     localStorage.setItem('password', response.data.password);
-                    window.location.href = 'http://localhost/proyecto_interactivasII/dist/pass-recovery-two.html';
+                    window.location.href = 'http://localhost/TheKitchen/dist/pass-recovery-two.html';
                 })
                 .catch(error => {
                     console.log(error);
-                    alert("No se encuentra registrado o ha ingresado los datos incorrectamente")
+                    window.location.href = 'http://localhost/TheKitchen/dist/error.html';
                 });
         }
     },

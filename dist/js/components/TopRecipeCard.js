@@ -46,10 +46,10 @@ app.component('top-recipe-card', {
     },
     methods: {
         onClickRecipeLike(){
-            //console.log("LIKE");
             this.$emit('recipelike', this.id);
         },
     },
+    //change color difficulty badge
     computed: {
         badgeClass() {
             if (this.level === 'Easy Recipes') {

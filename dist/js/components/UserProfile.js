@@ -1,4 +1,5 @@
 app.component('user-profile', {
+  //obtain data from signup form and its variables
   data() {
     return {
       name: '',
@@ -26,7 +27,7 @@ app.component('user-profile', {
         })
         .then(
           (response) => {
-            window.location.href = 'http://localhost/proyecto_interactivasII/dist/login.html'
+            window.location.href = 'http://localhost/TheKitchen/dist/login.html'
           }
         )
         .catch (

@@ -14,7 +14,7 @@
     <!--css-->
     <link rel="stylesheet" href="../dist/css/main.css">
     <!--title page-->
-    <title>Top 10</title>
+    <title>Thekitchen|Top10</title>
 </head>
 
 <body>
@@ -28,7 +28,9 @@
         <!--banner-->
         <div class="recipes-container">
             <div>
-                <banner title="Community Top" description="Get ready to discover our best recipes. On this page, we present you with the most popular and acclaimed dishes by our community of cooking lovers. From traditional dishes to innovative creations, these recipes have captivated the hearts and palates of many people. If you are looking for inspiration or just want to try something extraordinary, don't miss our best recipes, selected with passion and culinary excellence."></banner>
+                <banner title="Community Top"
+                    description="Get ready to discover our best recipes. On this page, we present you with the most popular and acclaimed dishes by our community of cooking lovers. From traditional dishes to innovative creations, these recipes have captivated the hearts and palates of many people. If you are looking for inspiration or just want to try something extraordinary, don't miss our best recipes, selected with passion and culinary excellence.">
+                </banner>
             </div>
         </div>
 
@@ -42,7 +44,8 @@
                         <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
                             :category="item.category" :level="item.level" :ocassion="item.ocassion"
                             :description="item.description" :totaltime="item.totaltime" :portions="item.portions"
-                            :likes="item.likes"  v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></top-recipe-card>
+                            :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item"
+                            :id="item.id"></top-recipe-card>
                         <!--final card-->
                     </div>
                 </div>

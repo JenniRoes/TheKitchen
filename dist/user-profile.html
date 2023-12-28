@@ -14,7 +14,7 @@
     <!--css-->
     <link rel="stylesheet" href="../dist/css/main.css">
     <!--title page-->
-    <title>User profile</title>
+    <title>Thekitchen|Profile</title>
 </head>
 
 <body>
@@ -24,7 +24,6 @@
             <!--navbar-->
             <navbar></navbar>
         </header>
-
 
         <section class="row profile-container">
             <!--user profile-->
@@ -38,7 +37,8 @@
                         <!--inicial card-->
                         <div v-for="(item, index) in savedRecipes" class="col-lg-3 p-0 me-5 gap-5">
                             <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                                :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></recipe-card>
+                                :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike"
+                                :data="item" :id="item.id"></recipe-card>
                         </div>
                         <!--final card-->
                     </section>
@@ -55,7 +55,7 @@
         </footer>
     </section>
 
-   
+
 
     <!--Scripts-->
     <!--bootstrap-->

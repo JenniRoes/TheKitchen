@@ -25,19 +25,16 @@ app.component('recipe-detail', {
     mounted() {
 
         const params = window.location.search;
-        //console.log(params);
         const urlParams = new URLSearchParams(params);
         const id = urlParams.get("id");
 
         this.getDetails(id);
-
     },
     methods: {
         getDetails(id) {
             axios({
                 method: 'get',
                 url: 'http://localhost/primerprueba/public/api/recipes/recipe/' + id
-
             })
                 .then(
                     (response) => {
@@ -86,8 +83,6 @@ app.component('recipe-detail', {
                             url: 'http://localhost/primerprueba/public/api/users/saverecipe/' + userId + '/' + idRecipe
                         })
                             .then((response) => {
-                                //console.log(idRecipe);
-                                //console.log(response);
                                 alert("The recipe has been added to your collection");
                             })
                             .catch((error) => console.log(error));
@@ -100,6 +95,7 @@ app.component('recipe-detail', {
         }
     },
     computed: {
+        //change color difficulty badge
         badgeClass() {
             if (this.level === 'Easy Recipes') {
                 return 'badge-green';
@@ -114,6 +110,7 @@ app.component('recipe-detail', {
     template:
         /*html*/
         `
+    <!--recipe image-->
     <div class="row recipes-details detail-mobile">
     <div class="center-img-detail col">
         <div class="card">
@@ -128,6 +125,7 @@ app.component('recipe-detail', {
                 </div>
             </div>
         </div>
+        <!--recipe detail-->
         <div class="d-flex justify-content-between">
             <h1 class="mt-4">{{title}}</h1>
             <h6 class="mt-3 opacity-50 photo-hidden"><small>{{likes}} likes</small></h6>

@@ -1,21 +1,19 @@
 app.component('signup', {
     methods: {
         registerUser() {
-            //Obtener datos ingresados por el usuario
+            //Get data entered by user
             const name = document.getElementById('name').value;
             const lastName = document.getElementById('lastname').value;
             const country = document.getElementById('country').value;
             const email = document.getElementById('email').value;
-            //const user = document.getElementById('user').value;
             const password = document.getElementById('password').value;
 
-            // Crear el objeto de datos a enviar en la solicitud POST
+            //Create the data object to send in the POST request
             const data = {
                 name: name,
                 last_name: lastName,
                 country: country,
                 email: email,
-               // user: user,
                 password: password
             };
 
@@ -47,9 +45,6 @@ app.component('signup', {
         <!--email-->
         <label class="form-label" for="email">Email</label>
         <input id="email" class="form-control mb-2" type="email" name="email">
-        <!--user
-        <label class="form-label" for="user">User</label>
-        <input id="user" class="form-control mb-2" type="text" name="user">-->
         <!--password-->
         <label for="password" class="form-label">Password</label>
             <input id="password" class="form-control mb-2" type="password">

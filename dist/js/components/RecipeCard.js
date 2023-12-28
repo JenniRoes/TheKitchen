@@ -30,7 +30,6 @@ app.component('recipe-card',{
     },
     methods: {
         onClickRecipeLike(){
-            //console.log("LIKE");
             this.$emit('recipelike', this.id);
         }
     },

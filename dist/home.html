@@ -14,7 +14,7 @@
     <!--css-->
     <link rel="stylesheet" href="../dist/css/main.css">
     <!--title page-->
-    <title>Home</title>
+    <title>Thekitchen|Home</title>
 
 </head>
 
@@ -29,7 +29,9 @@
         <!--banner-->
         <div class="recipes-container">
             <div>
-                <banner title="The Kitchen" description="Welcome to The Kitchen! You will find a careful selection of the best recipes to satisfy all palates. From main courses to irresistible desserts, here you will discover a wide variety of culinary options to delight your loved ones and surprise your guests. Join us on a culinary journey full of flavors and unforgettable gastronomic experiences."></banner>
+                <banner title="The Kitchen"
+                    description="Welcome to The Kitchen! You will find a careful selection of the best recipes to satisfy all palates. From main courses to irresistible desserts, here you will discover a wide variety of culinary options to delight your loved ones and surprise your guests. Join us on a culinary journey full of flavors and unforgettable gastronomic experiences.">
+                </banner>
             </div>
         </div>
 
@@ -38,10 +40,11 @@
         <section class="recipes-container mt-4 mb-5">
             <h2>Inspiration for your meals</h2>
             <section class="row mt-4">
-                <!--inicial card-->  
+                <!--inicial card-->
                 <div v-for="(item, index) in recipes.slice(0, 8)" class="col mb-4">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id" ></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike"
+                        :data="item" :id="item.id"></recipe-card>
                 </div>
                 <!--final card-->
             </section>
@@ -57,7 +60,8 @@
                         <top-recipe-card :position="item.position" :image="item.image" :title="item.title"
                             :category="item.category" :level="item.level" :ocassion="item.ocassion"
                             :description="item.description" :totaltime="item.totaltime" :portions="item.portions"
-                            :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id" ></top-recipe-card>
+                            :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item"
+                            :id="item.id"></top-recipe-card>
                         <!--final card-->
                     </div>
                 </div>
@@ -71,7 +75,8 @@
                 <!--inicial card-->
                 <div v-for="(item, index) in recipes.slice(13, 21)" class="col mb-5">
                     <recipe-card :image="item.image" :category="item.category" :title="item.title"
-                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike" :data="item" :id="item.id"></recipe-card>
+                        :description="item.description" :likes="item.likes" v-on:recipelike="onClickRecipeLike"
+                        :data="item" :id="item.id"></recipe-card>
                 </div>
                 <!--final card-->
             </section>

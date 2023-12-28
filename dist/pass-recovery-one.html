@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,34 +12,36 @@
     <!--css-->
     <link rel="stylesheet" href="../dist/css/main.css">
     <!--title page-->
-    <title>Password recovery</title>
+    <title>Thekitchen|Password</title>
 </head>
+
 <body class="admin-background">
     <section id="app">
-    <!--email for password recovery-->
-    <pass-recovery class="mb-5"></pass-recovery>
-    
-     <!--footer-->
-     <footer class="container-fluid footer-position-end footer-color mt-5">
-        <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
-            <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
-            <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
-        </div>
-    </footer>
-</section>
+        <!--email for password recovery-->
+        <pass-recovery class="mb-5"></pass-recovery>
 
-<!--Scripts-->
- <!--Vuejs-->
- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
- <!--axios recipes api-->
- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
- <!--js main-->
- <script src="./js/main.js"></script>
- <!--components-->
- <script src="./js/components/PassRecovery.js"></script>
- <!--mounted app-->
- <script>
-     const mountedApp = app.mount("#app");
- </script>
+        <!--footer-->
+        <footer class="container-fluid footer-position-end footer-color mt-5">
+            <div class="d-flex justify-content-between ps-5 pe-5 gap-5">
+                <p class="mt-4 pt-2">@2022 TheKitchen. All rights reserved.</p>
+                <img src="../dist/imgs/isotipo-xsm.png" class="isotipo-responsive img-fluid mt-4 mb-4" alt="logo">
+            </div>
+        </footer>
+    </section>
+
+    <!--Scripts-->
+    <!--Vuejs-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--axios recipes api-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--js main-->
+    <script src="./js/main.js"></script>
+    <!--components-->
+    <script src="./js/components/PassRecovery.js"></script>
+    <!--mounted app-->
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
 </body>
+
 </html>
