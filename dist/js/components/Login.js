@@ -31,7 +31,9 @@ app.component('login', {
             localStorage.setItem('country', userData.country);
             localStorage.setItem('email', userData.email);
     
-            window.location.href = 'http://localhost/TheKitchen/dist/home.html';
+            this.loggedIn = true;
+
+            window.location.href = 'http://localhost/TheKitchen/dist/index.html';
           } else {
             this.showIncorrectPasswordAlert = true;
           }
@@ -46,6 +48,7 @@ app.component('login', {
         });
       } else {
         const form = document.getElementById('loginForm');
+        
         if (form) {
           form.classList.add('was-validated');
         }

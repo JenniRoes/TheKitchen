@@ -1,7 +1,6 @@
 app.component('signup', {
     methods: {
         registerUser() {
-            //Get data entered by user
             const name = document.getElementById('name').value;
             const lastName = document.getElementById('lastname').value;
             const country = document.getElementById('country').value;
@@ -9,14 +8,13 @@ app.component('signup', {
             const password = document.getElementById('password').value;
 
             if (name && lastName && country && email && password) {
-            //Create the data object to send in the POST request
-            const data = {
-                name: name,
-                last_name: lastName,
-                country: country,
-                email: email,
-                password: password
-            };
+                const data = {
+                    name: name,
+                    last_name: lastName,
+                    country: country,
+                    email: email,
+                    password: password
+                };
 
                 axios.post('http://localhost/primerprueba/public/api/users/register', data)
                     .then(response => {
@@ -29,6 +27,7 @@ app.component('signup', {
                     });
             } else {
                 const form = document.getElementById('signupForm');
+                
                 if (form) {
                     form.classList.add('was-validated');
                 }

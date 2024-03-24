@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost/TheKitchen/dist/login.html",
+            "url": "http://localhost/TheKitchen/dist/user-profile.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
