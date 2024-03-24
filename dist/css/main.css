@@ -13465,6 +13465,24 @@ body {
   width: 21.875rem;
 }
 
+.alert-incorrect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 466px;
+  height: 64px;
+  background-color: #FF4848;
+  color: #ffffff;
+  margin: auto;
+  border-radius: 0.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .badge-orange {
   color: #ffffff;
   background-color: #FF6109;

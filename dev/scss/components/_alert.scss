@@ -1,0 +1,13 @@
+@use '../abstracts/vars';
+
+.alert-incorrect {
+    display: flex;
+    max-width: 466px;
+    height: 64px;
+    background-color: vars.$clr-red-100;
+    color: vars.$clr-white;
+    margin: auto;
+    border-radius: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
